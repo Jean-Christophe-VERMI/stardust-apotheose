@@ -14,3 +14,19 @@
 
  - Connection a une API
 
+ ** Mongo DB **
+
+### Worflow
+
+ - https://www.lafabriquedunet.fr/conseils/conception-site-web/arborescence-site-web/
+
+
+## Arborescence 
+
+- Liste des routes, comment elles sont reliees entre elles ...
+
+- Exemple : Page accueil est reliee a 4 categories, chacunes donnant sur 3 rubriques
+
+
+
+

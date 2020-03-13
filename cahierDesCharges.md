@@ -154,22 +154,22 @@ https://whimsical.com/Qv3pkx7rU6ZQFoh2tx9Bdz
     - description
     - résumé
   
- - forum:
+ - forum
     - topic
-      - id
-      - title
+    - id
+    - title
       
       
 
--sujets:
-        - id
-        - description
-        - messages
-        - name
-        - author
-        - date
-        - tags
-        - status ( open/closed )
+-sujets
+     - id
+     - description
+     - messages
+     - name
+     - author
+     - date
+     - tags
+     - status ( open/closed )
 
 
  - photos
@@ -194,15 +194,15 @@ https://whimsical.com/Qv3pkx7rU6ZQFoh2tx9Bdz
 
 **Relations**
 
-user 1 - N photos
-user 1 - N sujets
-user 1 - N messages
+- user 1 / N photos
+- user 1 / N sujets
+- user 1 / N messages
 
-sujet 1 - N messages
+- sujets 1 / N messages
 
-tag N - N sujet
-tag N - N articles
-tag N - 1 photos 
+- tag N / N sujets
+- tag N / N articles
+- tag N / 1 photos 
 
 
 

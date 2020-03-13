@@ -11,10 +11,10 @@
 
 ## Roles
 
-Scrum Master : Chloé
-Project Owner : Lucile
-Lead Back : Aziz
-Lead Front : Jean-Christophe
+- Scrum Master : Chloé
+- Project Owner : Lucile
+- Lead Back : Aziz
+- Lead Front : Jean-Christophe
 
 ## MVP 
 

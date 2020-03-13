@@ -45,7 +45,6 @@ accueil :
 login
 inscription
 profil user
-contact
 blog :
 - evenements
 - informations astronomie
@@ -65,27 +64,28 @@ moderation et mise a jour du blog / forum
     - les gens qui veulent s'inscrire seront dirigés vers le formulaire
 3. formulaire d'inscription : nom, prenom etc, case captcha, mail qui sera envoye pour confirmer l'inscription
 4. page user : changer pseudo, definir avatar, changer mdp, visualisation des sujets ouverts sur le forum -> prive accessible uniquement a l user
-5. contact : envoi de formulaire -> accessible a tout le monde
-6. blog : acceder aux differents categories (evenement, infos astro et infos astrophoto) -> accessible par tout le monde
-7. forum : poster et repondre a des messages, ouvrir un sujet, rechercher un sujet (barre de recherche) -> tout le contenu est accessible uniquement par les users inscrits, si pas inscrit petit message et redirige vers l accueil 
-8. observation : carte geolocalisée, cliquer sur des constellations pour afficher les infos -> 
-9. galerie photo : afficher les photos, soumettre une photo avec une legende et la localisation -> accessible a tout le monde sauf pour soumettre, user only
-10. mentions legales & conditions d'utilisation -> visible dans le footer
+5. blog : acceder aux differents categories (evenement, infos astro et infos astrophoto) -> accessible par tout le monde
+6. forum : poster et repondre a des messages, ouvrir un sujet, rechercher un sujet (barre de recherche) -> tout le contenu est accessible uniquement par les users inscrits, si pas inscrit petit message et redirige vers l accueil 
+7. observation : carte geolocalisée, cliquer sur des constellations pour afficher les infos -> 
+8. galerie photo : afficher les photos, soumettre une photo avec une legende et la localisation -> accessible a tout le monde sauf pour soumettre, user only
+9. mentions legales & conditions d'utilisation -> visible dans le footer
 ### ESPACE ADMIN (accessible uniquement a l'admin)
+page user classique avec des fonctionnalites en plus que les utilisateurs ne voient pas sur les autres pages
 moderer messages du forum
 fermer un sujet sur le forum
 moderer photo galerie
 ### VISUELS :
 
-Accueil : 
-Login : 
-Forumulaire inscription :
-Page user :
-Contact :
-Blog :
-Forum :
-Observation:
-Galerie photo:
+Accueil : Chloe
+Page user : Lucile
+Forumulaire inscription : Lucile
+Mot de passe oublié : Lucile 
+Blog : Jc
+Page article : Jc
+Forum : Aziz
+Page sujet : Aziz
+Observation : Lucile
+Galerie photo : Chloe
 
 
 ## Arborescence 
@@ -95,15 +95,36 @@ https://whimsical.com/MnEdB5cEzqAKNxXZ3ZS2rq
 
 ## Routes
 
+Accueil : stardust.com (ou fr)
+Login : stardust.com/login
+Forumulaire inscription : stardust.com/signup
+Mot de passe oublié : stardust.com/password
+Page user : stardust.com/user
+Contact : stardust.com/contact
+Blog : stardust.com/blog
+Article : stardust.com/blog/article
+Forum : stardust.com/forum
+Sujet : stardust.com/forum/sujet
+Observation: stardust.com/map
+Galerie photo: stardust.com/pictures
+Admin : stardust.com/admin
+
 ## Technologies
 
+**Back**
+ - nodejs
+ - mongoDB
+ - mongoose
+ - express
 
-### Base de donnees
+**Front**
+- react
+- webpack    
+- babel
+- styledComponent
+- axios
+- redux
+- react-router
 
- - Donnees fixes : infos sur constellations, infos utilisateurs ...
-
- - Connection a une API
-
- ** Mongo DB **
 
 

@@ -129,6 +129,8 @@ Admin : stardust.com/admin
 
 ## MCD / MLD
 
+https://whimsical.com/Qv3pkx7rU6ZQFoh2tx9Bdz
+
 **Tables**
  
  - user :
@@ -152,11 +154,18 @@ Admin : stardust.com/admin
     - description
     - résumé
   
- - forum
-    - sujets
+ - forum:
+    - topic
+      - id
+      - title
+      
+      
+
+-sujets:
+        - id
+        - description
         - messages
         - name
-        - id
         - author
         - date
         - tags
@@ -174,19 +183,30 @@ Admin : stardust.com/admin
    - id
    - text
 
+- messages
+  - id
+  - sujet_id
+  - user_id
+  - text
+  - date
+
 
 
 **Relations**
 
-user 0 - N photos
-user 0 - N sujets
-user 0 - N messages
+user 1 - N photos
+user 1 - N sujets
+user 1 - N messages
 
 sujet 1 - N messages
 
 tag N - N sujet
 tag N - N articles
-tag N - 1 photos ? 
+tag N - 1 photos 
+
+
+
+
 
   
 

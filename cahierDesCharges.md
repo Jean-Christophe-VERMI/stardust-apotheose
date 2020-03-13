@@ -63,7 +63,7 @@ moderation et mise a jour du blog / forum
     - les gens connectés resteront sur l'accueil (plugin modal "se connecter")
     - les gens qui veulent s'inscrire seront dirigés vers le formulaire
 3. formulaire d'inscription : nom, prenom etc, case captcha, mail qui sera envoye pour confirmer l'inscription
-4. page user : changer pseudo, definir avatar, changer mdp, visualisation des sujets ouverts sur le forum -> prive accessible uniquement a l user
+4. page user : changer pseudo, definir avatar, changer mdp, fav messages, photos et articles, visualisation des sujets ouverts sur le forum -> prive accessible uniquement a l user
 5. blog : acceder aux differents categories (evenement, infos astro et infos astrophoto) -> accessible par tout le monde
 6. forum : poster et repondre a des messages, ouvrir un sujet, rechercher un sujet (barre de recherche) -> tout le contenu est accessible uniquement par les users inscrits, si pas inscrit petit message et redirige vers l accueil 
 7. observation : carte geolocalisée, cliquer sur des constellations pour afficher les infos -> 
@@ -100,6 +100,7 @@ Login : stardust.com/login
 Forumulaire inscription : stardust.com/signup
 Mot de passe oublié : stardust.com/password
 Page user : stardust.com/user
+Page fav : stardust.com/user/fav
 Contact : stardust.com/contact
 Blog : stardust.com/blog
 Article : stardust.com/blog/article
@@ -125,6 +126,73 @@ Admin : stardust.com/admin
 - axios
 - redux
 - react-router
+
+## MCD / MLD
+
+**Tables**
+ 
+ - user :
+    - id
+    - name
+    - email
+    - password
+    - date
+    - role
+  
+ - constellation
+    - description
+    - coordonnées / carte
+    - photo
+
+ - articles
+    - id
+    - thème(s)
+    - name
+    - photos ?
+    - description
+    - résumé
+  
+ - forum
+    - sujets
+        - messages
+        - name
+        - id
+        - author
+        - date
+        - tags
+        - status ( open/closed )
+
+
+ - photos
+    - id
+    - author
+    - description
+    - geoloc
+    - image
+
+ - tag
+   - id
+   - text
+
+
+
+**Relations**
+
+user 0 - N photos
+user 0 - N sujets
+user 0 - N messages
+
+sujet 1 - N messages
+
+tag N - N sujet
+tag N - N articles
+tag N - 1 photos ? 
+
+  
+
+
+
+
 
 
 

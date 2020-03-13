@@ -1,15 +1,10 @@
-# User Stories
+# STARDUST
 
-## quizz :
-titre
-themes : cosmologie/ informatique / culture G / ...
-sujets : cosmo = espace, relativite, gravitation, ...
-auteur : cosmo = jerome dudant)
-question : titre de la question
-reponses : reponses possibles
-niveau de difficulte : debutant, confirme, expert
-contexte : anecdote, infos,...)
-pas besoin de stocker, reponse immediate
+## Stardust :
+Découvrir l'astronomie 
+themes : astronomie / astrophoto 
+Plusieurs pages (login, accueil, blog, observation, profil, forum)
+
 
 ## NEED :
 structure bas de donnees
@@ -18,54 +13,63 @@ ROLES :
 invité
 user
 admin
-PAGES :
-accueil
+
+## PAGES :
+accueil :
+- galerie photo
+- differents liens vers les pages
+- login
+- widget meteo
 login
 inscription
 profil user
 contact
-themes
-sujets
-quizz
-scores
+blog :
+- evenements
+- informations astronomie
+- informations astrophoto
+forum :
+- echanger sur l'astronomie, discuter
+observation :
+- carte qui montre les constellations selon la position gps
+galerie photo
 mentions legales & conditions d'utilisation
 espace admin :
-éditer un quizz
-éditer une question
+moderation et mise a jour du blog / forum
+
 
 
 ## ACTIONS SUR LES PAGES :
-visualiser quizz (caroussel des themes, liste des differents themes dispo, ...), le noms des participants, pouvoir s'inscrire, se connecter -> tout le monde peut voir les infos de la page accueil
 
-demander le login ( mail / pseudo), mdp, mdp oublié ? , lien inscription -> page accessible par tout le monde mais reagit differemment en fonction des utilisateurs : - page à conditions d'affichage : si deja connecté redirige vers une autre page ou affiche autre chose ou proposer de se déconnecter - page de co redirige vers la page profil user ou on peut se deconnecter
+1. accueil : Visualiser la galerie photo, acceder au login, mettre en avant deux trois derniers articles du blog -> tout le monde a acces a la page accueil
+2. login : Plugin modal se connecter, mdp, demande mdp oublié, s'inscrire , se deconnecter -> page accessible par tout le monde mais réagit differemment en fonction des        utilisateurs :
+    - les gens connectés resteront sur l'accueil (plugin modal "se connecter")
+    - les gens qui veulent s'inscrire seront dirigés vers le formulaire
+3. formulaire d'inscription : nom, prenom etc, case captcha, mail qui sera envoye pour confirmer l'inscription
+4. page user : changer pseudo, definir avatar, changer mdp, visualisation des sujets ouverts sur le forum -> prive accessible uniquement a l user
+5. contact : envoi de formulaire -> accessible a tout le monde
+6. blog : acceder aux differents categories (evenement, infos astro et infos astrophoto) -> accessible par tout le monde
+7. forum : poster et repondre a des messages, ouvrir un sujet, rechercher un sujet (barre de recherche) -> tout le contenu est accessible uniquement par les users inscrits, si pas inscrit petit message et redirige vers l accueil 
+8. observation : carte geolocalisée, cliquer sur des constellations pour afficher les infos -> 
+9. galerie photo : afficher les photos, soumettre une photo -> accessible a tout le monde sauf pour soumettre, user only
+10. mentions legales & conditions d'utilisation -> visible dans le footer
 
-inscription, acceder au formulaire, case a cocher pour proposer la newsletter -> page accessible par les invités
-
-editer son compte, on doit etre connecter -> page accessible par le user
-
-contacts : envois de formulaire (feedback / pouvoir proposer une question / ...) / situer sur une cartes / differentes adresses (mails, postales, ...) -> page accessible par tout le monde
-
-lister les themes par champs de recherche (sujets par exemple) pour pouvoir ensuite les choisir avec des boutons ou liens -> page accessible par tout le monde
-
-visualiser les noms des quizz en fonction du theme choisis -> page accessible par tout le monde
-
-quizz, mettre information de difficulté et de contexte par questions -> page accessible par les users uniquement (pouvoir se log/inscrire à ce moment là ?) mode démo : pouvoir participer a un quizz accessible sans avoir besoin de s inscrire
-
-visualiser, afficher les scores -> page accessible par les users uniquement
-
-mentions legales
 
 ## ESPACE ADMIN (accessible uniquement a l'admin)
 
-ajouter, supprimer ou modifier :
-un theme
-un quizz
-des questions
-des reponses
+moderer messages du forum
+fermer un sujet sur le forum
+moderer photo galerie
 
 ## VISUELS :
 wireframe.cc
 
-Accueil : https://wireframe.cc/DOxlUS
-Login/inscription : https://wireframe.cc/a1vneH
-Quizz : https://wireframe.cc/4W6QwQ
+Accueil : 
+Login : 
+Forumulaire inscription :
+Page user :
+Contact :
+Blog :
+Forum :
+Observation:
+Galerie photo:

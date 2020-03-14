@@ -76,16 +76,16 @@ fermer un sujet sur le forum
 moderer photo galerie
 ### VISUELS :
 
-Accueil : Chloe
-Page user : Lucile
-Forumulaire inscription : Lucile
-Mot de passe oublié : Lucile 
-Blog : Jc
-Page article : Jc
-Forum : Aziz
-Page sujet : Aziz
-Observation : Lucile
-Galerie photo : Chloe
+- Accueil : Chloe
+- Page user : Lucile
+- Forumulaire inscription : Lucile
+- Mot de passe oublié : Lucile
+- Blog : Jc
+- Page article : Jc
+- Forum : Aziz
+- Page sujet : Aziz
+- Observation : Lucile
+- Galerie photo : Chloe
 
 
 ## Arborescence 
@@ -95,20 +95,20 @@ https://whimsical.com/MnEdB5cEzqAKNxXZ3ZS2rq
 
 ## Routes
 
-Accueil : stardust.com (ou fr)
-Login : stardust.com/login
-Forumulaire inscription : stardust.com/signup
-Mot de passe oublié : stardust.com/password
-Page user : stardust.com/user
-Page fav : stardust.com/user/fav
-Contact : stardust.com/contact
-Blog : stardust.com/blog
-Article : stardust.com/blog/article
-Forum : stardust.com/forum
-Sujet : stardust.com/forum/sujet
-Observation: stardust.com/map
-Galerie photo: stardust.com/pictures
-Admin : stardust.com/admin
+- Accueil : stardust.com (ou fr)
+- Login : stardust.com/login
+- Forumulaire inscription : stardust.com/signup
+- Mot de passe oublié : stardust.com/password
+- Page user : stardust.com/user
+- Page fav : stardust.com/user/fav
+- Contact : stardust.com/contact
+- Blog : stardust.com/blog
+- Article : stardust.com/blog/article
+- Forum : stardust.com/forum
+- Sujet : stardust.com/forum/sujet
+- Observation: stardust.com/map
+- Galerie photo: stardust.com/pictures
+- Admin : stardust.com/admin
 
 ## Technologies
 

@@ -80,8 +80,10 @@ moderer photo galerie
 - Page user : Lucile
 - Forumulaire inscription : Lucile
 - Mot de passe oublié : Lucile
-- Blog : Jc
+- Blog : Jc 
+   - Blog vue mobile : https://whimsical.com/XVHvUpVu4eTrXB6AUmihwb
 - Page article : Jc
+   - Article vue mobile : https://whimsical.com/MEp5SZZW1mXii35fU2BgoJ
 - Forum : Aziz
 - Page sujet : Aziz
 - Observation : Lucile

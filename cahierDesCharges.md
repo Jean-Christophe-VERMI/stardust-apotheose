@@ -81,8 +81,8 @@ moderer photo galerie
   - vue website : https://whimsical.com/WjxHiUenHuXYwPoYoWhKbH
   - vue mobile : https://whimsical.com/BY2TEguZt3eseuoofDA5Vx
 - Forumulaire inscription : Lucile
-  - vue website : 
-- Mot de passe oublié : Lucile
+  - vue website / mobile : https://whimsical.com/WjxHiUenHuXYwPoYoWhKbH
+- Mot de passe oublié : Lucile :https://whimsical.com/WjxHiUenHuXYwPoYoWhKbH
 - Blog : Jc 
    - Blog vue mobile : https://whimsical.com/XVHvUpVu4eTrXB6AUmihwb
    - Blog vue website : https://whimsical.com/3f9FczrqxYRpqKCqNTgr7x
@@ -91,7 +91,7 @@ moderer photo galerie
    - Article vue website : https://whimsical.com/CY8dEFjJR1nCDwtZbFVczA
 - Forum : Aziz
 - Page sujet : Aziz
-- Observation : Lucile
+- Observation : Lucile : https://whimsical.com/WjxHiUenHuXYwPoYoWhKbH
 - Galerie photo : Chloe
 
 

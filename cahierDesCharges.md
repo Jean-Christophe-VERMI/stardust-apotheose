@@ -82,8 +82,10 @@ moderer photo galerie
 - Mot de passe oublié : Lucile
 - Blog : Jc 
    - Blog vue mobile : https://whimsical.com/XVHvUpVu4eTrXB6AUmihwb
+   - Blog vue website : https://whimsical.com/3f9FczrqxYRpqKCqNTgr7x
 - Page article : Jc
    - Article vue mobile : https://whimsical.com/MEp5SZZW1mXii35fU2BgoJ
+   - Article vue website : https://whimsical.com/CY8dEFjJR1nCDwtZbFVczA
 - Forum : Aziz
 - Page sujet : Aziz
 - Observation : Lucile

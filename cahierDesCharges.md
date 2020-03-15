@@ -77,6 +77,7 @@ moderer photo galerie
 ### VISUELS :
 
 - Accueil : Chloe
+   - vue website et mobile : https://whimsical.com/Dz9xrb9Z3qoJA8rFQSPQBb
 - Page user : Lucile 
   - vue website : https://whimsical.com/WjxHiUenHuXYwPoYoWhKbH
   - vue mobile : https://whimsical.com/BY2TEguZt3eseuoofDA5Vx
@@ -93,6 +94,7 @@ moderer photo galerie
 - Page sujet : Aziz
 - Observation : Lucile
 - Galerie photo : Chloe
+   - vue website et mobile : https://whimsical.com/RyhFEKrNqt6QDrCMttpuFC
 
 
 ## Arborescence 

@@ -79,8 +79,7 @@ moderer photo galerie
 - Accueil : Chloe
    - vue website et mobile : https://whimsical.com/Dz9xrb9Z3qoJA8rFQSPQBb
 - Page user : Lucile 
-  - vue website : https://whimsical.com/WjxHiUenHuXYwPoYoWhKbH
-  - vue mobile : https://whimsical.com/BY2TEguZt3eseuoofDA5Vx
+  - vue website et mobile : https://whimsical.com/WjxHiUenHuXYwPoYoWhKbH
 - Forumulaire inscription : Lucile
   - vue website : 
 - Mot de passe oublié : Lucile

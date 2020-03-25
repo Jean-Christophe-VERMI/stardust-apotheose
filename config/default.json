@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://stardust-admin:stardust@cluster0-defua.mongodb.net/Stardust?retryWrites=true&w=majority",
+  "jwtSecret": "secret"
+}

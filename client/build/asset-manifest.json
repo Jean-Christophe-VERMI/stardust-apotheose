@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6c02e264.chunk.css",
+    "main.js": "/static/js/main.65bd8ce2.chunk.js",
+    "main.js.map": "/static/js/main.65bd8ce2.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b02ba4a4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b02ba4a4.js.map",
+    "static/js/2.ab4f6273.chunk.js": "/static/js/2.ab4f6273.chunk.js",
+    "static/js/2.ab4f6273.chunk.js.map": "/static/js/2.ab4f6273.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.1ca489aa54a4a1361729020b2e9518c0.js": "/precache-manifest.1ca489aa54a4a1361729020b2e9518c0.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.6c02e264.chunk.css.map": "/static/css/main.6c02e264.chunk.css.map",
+    "static/js/2.ab4f6273.chunk.js.LICENSE.txt": "/static/js/2.ab4f6273.chunk.js.LICENSE.txt",
+    "static/media/cosmos-3.jpg": "/static/media/cosmos-3.b8f1eb11.jpg",
+    "static/media/helmet.svg": "/static/media/helmet.172f52c0.svg",
+    "static/media/planet.svg": "/static/media/planet.e8c71195.svg",
+    "static/media/register-bg.jpg": "/static/media/register-bg.2d4edad2.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b02ba4a4.js",
+    "static/js/2.ab4f6273.chunk.js",
+    "static/css/main.6c02e264.chunk.css",
+    "static/js/main.65bd8ce2.chunk.js"
+  ]
+}

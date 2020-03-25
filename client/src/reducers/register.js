@@ -1,6 +1,7 @@
 import {
   SEND_USER,
   MODIFY_FIELD,
+  ERROR_MESSAGE,
 } from 'src/actions/user';
 
 export const initialState = {
@@ -9,6 +10,8 @@ export const initialState = {
   password: '',
   city: '',
   users: [],
+  items: [],
+  errorMessage: '',
 };
 
 const register = (state = initialState, action = {}) => {
@@ -22,6 +25,11 @@ const register = (state = initialState, action = {}) => {
       return {
         ...state,
         [action.key]: action.value,
+      };
+    case ERROR_MESSAGE:
+      return {
+        ...state,
+        errorMessage: action.value,
       };
     default:
       return state;

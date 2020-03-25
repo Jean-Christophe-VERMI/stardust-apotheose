@@ -12,6 +12,7 @@ const Register = ({
   city,
   changeValue,
   sendUser,
+  errorMessage,
 }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -67,6 +68,7 @@ Register.propTypes = {
   city: PropTypes.string.isRequired,
   changeValue: PropTypes.func.isRequired,
   sendUser: PropTypes.func.isRequired,
+  ErrorMessage: PropTypes.string.isRequired,
 };
 
 export default Register;

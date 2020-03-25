@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { SEND_USER } from 'src/actions/user';
+import { SEND_USER, errorMsg } from 'src/actions/user';
 
 
 const registerMiddleware = (store) => (next) => (action) => {
@@ -17,12 +17,12 @@ const registerMiddleware = (store) => (next) => (action) => {
         },
       })
         .then((response) => {
-          console.log('la requete est ok');
+          console.log('la requete est ok, msg confirmation e-mail');
           console.log(response.data);
         })
         .catch((error) => {
-          console.log('j ai pas l email');
-          console.error(error);
+          console.error(error.data);
+          store.dispach(errorMsg(error.data));
         });
       next(action);
       break;

@@ -10,6 +10,7 @@ const Thread = () => (
               rows="3" cols="33">
         </textarea>
     </form>
+    
   </div>
 );
 

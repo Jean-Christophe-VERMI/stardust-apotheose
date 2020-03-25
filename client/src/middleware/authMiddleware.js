@@ -1,7 +1,7 @@
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 
-import { LOGIN, LOGOUT, addUserInfos } from 'src/actions/user';
+import { LOGIN, LOGOUT, addUserInfos, emptyUser } from 'src/actions/user';
 
 const auth = store => next => action => {
   switch (action.type) {
@@ -21,28 +21,13 @@ const auth = store => next => action => {
         .catch(error => {
           console.log(error);
         });
-      axios({
-        method: 'get',
-        url: 'http://localhost:5000/login',
-        data: {
-          user: 'user',
-        },
-      })
-        .then((response) => {
-          console.log(response.data);
-        });
+
       // je laisse passer tout de suite au middleware/reducer suivant
       next(action);
       break;
     }
     case LOGOUT:
-      axios.post(
-        'http://localhost:5000/logout',
-        {},
-        {
-          withCredentials: true,
-        }
-      );
+      store.dispatch(emptyUser());
       next(action);
       break;
     default:

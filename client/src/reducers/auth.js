@@ -1,12 +1,6 @@
-import {
-  ADD_USER_INFOS,
-} from 'src/actions/user';
+import { ADD_USER_INFOS, EMPTY_USER } from 'src/actions/user';
 
-export const initialState = {
-  name: 'NAME-FROM-TOKEN',
-  email: 'EMAIL-FROM-TOKEN',
-  city: '',
-};
+export const initialState = {};
 
 const auth = (state = initialState, action = {}) => {
   switch (action.type) {

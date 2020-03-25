@@ -2,6 +2,8 @@ import {
   SEND_USER,
   MODIFY_FIELD,
   ERROR_MESSAGE,
+  ERROR_MESSAGE_TWO,
+  VALIDATION_SIGNUP,
 } from 'src/actions/user';
 
 export const initialState = {
@@ -12,6 +14,9 @@ export const initialState = {
   users: [],
   items: [],
   errorMessage: '',
+  errorMessage2: '',
+  validationSignup: false,
+  signupMessage: 'Inscription confirmé, validez-votre adresse e-mail.'
 };
 
 const register = (state = initialState, action = {}) => {
@@ -30,6 +35,16 @@ const register = (state = initialState, action = {}) => {
       return {
         ...state,
         errorMessage: action.value,
+      };
+    case ERROR_MESSAGE_TWO:
+      return {
+        ...state,
+        errorMessage2: action.value,
+      };
+    case VALIDATION_SIGNUP:
+      return {
+        ...state,
+        validationSignup: true,
       };
     default:
       return state;

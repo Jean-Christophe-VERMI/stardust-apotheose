@@ -6,12 +6,12 @@ const NavStyled = styled.nav`
     width : 100%;
     top : 10px;
     z-index : 6;
-    position : sticky;
     display : flex;
     justify-content : space-between;
     align-items : center;
     padding : 0rem 1rem ;
     color : white;
+    position: sticky;
 
     nav {
       display : flex;
@@ -58,11 +58,6 @@ const NavStyled = styled.nav`
 
     .loginForm {
         max-width : 390px;
-        display: flex;
-        flex-direction : row;
-        flex-wrap: wrap;
-        justify-content : space-between;
-        vertical-align : middle;
         animation: fadein 2s;
         transition: transform 0.3s ease-in-out;
     }
@@ -73,11 +68,6 @@ const NavStyled = styled.nav`
 
     .nav-menu {
         max-width : 390px;
-        display: flex;
-        flex-direction : row;
-        flex-wrap: wrap;
-        justify-content : space-between;
-        vertical-align : middle;
         animation: fadein 2s;
         transition: transform 0.3s ease-in-out;
     }

@@ -1,6 +1,7 @@
 .login-form {
   
 }
+
 .login-form-element {
   width: 100%;
   display: flex;
@@ -8,15 +9,32 @@
   align-items: flex-start;
 }
 
+.message-profil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: .2rem;
+  
+}
+
+.profil-link {
+  padding: .3rem;
+  color : #60a3bc;
+  font-weight: bold;
+}
+
 .login-form-message {
   text-align: right;
   margin: .3em 1em;
 }
+
 .login-form-logged {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
+
 .login-form-button {
   font-weight: 700;
   font-size: 1em;
@@ -26,15 +44,16 @@
   border: 0;
   padding: .7em;
   height: 2.5em;
-  margin-top: 0.3rem;
   margin-left: 0.3rem;
 }
+
 .field-log{
   max-width: 250px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
+
 .link-log{
   width: 100%;
   text-align: left;

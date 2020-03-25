@@ -29,6 +29,11 @@ export const RegisterStyled = styled.div`
       font-size: 1.5rem;
     }
 
+    p{
+      color: white;
+      text-align: center;
+    }
+
   }
 
   .terms-button-submit {

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { SEND_USER, errorMsg } from 'src/actions/user';
+import { SEND_USER, errorMsg, errorMsg2, validationSignup } from 'src/actions/user';
 
 
 const registerMiddleware = (store) => (next) => (action) => {
@@ -17,18 +17,16 @@ const registerMiddleware = (store) => (next) => (action) => {
         },
       })
         .then((response) => {
-          console.log('la requete est ok, msg confirmation e-mail');
           console.log(response.data);
+          store.dispatch(validationSignup());
         })
         .catch((error) => {
           if (error.response) {
-
             const errorMessage = error.response.data.errors[0].msg;
-            // const errors = error.response.errors;
-            // const errorMessage = errors.map(function (el) { return el.msg; });
-        
-            // console.log(errorMessage);
+            const errorMessage2 = error.response.data.errors[1].msg;
+
             store.dispatch(errorMsg(errorMessage));
+            store.dispatch(errorMsg2(errorMessage2));
           }
           
         });

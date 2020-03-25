@@ -24,20 +24,20 @@ const Login = ({
     <div className='login-form'>
       {isLogged && (
         <div className='login-form-logged'>
-          <p className='login-form-element'>
-            {loggedMessage}
-            <NavLink exact to='/profil'>
+          <div className="message-profil">
+            <p>{loggedMessage}</p>
+            <NavLink className="profil-link" exact to='/profil'>
               Mon profil
             </NavLink>
+          </div>
             <button
               type='button'
               className='login-form-button'
               onClick={handleLogout}
             >
-              Déconnexion
+            Déconnexion
             </button>
-          </p>
-        </div>
+      </div>
       )}
       {!isLogged && (
         <form className='login-form-element' onSubmit={handleSubmit}>

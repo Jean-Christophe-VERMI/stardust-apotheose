@@ -13,6 +13,9 @@ const Register = ({
   changeValue,
   sendUser,
   errorMessage,
+  errorMessage2,
+  validationSignup,
+  signupMessage,
 }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -24,6 +27,10 @@ const Register = ({
         <Form className="register-form-element" onSubmit={handleSubmit}>
           <h1>INSCRIPTION</h1>
           <p>{errorMessage}</p>
+          <p>{errorMessage2}</p>
+          {validationSignup && (
+          <p>{signupMessage}</p>
+          )}
           <Field
             name="name"
             placeholder="Nom"
@@ -51,7 +58,7 @@ const Register = ({
           />
           <div className="terms-button-submit">
             <Form.Field>
-              <Checkbox className="terms" label='I agree to the Terms and Conditions' />
+              <Checkbox className="terms" label="J'accepte les termes et conditions" />
             </Form.Field>
             <Button className="button-submit" type="submit">ENREGISTRER</Button>
           </div>
@@ -70,6 +77,9 @@ Register.propTypes = {
   changeValue: PropTypes.func.isRequired,
   sendUser: PropTypes.func.isRequired,
   errorMessage: PropTypes.string.isRequired,
+  errorMessage2: PropTypes.string.isRequired,
+  validationSignup: PropTypes.bool.isRequired,
+  signupMessage: PropTypes.string.isRequired,
 };
 
 export default Register;

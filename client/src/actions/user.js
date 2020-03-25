@@ -7,6 +7,8 @@ export const SEND_USER = 'SEND_USER';
 export const ADD_USER_INFOS = 'ADD_USER_INFOS';
 export const EMPTY_USER = 'EMPTY_USER';
 export const ERROR_MESSAGE = 'ERROR_MESSAGE';
+export const ERROR_MESSAGE_TWO = 'ERROR_MESSAGE_TWO';
+export const VALIDATION_SIGNUP = 'VALIDATION_SIGNUP';
 
 export const changeValue = (value, name) => ({
   type: CHANGE_VALUE,
@@ -49,4 +51,13 @@ export const emptyUser = () => ({
 export const errorMsg = (value) => ({
   type: ERROR_MESSAGE,
   value,
+});
+
+export const errorMsg2 = (value) => ({
+  type: ERROR_MESSAGE_TWO,
+  value,
+});
+
+export const validationSignup = () => ({
+  type: VALIDATION_SIGNUP,
 });

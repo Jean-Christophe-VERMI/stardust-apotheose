@@ -11,15 +11,15 @@ const Token = require('../models/Token');
 router.post(
   '/',
   [
-    check('name', 'Please add name')
+    check('name', 'Veuillez ajouter un nom')
       .not()
       .isEmpty(),
-    check('email', 'Please include a valid email').isEmail(),
+    check('email', 'Veuillez entrer un e-mail valide').isEmail(),
     check(
       'password',
-      'Please enter a password with 6 or more characters'
+      'Veuillez entrer un mot de passe avec 6 caracteres minimum'
     ).isLength({ min: 6 }),
-    check('city', 'Please add your current city')
+    check('city', 'Veuillez ajouter une votre ville')
       .not()
       .isEmpty(),
   ],

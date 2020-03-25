@@ -1,11 +1,6 @@
-import {
-  CHANGE_VALUE,
-  LOGOUT,
-  LOGIN,
-} from 'src/actions/user';
+import { CHANGE_VALUE, LOGOUT, LOGIN } from 'src/actions/user';
 
 export const initialState = {
-  name: '',
   email: '',
   password: '',
   isLogged: false,

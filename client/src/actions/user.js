@@ -5,6 +5,7 @@ export const LOGOUT = 'LOGOUT';
 export const CHECK_IS_LOGGED = 'CHECK_IS_LOGGED';
 export const SEND_USER = 'SEND_USER';
 export const ADD_USER_INFOS = 'ADD_USER_INFOS';
+export const EMPTY_USER = 'EMPTY_USER';
 
 export const changeValue = (value, name) => ({
   type: CHANGE_VALUE,
@@ -36,6 +37,10 @@ export const checkIsLogged = () => ({
   type: CHECK_IS_LOGGED,
 });
 
-export const addUserInfos = () => ({
+export const addUserInfos = user => ({
   type: ADD_USER_INFOS,
+  payload: user,
+});
+export const emptyUser = () => ({
+  type: EMPTY_USER,
 });

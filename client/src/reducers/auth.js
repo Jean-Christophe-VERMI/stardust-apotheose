@@ -13,8 +13,13 @@ const auth = (state = initialState, action = {}) => {
     case ADD_USER_INFOS:
       return {
         ...state,
-        isLogged: true,
+        name: action.payload.name,
+        email: action.payload.email,
+        city: action.payload.city,
+        id: action.payload.id,
       };
+    case EMPTY_USER:
+      return {};
     default:
       return state;
   }

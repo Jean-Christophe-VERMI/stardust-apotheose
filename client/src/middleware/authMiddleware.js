@@ -1,5 +1,5 @@
 import axios from 'axios';
-//import jwtDecode from 'jwt-decode';
+import jwtDecode from 'jwt-decode';
 
 import { LOGIN, LOGOUT, addUserInfos } from 'src/actions/user';
 
@@ -15,9 +15,8 @@ const auth = store => next => action => {
         },
       })
         .then(response => {
-          console.log('j affiche la page profil');
-          console.log(response.data.access_token);
-          store.dispatch(addUserInfos());
+          const { user } = jwtDecode(response.data.token);
+          store.dispatch(addUserInfos(user));
         })
         .catch(error => {
           console.log(error);

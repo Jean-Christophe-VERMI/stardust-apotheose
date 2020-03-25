@@ -23,6 +23,7 @@ const Register = ({
       <div id="register-form">
         <Form className="register-form-element" onSubmit={handleSubmit}>
           <h1>INSCRIPTION</h1>
+          <p>{errorMessage}</p>
           <Field
             name="name"
             placeholder="Nom"
@@ -68,7 +69,7 @@ Register.propTypes = {
   city: PropTypes.string.isRequired,
   changeValue: PropTypes.func.isRequired,
   sendUser: PropTypes.func.isRequired,
-  ErrorMessage: PropTypes.string.isRequired,
+  errorMessage: PropTypes.string.isRequired,
 };
 
 export default Register;

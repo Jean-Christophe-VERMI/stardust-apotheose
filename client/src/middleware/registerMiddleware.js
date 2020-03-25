@@ -21,8 +21,16 @@ const registerMiddleware = (store) => (next) => (action) => {
           console.log(response.data);
         })
         .catch((error) => {
-          console.error(error.data);
-          store.dispach(errorMsg(error.data));
+          if (error.response) {
+
+            const errorMessage = error.response.data.errors[0].msg;
+            // const errors = error.response.errors;
+            // const errorMessage = errors.map(function (el) { return el.msg; });
+        
+            // console.log(errorMessage);
+            store.dispatch(errorMsg(errorMessage));
+          }
+          
         });
       next(action);
       break;

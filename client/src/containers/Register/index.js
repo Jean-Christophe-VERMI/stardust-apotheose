@@ -9,6 +9,7 @@ const mapStateToProps = (state) => ({
   email: state.register.email,
   password: state.register.password,
   city: state.register.city,
+  errorMessage: state.register.errorMessage,
 });
 
 const mapDispatchToProps = (dispatch) => ({

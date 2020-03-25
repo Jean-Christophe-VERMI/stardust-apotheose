@@ -46,6 +46,7 @@ export const emptyUser = () => ({
   type: EMPTY_USER,
 });
 
-export const errorMsg = () => ({
+export const errorMsg = (value) => ({
   type: ERROR_MESSAGE,
+  value,
 });

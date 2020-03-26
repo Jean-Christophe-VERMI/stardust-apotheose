@@ -35,7 +35,6 @@ background-color: #c7ecee;
   border: none;
   border-radius: .3em;
   height: 2rem;
-  
   }
 
 

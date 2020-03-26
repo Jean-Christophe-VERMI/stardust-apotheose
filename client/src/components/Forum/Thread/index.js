@@ -1,17 +1,13 @@
 import React from 'react';
 
+import ThreadStyled from './ThreadStyled';
+
 const Thread = () => (
-  <div className="thread">
-    <form>
-      <label>Sujet</label>
-        <input type="text"></input>
-      <label>Description</label>
-        <textarea id="story" name="description"
-              rows="3" cols="33">
-        </textarea>
-    </form>
-    
-  </div>
+  <ThreadStyled>
+    <div className="thread">
+      <p>Sujet</p>
+    </div>
+  </ThreadStyled>
 );
 
 export default Thread;

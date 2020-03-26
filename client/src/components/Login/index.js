@@ -16,7 +16,7 @@ const Login = ({
   isLogged,
   loggedMessage,
 }) => {
-  const handleSubmit = evt => {
+  const handleSubmit = (evt) => {
     evt.preventDefault();
     handleLogin();
   };

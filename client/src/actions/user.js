@@ -40,7 +40,7 @@ export const checkIsLogged = () => ({
   type: CHECK_IS_LOGGED,
 });
 
-export const addUserInfos = user => ({
+export const addUserInfos = (user) => ({
   type: ADD_USER_INFOS,
   payload: user,
 });

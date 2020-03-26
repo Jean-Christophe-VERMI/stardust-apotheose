@@ -8,7 +8,7 @@ import {
 const threadMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case FETCH_THREADS: {
-      axios.get('http://localhost:5000/forum/threads')
+      axios.get('http://localhost:5000/forum/')
         .then((response) => {
           store.dispatch(saveThreads(response.data));
         })

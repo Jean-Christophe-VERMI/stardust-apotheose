@@ -4,11 +4,10 @@ import Thread from 'src/containers/Thread';
 import ThreadsStyled from './ThreadsStyled';
 
 const Threads = ({
-  threads,
   fetchThreads,
+  threads,
 }) => {
   useEffect(fetchThreads, []);
-
   return (
     <ThreadsStyled>
       <div className="thread">
@@ -21,12 +20,12 @@ const Threads = ({
 };
 
 Threads.propTypes = {
+  fetchThreads: PropTypes.func.isRequired,
   threads: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
     }),
   ).isRequired,
-  fetchThreads: PropTypes.func.isRequired,
 };
 
 export default Threads;

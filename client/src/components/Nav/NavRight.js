@@ -13,7 +13,7 @@ const NavRight = ({
         <NavLink exact to="/skymap" className="link-menu">
           SkyMap
         </NavLink>
-        <NavLink exact to="/forum" className="link-menu">
+        <NavLink exact to="/forum/threads" className="link-menu">
           Forum
         </NavLink>
       </div>

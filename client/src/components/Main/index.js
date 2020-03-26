@@ -5,7 +5,9 @@ import HomePage from 'src/components/HomePage';
 import Register from 'src/containers/Register';
 import UserProfil from 'src/components/UserProfil';
 import SkyMap from 'src/components/SkyMap';
+import Forum from 'src/containers/Forum';
 import MainStyled from './MainStyled';
+
 
 const Main = () => (
   <MainStyled>
@@ -13,6 +15,7 @@ const Main = () => (
     <Route path="/register" component={Register} />
     <Route path="/skyMap" component={SkyMap} />
     <Route path="/profil" component={UserProfil} />
+    <Route path="/forum/threads" component={Forum} />
   </MainStyled>
 );
 

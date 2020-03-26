@@ -9,7 +9,6 @@ const HomePageStyled = styled.header`
   background-size: cover;
   margin-top: -65px;
   
-
   .header{
     background-color: rgba(0, 0, 0, 0.3);
     height: 100vh;
@@ -23,6 +22,7 @@ const HomePageStyled = styled.header`
     color: white;
     font-weight: bold;
     font-size: 5rem;
+
   }
 
 `;

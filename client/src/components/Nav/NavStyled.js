@@ -11,7 +11,7 @@ const NavStyled = styled.nav`
     align-items : center;
     padding : 0rem 1rem ;
     color : white;
-    position: sticky;
+    position: fixed;
 
     nav {
       display : flex;

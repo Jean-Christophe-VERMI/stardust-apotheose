@@ -28,7 +28,6 @@ const registerMiddleware = (store) => (next) => (action) => {
             store.dispatch(errorMsg(errorMessage));
             store.dispatch(errorMsg2(errorMessage2));
           }
-          
         });
       next(action);
       break;

@@ -68,6 +68,7 @@
     "react-scroll-to-component": "^1.0.2",
     "redux": "^4.0.5",
     "semantic-ui-react": "^0.88.2",
+    "slugify": "^1.4.0",
     "styled-components": "*",
     "three": "^0.114.0"
   },

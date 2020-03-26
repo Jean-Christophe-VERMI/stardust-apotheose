@@ -1,5 +1,5 @@
 import React from 'react';
-import Thread from 'src/components/Forum/Thread';
+import Threads from 'src/containers/Threads';
 import NewThread from 'src/components/NewThread';
 import PropTypes from 'prop-types';
 import ForumStyled from './ForumStyled';
@@ -11,9 +11,8 @@ const Forum = ({
     {isLogged && (
       <NewThread />
     )}
-    <Thread />
+    <Threads />
   </ForumStyled>
-
 );
 
 Forum.propTypes = {

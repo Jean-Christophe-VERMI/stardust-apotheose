@@ -11,9 +11,11 @@ const UserProfil = styled.section`
 
   .container {
     display: flex;
+    min-height: 80vh;
     justify-content: space-between;
     width: 70%;
     margin: auto auto;
+    padding: 30px;
   }
 
 `;

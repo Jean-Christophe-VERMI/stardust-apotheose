@@ -5,7 +5,9 @@ import PostsStyled from './PostsStyled';
 const Posts = () => (
   <PostsStyled>
     <div className="posts-infos">
-      Posts
+      <p>Posts</p>
+      <p>Posts</p>
+      <p>Posts</p>
     </div>
   </PostsStyled>
 

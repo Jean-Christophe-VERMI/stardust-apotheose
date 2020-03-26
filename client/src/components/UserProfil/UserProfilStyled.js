@@ -9,6 +9,13 @@ const UserProfil = styled.section`
   background-size: cover;
   min-height : 100vh;
 
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto auto;
+  }
+
 `;
 
 export default UserProfil;

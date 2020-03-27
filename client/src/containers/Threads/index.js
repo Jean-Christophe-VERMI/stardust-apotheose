@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
-import Threads from 'src/components/Forum/Threads';
+import Threads from 'src/components/Threads';
 
 const mapStateToProps = (state) => ({
-  list: state.threads.list
+  list: state.threads.list,
 });
 
 const mapDispatchToProps = () => ({});

@@ -14,10 +14,10 @@ const Forum = ({
       {isLogged && (
         <NewThread />
       )}
-    <Threads />
+      <Threads />
     </ForumStyled>
   );
-} 
+};
 
 Forum.propTypes = {
   fetchThreads: PropTypes.func.isRequired,

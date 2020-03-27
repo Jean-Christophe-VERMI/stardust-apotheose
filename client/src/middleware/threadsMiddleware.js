@@ -10,7 +10,6 @@ const threadMiddleware = (store) => (next) => (action) => {
     case FETCH_THREADS: {
       axios.get('http://localhost:5000/forum/')
         .then((response) => {
-          console.log(response.data)
           store.dispatch(saveThreads(response.data));
         })
         .catch((error) => {

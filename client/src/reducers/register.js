@@ -16,7 +16,7 @@ export const initialState = {
   errorMessage: '',
   errorMessage2: '',
   validationSignup: false,
-  signupMessage: 'Inscription confirmé, validez-votre adresse e-mail.'
+  signupMessage: 'Inscription confirmé, validez-votre adresse e-mail.',
 };
 
 const register = (state = initialState, action = {}) => {

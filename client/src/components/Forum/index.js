@@ -1,22 +1,26 @@
-import React from 'react';
-import Thread from 'src/components/Forum/Thread';
-import NewThread from 'src/components/NewThread';
+import React, { useEffect } from 'react';
+import Threads from 'src/containers/Threads';
+import NewThread from 'src/containers/NewThread';
 import PropTypes from 'prop-types';
 import ForumStyled from './ForumStyled';
 
 const Forum = ({
   isLogged,
-}) => (
-  <ForumStyled>
-    {isLogged && (
-      <NewThread />
-    )}
-    <Thread />
-  </ForumStyled>
-
-);
+  fetchThreads,
+}) => {
+  useEffect(fetchThreads, []);
+  return (
+    <ForumStyled>
+      {isLogged && (
+        <NewThread />
+      )}
+      <Threads />
+    </ForumStyled>
+  );
+};
 
 Forum.propTypes = {
+  fetchThreads: PropTypes.func.isRequired,
   isLogged: PropTypes.bool.isRequired,
 };
 

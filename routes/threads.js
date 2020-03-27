@@ -15,7 +15,7 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { text, author, active, title } = req.body;
+    const { author, active, title } = req.body;
 
     try {
       const newThread = new Thread({
@@ -24,14 +24,6 @@ router.post(
         title,
       });
 
-      const newComment = new Comment({
-        text,
-        author,
-        createdAt: Date.now(),
-      });
-
-      await newComment.save();
-      newThread.comments.push(newComment._id);
       await newThread.save();
 
       res.send(newThread);

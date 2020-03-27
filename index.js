@@ -21,7 +21,7 @@ const users = require('./routes/users');
 app.use('/register', register);
 app.use('/login', login);
 app.use('/constellations', constellations);
-app.use('/forum/threads', threads);
+app.use('/forum', threads);
 app.use('/users', users);
 
 const PORT = process.env.PORT || 5000;

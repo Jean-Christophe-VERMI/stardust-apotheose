@@ -1,9 +1,13 @@
 import axios from 'axios';
 
-import { SEND_USER, errorMsg, errorMsg2, validationSignup } from 'src/actions/user';
+import {
+  SEND_USER,
+  errorMsg,
+  errorMsg2,
+  validationSignup,
+} from 'src/actions/user';
 
-
-const registerMiddleware = (store) => (next) => (action) => {
+const registerMiddleware = store => next => action => {
   switch (action.type) {
     case SEND_USER: {
       axios({
@@ -16,11 +20,11 @@ const registerMiddleware = (store) => (next) => (action) => {
           city: store.getState().register.city,
         },
       })
-        .then((response) => {
+        .then(response => {
           console.log(response.data);
           store.dispatch(validationSignup());
         })
-        .catch((error) => {
+        .catch(error => {
           if (error.response) {
             const errorMessage = error.response.data.errors[0].msg;
             const errorMessage2 = error.response.data.errors[1].msg;
@@ -28,7 +32,6 @@ const registerMiddleware = (store) => (next) => (action) => {
             store.dispatch(errorMsg(errorMessage));
             store.dispatch(errorMsg2(errorMessage2));
           }
-          
         });
       next(action);
       break;
@@ -36,6 +39,7 @@ const registerMiddleware = (store) => (next) => (action) => {
     default:
       console.log('Je laisse passer cette action: ', action);
       next(action);
+      break;
   }
 };
 

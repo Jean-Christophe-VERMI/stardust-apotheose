@@ -47,7 +47,7 @@ router.get(
 
   async (req, res) => {
     try {
-      const constellations = await Constellation.findAll();
+      const constellations = await Constellation.find({});
       res.json(constellations);
     } catch (err) {
       console.error(err.message);

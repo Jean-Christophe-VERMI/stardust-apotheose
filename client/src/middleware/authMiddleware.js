@@ -31,8 +31,9 @@ const auth = store => next => action => {
       next(action);
       break;
     default:
-      console.log('AUTH MIDDLEWARE: ', action, 'passe, je laisse paser');
+      console.log('AUTH MIDDLEWARE: ', action, 'passe, je laisse passer');
       next(action);
+      break;
   }
 };
 

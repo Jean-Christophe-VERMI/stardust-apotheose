@@ -6,6 +6,7 @@ import { newThread, changeValue } from 'src/actions/thread';
 
 const mapStateToProps = (state) => ({
   title: state.threads.title,
+  active: state.threads.active,
 });
 
 const mapDispatchToProps = (dispatch) => ({

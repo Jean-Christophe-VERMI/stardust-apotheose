@@ -2,7 +2,9 @@ import { SAVE_THREADS, NEW_THREAD, CHANGE_VALUE } from 'src/actions/thread';
 
 export const initialState = {
   title: '',
+  active: true,
   list: [],
+  newThread: [],
 };
 
 const threads = (state = initialState, action = {}) => {
@@ -20,7 +22,7 @@ const threads = (state = initialState, action = {}) => {
     case NEW_THREAD:
       return {
         ...state,
-        [action.name]: action.value,
+        [action.key]: action.value,
       };
     default:
       return state;

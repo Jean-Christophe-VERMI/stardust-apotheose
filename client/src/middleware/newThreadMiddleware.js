@@ -8,14 +8,16 @@ const newThreadMiddleware = (store) => (next) => (action) => {
     case NEW_THREAD: {
       axios({
         method: 'post',
-        url: 'http://localhost:5000/forum',
+        url: 'http://localhost:5000/forum/',
         data: {
+          author: store.getState().auth.name,
           title: store.getState().threads.title,
+          active: store.getState().threads.active,
         },
       })
         .then((response) => {
           console.log(response.data);
-          store.dispatch(newThread());
+          store.dispatch(newThread(response.data));
         })
         .catch((error) => {
           console.log(error);

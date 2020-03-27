@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Threads from 'src/containers/Threads';
-import NewThread from 'src/components/NewThread';
+import NewThread from 'src/containers/NewThread';
 import PropTypes from 'prop-types';
 import ForumStyled from './ForumStyled';
 

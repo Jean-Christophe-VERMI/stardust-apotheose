@@ -6,15 +6,6 @@ const NewThreadStyled = styled.div`
   border: 1px solid #dddddd;
 
 
-  h1{
-    font-size: 1.5 rem;
-    text-transform: uppercase;
-  }
-
-  p{
-    
-  }
-
 `;
 
 export default NewThreadStyled;

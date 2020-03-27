@@ -10,7 +10,7 @@ const newThreadMiddleware = (store) => (next) => (action) => {
         method: 'post',
         url: 'http://localhost:5000/forum/',
         data: {
-          author: store.getState().auth.name,
+          author: store.getState().auth.id,
           title: store.getState().threads.title,
           active: store.getState().threads.active,
         },

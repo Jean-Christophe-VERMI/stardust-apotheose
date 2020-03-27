@@ -4,7 +4,6 @@ export const initialState = {
   title: '',
   active: true,
   list: [],
-  newThread: [],
 };
 
 const threads = (state = initialState, action = {}) => {
@@ -22,7 +21,7 @@ const threads = (state = initialState, action = {}) => {
     case NEW_THREAD:
       return {
         ...state,
-        [action.key]: action.value,
+        title: action.value,
       };
     default:
       return state;

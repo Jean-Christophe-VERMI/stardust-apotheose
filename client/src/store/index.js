@@ -7,7 +7,7 @@ import logMiddleware from '../middleware/logMiddleware';
 import registerMiddleware from '../middleware/registerMiddleware';
 import threadsMiddleware from '../middleware/threadsMiddleware';
 import authMiddleware from '../middleware/authMiddleware';
-
+import newThreadMiddleware from '../middleware/newThreadMiddleware';
 
 // == Enhancers
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -18,6 +18,7 @@ const enhancers = composeEnhancers(
     registerMiddleware,
     authMiddleware,
     threadsMiddleware,
+    newThreadMiddleware,
   ),
 );
 

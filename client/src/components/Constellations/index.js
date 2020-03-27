@@ -1,13 +1,15 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import ConstellationStyled from './ConstellationStyled';
+import Modal from './ModalConstellations';
 
 const InfoConstellation = () => {
   const [name, setName] = useState('');
   const [constellations, setConstellations] = useState([]);
   const [filteredConstellations, setFilteredConstellations] = useState([]);
+  const [selectedConstellation, setSelectedConstellation] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   const fetchConstellations = async () => {
     const { data } = await axios({
@@ -19,6 +21,11 @@ const InfoConstellation = () => {
   const getConstellations = async () => {
     const data = await fetchConstellations();
     setConstellations(data);
+  };
+
+  const handleModal = c => {
+    setSelectedConstellation(c);
+    setShowModal(true);
   };
 
   useEffect(() => {
@@ -44,21 +51,26 @@ const InfoConstellation = () => {
           autoComplete='off'
         />
         {constellations.length ? (
-          <>
+          <div className='constellations-list'>
             {name &&
-              filteredConstellations.map(c => <p key={c.id}>{c.frenchName}</p>)}
-          </>
+              filteredConstellations.map((c, index) => (
+                <div onClick={() => handleModal(c)}>
+                  <p key={`constellation-${index}`}>{c.frenchName}</p>
+                </div>
+              ))}
+          </div>
         ) : (
           <p>Loading</p>
         )}
       </div>
+      {selectedConstellation && (
+        <Modal
+          active={showModal}
+          setShowModal={setShowModal}
+          constellation={selectedConstellation}
+        ></Modal>
+      )}
     </ConstellationStyled>
   );
 };
-
-InfoConstellation.propTypes = {
-  getConstellations: PropTypes.func.isRequired,
-  constellations: PropTypes.array.isRequired,
-};
-
 export default InfoConstellation;

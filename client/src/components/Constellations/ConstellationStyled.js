@@ -13,6 +13,11 @@ const ConstellationStyled = styled.div`
     text-align: left;
     margin-bottom: 0.5rem;
   }
+
+  .constellations-list {
+    overflow-y: auto;
+    max-height: 500px;
+  }
 `;
 
 export default ConstellationStyled;

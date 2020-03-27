@@ -26,9 +26,7 @@ const SkyMap = () => (
         ></iframe>
       </div>
     </div>
-    <div className='infos-api'>
-      <Constellations />
-    </div>
+    <Constellations />
   </SkyMapStyled>
 );
 

@@ -1,7 +1,7 @@
 import { SAVE_THREADS } from 'src/actions/thread';
 
 export const initialState = {
-  thread: [],
+  list: [],
 };
 
 const threads = (state = initialState, action = {}) => {
@@ -9,7 +9,7 @@ const threads = (state = initialState, action = {}) => {
     case SAVE_THREADS:
       return {
         ...state,
-        thread: action.thread,
+        list: action.thread,
       };
     default:
       return state;

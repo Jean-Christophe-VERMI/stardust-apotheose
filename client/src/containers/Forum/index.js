@@ -6,9 +6,9 @@ const mapStateToProps = (state) => ({
   isLogged: state.login.isLogged,
 });
 
-const mapDispatchToProps = (store) => ({
+const mapDispatchToProps = (dispatch) => ({
   fetchThreads: () => {
-    store.dispatch(fetchThreads());
+    dispatch(fetchThreads());
   },
 });
 

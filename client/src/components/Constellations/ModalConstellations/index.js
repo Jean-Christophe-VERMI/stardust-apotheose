@@ -13,13 +13,10 @@ const Modal = ({ active, setShowModal, constellation }) => {
             <button onClick={() => setShowModal(false)}>Close</button>
             <div className='modal-text'>
               <p>Etoile principale : {constellation.mainStar}</p>
-
+              <p>Nom Latin : {constellation.latinName}</p>
               <p>Saison :{constellation.season}</p>
-
               <p> Hemisphere : {constellation.hemisphereQuadrant}</p>
-
               <p>Origine : {constellation.origin}</p>
-
               <p>Declinaison : {constellation.declinaison}</p>
             </div>
           </div>

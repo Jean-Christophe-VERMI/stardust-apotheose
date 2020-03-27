@@ -26,7 +26,7 @@ const enhancers = composeEnhancers(
 const store = createStore(
   combineReducers,
   // preloadedState,
-  enhancers,
+  enhancers
 );
 
 // == Export

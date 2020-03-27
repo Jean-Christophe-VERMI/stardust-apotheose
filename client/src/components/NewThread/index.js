@@ -20,7 +20,8 @@ const NewThread = ({
           <h1>Nouveau sujet</h1>
           <div className="thread">
             <Field
-              placeholder="Ecrivez votre titre ici"
+              name='title'
+              placeholder='Ecrivez votre titre ici'
               onChange={changeField}
               value={title}
             />

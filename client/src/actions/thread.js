@@ -1,7 +1,7 @@
 export const FETCH_THREADS = 'FETCH_THREADS';
 export const SAVE_THREADS = 'SAVE_THREADS';
 export const NEW_THREAD = 'NEW_THREAD';
-export const CHANGE_FIELD = 'CHANGE_FIELD';
+export const CHANGE_VALUE = 'CHANGE_VALUE';
 
 export const fetchThreads = () => ({
   type: FETCH_THREADS,
@@ -12,12 +12,14 @@ export const saveThreads = (thread) => ({
   thread,
 });
 
-export const newThread = (value) => ({
+export const newThread = (value, name) => ({
   type: NEW_THREAD,
   value,
+  name,
 });
 
-export const changeField = (value) => ({
-  type: CHANGE_FIELD,
+export const changeValue = (value, name) => ({
+  type: CHANGE_VALUE,
+  name,
   value,
 });

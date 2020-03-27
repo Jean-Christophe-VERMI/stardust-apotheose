@@ -2,18 +2,18 @@ import { connect } from 'react-redux';
 
 import NewThread from 'src/components/NewThread';
 
-import { newThread, changeField } from 'src/actions/thread';
+import { newThread, changeValue } from 'src/actions/thread';
 
 const mapStateToProps = (state) => ({
   title: state.threads.title,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  changeField: (value) => {
-    dispatch(changeField(value));
+  changeField: (value, name) => {
+    dispatch(changeValue(value, name));
   },
-  newThread: (value) => {
-    dispatch(newThread(value));
+  newThread: (value, name) => {
+    dispatch(newThread(value, name));
   },
 });
 

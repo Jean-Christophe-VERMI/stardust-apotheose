@@ -13,8 +13,8 @@ const mapDispatchToProps = (dispatch) => ({
   changeField: (value, name) => {
     dispatch(changeValue(value, name));
   },
-  newThread: (value, name) => {
-    dispatch(newThread(value, name));
+  newThread: (thread) => {
+    dispatch(newThread(thread));
   },
 });
 

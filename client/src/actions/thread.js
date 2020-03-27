@@ -12,10 +12,9 @@ export const saveThreads = (thread) => ({
   thread,
 });
 
-export const newThread = (value, name) => ({
+export const newThread = (title) => ({
   type: NEW_THREAD,
-  value,
-  name,
+  title,
 });
 
 export const changeValue = (value, name) => ({

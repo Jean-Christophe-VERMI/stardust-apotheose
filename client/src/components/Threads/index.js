@@ -8,8 +8,8 @@ const Threads = ({
 }) => (
   <ThreadsStyled>
     <div className="thread">
-      {list.map((item) => (
-        <Thread key={item._id} {...item} />
+      {list.map((thread) => (
+        <Thread key={thread._id} {...thread} />
       ))}
     </div>
   </ThreadsStyled>

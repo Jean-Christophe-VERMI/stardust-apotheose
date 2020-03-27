@@ -17,7 +17,7 @@ const newThreadMiddleware = (store) => (next) => (action) => {
       })
         .then((response) => {
           console.log(response.data);
-          store.dispatch(newThread(response.data));
+          store.dispatch(newThread());
         })
         .catch((error) => {
           console.log(error);

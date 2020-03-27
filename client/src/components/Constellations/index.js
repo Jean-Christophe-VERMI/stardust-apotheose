@@ -1,21 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
+
 import ConstellationStyled from './ConstellationStyled';
 
-const InfoConstellation = ({ getConstellations, constellations }) => {
+const InfoConstellation = () => {
   const [name, setName] = useState('');
+  const [constellations, setConstellations] = useState([]);
+  const [filteredConstellations, setFilteredConstellations] = useState([]);
 
   const fetchConstellations = async () => {
-    await getConstellations();
+    const { data } = await axios({
+      url: 'http://localhost:5000/constellations',
+    });
+    return data;
+  };
+
+  const getConstellations = async () => {
+    const data = await fetchConstellations();
+    setConstellations(data);
   };
 
   useEffect(() => {
-    fetchConstellations();
-  }, [name]);
-
-  const filteredConstellations = constellations.filter(c =>
-    c.frenchName.toLowerCase().includes(name.toLowerCase())
-  );
+    let isSubscribed = true;
+    getConstellations();
+    setFilteredConstellations(
+      constellations.filter(c =>
+        c.frenchName.toLowerCase().includes(name.toLowerCase())
+      )
+    );
+    return () => (isSubscribed = false);
+  }, [name, constellations]);
 
   return (
     <ConstellationStyled>
@@ -28,7 +43,14 @@ const InfoConstellation = ({ getConstellations, constellations }) => {
           onChange={e => setName(e.target.value)}
           autoComplete='off'
         />
-        {name && filteredConstellations.map(c => <p>{c.frenchName}</p>)}
+        {constellations.length ? (
+          <>
+            {name &&
+              filteredConstellations.map(c => <p key={c.id}>{c.frenchName}</p>)}
+          </>
+        ) : (
+          <p>Loading</p>
+        )}
       </div>
     </ConstellationStyled>
   );

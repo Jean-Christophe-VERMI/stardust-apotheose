@@ -1,5 +1,5 @@
 import React from 'react';
-import Constellations from 'src/containers/Constellations';
+import Constellations from 'src/components/Constellations';
 import SkyMapStyled from './SkyMapStyled';
 
 const SkyMap = () => (

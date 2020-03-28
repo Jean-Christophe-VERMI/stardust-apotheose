@@ -6,9 +6,9 @@ import auth from './auth';
 import threads from './threads';
 
 export default combineReducers({
+  threads,
   nav,
   login,
   auth,
   register,
-  threads,
 });

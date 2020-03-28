@@ -19,21 +19,15 @@ const threads = (state = initialState, action = {}) => {
         ...state,
         list: action.thread,
       };
-    case NEW_THREAD: {
-      const addThread = [
-        ...state.list,
-        action.title,
-      ];
+    case NEW_THREAD:
       return {
         ...state,
-        title: action.title,
-        list: addThread,
-        newThreadValue: '',
+        title: action.thread,
       };
-    }
-    default:
-      return state;
+      default:
+        return state;
   }
+  
 };
 
 export default threads;

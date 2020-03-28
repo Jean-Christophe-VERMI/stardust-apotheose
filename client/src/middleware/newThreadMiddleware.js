@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { NEW_THREAD, newThread } from 'src/actions/thread';
+import { NEW_THREAD, fetchThreads } from 'src/actions/thread';
 
 
 const newThreadMiddleware = (store) => (next) => (action) => {
@@ -17,7 +17,8 @@ const newThreadMiddleware = (store) => (next) => (action) => {
       })
         .then((response) => {
           console.log(response.data);
-          store.dispatch(newThread());
+          console.log('je dois fech et save à nouveau tous les Threads');
+          store.dispatch(fetchThreads());
         })
         .catch((error) => {
           console.log(error);

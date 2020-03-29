@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Checkbox, Form } from 'semantic-ui-react';
 import Field from './Field';
+const Recaptcha = require('react-recaptcha');
 
 import RegisterStyled from './RegisterStyled';
 
@@ -61,7 +62,14 @@ const Register = ({
               <Checkbox className="terms" label="J'accepte les termes et conditions" />
             </Form.Field>
             <Button className="button-submit" type="submit">ENREGISTRER</Button>
+            <Form.Field>
+              <Checkbox className="terms" label="Mentions RGPD bla bla bla ...!!!" />
+            </Form.Field>
           </div>
+          <Recaptcha
+          sitekey="6LdwN-QUAAAAAH5d15dEMnS-CL6UYmtzvl1C2krw"
+          
+          />
         </Form>
       </div>
     </RegisterStyled>

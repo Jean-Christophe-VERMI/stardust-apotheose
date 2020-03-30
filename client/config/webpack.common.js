@@ -1,4 +1,5 @@
 const paths = require('./paths');
+const DotEnv = require('dotenv-webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -30,6 +31,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       favicon: paths.assets + '/favicon.ico',
       template: paths.assets + '/index.html',
+    }),
+    new DotEnv({
+      path: './.env',
     }),
   ],
 

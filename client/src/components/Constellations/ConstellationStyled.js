@@ -2,16 +2,16 @@ import styled from 'styled-components';
 
 const ConstellationStyled = styled.div`
   input {
-    width: 200px;
-    padding: 1rem;
-    margin: 0.5rem;
+    padding: ${props => props.theme.sizings.small};
+    font-size: ${props => props.theme.fontSizes.default};
     border: none;
-    border-radius: 10px;
+    border-radius: ${props => props.theme.radius.medium};
+    margin-right: ${props => props.theme.sizings.medium};
   }
 
   h2 {
     text-align: left;
-    margin-bottom: 0.5rem;
+    margin-bottom: ${props => props.theme.sizings.small};
   }
 
   .constellations-list {
@@ -23,7 +23,7 @@ const ConstellationStyled = styled.div`
     cursor: pointer;
 
     &:hover {
-      color: ${props => props.theme.colors.primary};
+      color: ${props => props.theme.colors.linkDark};
     }
   }
 `;

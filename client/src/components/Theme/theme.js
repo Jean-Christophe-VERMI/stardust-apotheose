@@ -23,7 +23,7 @@ const theme = {
     linkDark: '#0abde3',
     warning: '#feca57',
     warningDark: '#ff9f43',
-    greyLighter: '#c8d6e5',
+    greyLighter: '#DFE6E9',
     greyDarker: '#8395a7',
   },
   fonts: {
@@ -31,6 +31,7 @@ const theme = {
     headings: 'Evolve',
   },
   lineHeight: '1.6rem',
+
   fontSizes: {
     mini: 'O.25rem',
     small: '0.75rem',
@@ -43,6 +44,7 @@ const theme = {
     small: '0.5em',
     medium: '1em',
     large: '2em',
+    larger: '3em',
   },
   radius: {
     small: '4',

@@ -12,13 +12,13 @@ const ModalStyled = styled.div`
   align-items: center;
 
   .modal {
-    border-radius: 1rem;
-    background: white;
-    border: 1px solid #2d3436;
+    border-radius: ${props => props.theme.sizings.medium};
+    background: ${props => props.theme.colors.white};
+    border: 1px solid ${props => props.theme.colors.dark};
     width: 50%;
     z-index: 40;
-    padding-bottom: 1rem;
-    padding-right: 1rem;
+    padding-bottom: ${props => props.theme.sizings.medium};
+    padding-right: ${props => props.theme.sizings.medium};
   }
 
   .modal-mask {
@@ -31,19 +31,19 @@ const ModalStyled = styled.div`
   }
 
   .modal-text {
-    margin-left: 3rem;
+    margin-left: ${props => props.theme.sizings.larger};
   }
 
   p {
-    padding: 0.5rem;
+    padding: ${props => props.theme.sizings.small};
     font-size: 0.8rem;
   }
 
   button {
-    margin: 1rem;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    border: 1px solid #2d3436;
+    margin: ${props => props.theme.sizings.medium};
+    padding: ${props => props.theme.sizings.small};
+    border-radius: ${props => props.theme.sizings.small};
+    border: 1px solid ${props => props.theme.colors.dark};
   }
 `;
 

@@ -21,21 +21,20 @@ const SkyMapStyled = styled.section`
     align-items: center;
 
     h1 {
-      font-size: 4rem;
+      font-size: ${props => props.theme.fontSizes.larger};
     }
 
     .search-bar {
-      width: 40%;
-      padding: 0.3rem;
-      font-size: 1em;
+      padding: ${props => props.theme.sizings.small};
+      font-size: ${props => props.theme.fontSizes.default};
       border: none;
-      border-radius: 0.3em;
-      height: 2rem;
+      border-radius: ${props => props.theme.radius.medium};
+      margin: ${props => props.theme.sizings.medium};
     }
   }
 
   .sky-map {
-    padding: 2rem;
+    padding: ${props => props.theme.sizings.large};
     max-width: 80%;
     max-height: 80%;
   }

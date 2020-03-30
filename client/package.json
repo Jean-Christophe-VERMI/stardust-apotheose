@@ -26,6 +26,7 @@
     "cross-env": "*",
     "css-loader": "*",
     "cssnano": "*",
+    "dotenv-webpack": "^1.7.0",
     "enzyme": "*",
     "enzyme-adapter-react-16": "*",
     "eslint": "^6.8.0",

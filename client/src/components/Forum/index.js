@@ -18,7 +18,7 @@ const Forum = ({
     <ForumStyled>
     <Router>
       {isLogged && (
-        <NewThread />
+        <Route exact path='/forum' component={NewThread} />
       )}
         <Route exact path='/forum' component={Threads} />
       <Switch>

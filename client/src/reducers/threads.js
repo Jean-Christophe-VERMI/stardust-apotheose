@@ -1,10 +1,12 @@
-import { SAVE_THREADS, NEW_THREAD, CHANGE_VALUE } from 'src/actions/thread';
+import { SAVE_THREADS, NEW_THREAD, CHANGE_VALUE, NEW_COMMENT } from 'src/actions/thread';
 
 export const initialState = {
   newThreadValue: '',
   active: true,
   list: [],
   title: '',
+  text: '',
+  display: false,
 };
 
 const threads = (state = initialState, action = {}) => {
@@ -24,10 +26,14 @@ const threads = (state = initialState, action = {}) => {
         ...state,
         title: action.thread,
       };
-      default:
-        return state;
+    case NEW_COMMENT:
+      return {
+        ...state,
+        text: action.text,
+      };
+    default:
+      return state;
   }
-  
 };
 
 export default threads;

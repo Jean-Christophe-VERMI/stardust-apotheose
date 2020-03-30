@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Thread from 'src/components/Thread';
+import Thread from 'src/containers/Thread';
 import ThreadsStyled from './ThreadsStyled';
 
 const Threads = ({

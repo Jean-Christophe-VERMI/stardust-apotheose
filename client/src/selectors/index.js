@@ -9,7 +9,7 @@ export const getSlugByThreadTitle = (title) => {
 };
 
 export const getUrlByThreadTitle = (title) => {
-  const url = `/forum/threads/${getSlugByThreadTitle(title)}`;
+  const url = `/forum/${getSlugByThreadTitle(title)}`;
   return url;
 };
 

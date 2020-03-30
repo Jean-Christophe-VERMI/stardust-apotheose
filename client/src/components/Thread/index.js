@@ -1,20 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Comment from 'src/components/Comment';
-import NewComment from 'src/containers/NewComment';
+import { Link } from 'react-router-dom';
+import { getUrlByThreadTitle } from 'src/selectors';
+
 import ThreadStyled from './ThreadStyled';
 
-const Thread = ({ title, author, comments }) => (
+const Thread = ({ title, author }) => (
   <ThreadStyled>
     <div className='content'>
-      <h2 className='content-title'>{title}</h2>
+    <Link className="show-thread" to={getUrlByThreadTitle(title)}>{title}</Link>
       <p className='content-text'>{author}</p>
-      {comments.map(answer => (
-        <div>
-          <Comment key={answer._id} {...answer} />
-          <NewComment />
-        </div>
-      ))}
     </div>
   </ThreadStyled>
 );
@@ -22,11 +17,6 @@ const Thread = ({ title, author, comments }) => (
 Thread.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  comments: PropTypes.arrayOf(
-    PropTypes.shape({
-      _id: PropTypes.string.isRequired,
-    })
-  ).isRequired,
 };
 
 Thread.defaultProps = {

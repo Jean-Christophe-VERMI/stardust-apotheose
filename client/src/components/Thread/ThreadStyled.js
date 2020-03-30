@@ -8,6 +8,10 @@ const ThreadStyled = styled.div`
   margin : 1rem;
   padding : 1rem;
 
+  .show-thread {
+    color: #60a3bc;
+  }
+
 `;
 
 export default ThreadStyled;

@@ -18,6 +18,7 @@ const Modal = ({ active, setShowModal, constellation }) => {
               <p> Hemisphere : {constellation.hemisphereQuadrant}</p>
               <p>Origine : {constellation.origin}</p>
               <p>Declinaison : {constellation.declinaison}</p>
+              <p>Informations : {constellation.desc}</p>
             </div>
           </div>
         </ModalStyled>

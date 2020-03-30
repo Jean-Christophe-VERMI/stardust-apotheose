@@ -16,6 +16,7 @@ router.post(
       englishName,
       frenchName,
       declinaison,
+      desc,
     } = req.body;
     try {
       let constellation = await Constellation.findOne({ _id });
@@ -31,6 +32,7 @@ router.post(
         englishName,
         frenchName,
         declinaison,
+        desc,
       });
 
       await newConstellation.save();

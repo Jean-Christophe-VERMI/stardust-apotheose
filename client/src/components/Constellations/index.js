@@ -54,7 +54,10 @@ const InfoConstellation = () => {
           <div className='constellations-list'>
             {name &&
               filteredConstellations.map((c, index) => (
-                <div onClick={() => handleModal(c)}>
+                <div
+                  className='constellation-link'
+                  onClick={() => handleModal(c)}
+                >
                   <p key={`constellation-${index}`}>{c.frenchName}</p>
                 </div>
               ))}

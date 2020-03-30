@@ -3,13 +3,11 @@ import PropTypes from 'prop-types';
 import Thread from 'src/containers/Thread';
 import ThreadsStyled from './ThreadsStyled';
 
-const Threads = ({
-  list,
-}) => (
+const Threads = ({ list }) => (
   <ThreadsStyled>
-    <div className="thread">
-      {list.map((thread) => (
-        <Thread key={thread._id} {...thread} />
+    <div className='thread'>
+      {list.map(thread => (
+        <Thread key={thread.author} {...thread} />
       ))}
     </div>
   </ThreadsStyled>
@@ -18,8 +16,8 @@ const Threads = ({
 Threads.propTypes = {
   list: PropTypes.arrayOf(
     PropTypes.shape({
-      _id: PropTypes.string.isRequired,
-    }),
+      author: PropTypes.string.isRequired,
+    })
   ).isRequired,
 };
 

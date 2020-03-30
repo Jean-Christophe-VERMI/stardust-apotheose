@@ -19,6 +19,7 @@ const HomePageStyled = styled.header`
     color: white;
     font-weight: bold;
     font-size: 10rem;
+    font-family: ${props => props.theme.fonts.headings};
   }
 `;
 

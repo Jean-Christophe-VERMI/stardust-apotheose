@@ -21,7 +21,7 @@ const SkyMap = () => (
           scrolling='no'
           marginHeight='0'
           marginWidth='0'
-          src='https://virtualsky.lco.global/embed/index.html?longitude=-119.86286000000001&latitude=34.4326&projection=polar&constellations=true&constellationlabels=true&showstarlabels=true&az=192.84525109280014'
+          src='https://virtualsky.lco.global/embed/index.html?longitude=-119.86286000000001&latitude=34.4326&projection=polar&constellations=true&constellationlabels=true&az=192.84525109280014'
           allowtransparency='true'
         ></iframe>
       </div>

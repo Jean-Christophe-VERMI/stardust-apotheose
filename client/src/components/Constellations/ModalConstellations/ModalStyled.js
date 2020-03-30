@@ -16,8 +16,9 @@ const ModalStyled = styled.div`
     background: white;
     border: 1px solid #2d3436;
     width: 50%;
-    height: 50%;
     z-index: 40;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
   }
 
   .modal-mask {
@@ -35,6 +36,7 @@ const ModalStyled = styled.div`
 
   p {
     padding: 0.5rem;
+    font-size: 0.8rem;
   }
 
   button {

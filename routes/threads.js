@@ -71,7 +71,6 @@ router.post(
 router.get('/', async (req, res) => {
   try {
     const threads = await Thread.find().populate('comments');
-    console.log(threads);
     res.json(threads);
   } catch (err) {
     console.error(err.message);

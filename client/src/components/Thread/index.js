@@ -4,17 +4,12 @@ import Comment from 'src/components/Comment';
 import NewComment from 'src/containers/NewComment';
 import ThreadStyled from './ThreadStyled';
 
-
-const Thread = ({
-  title,
-  author,
-  comments,
-}) => (
+const Thread = ({ title, author, comments }) => (
   <ThreadStyled>
-    <div className="content">
-      <h2 className="content-title">{title}</h2>
-      <p className="content-text">{author}</p>
-      {comments.map((answer) => (
+    <div className='content'>
+      <h2 className='content-title'>{title}</h2>
+      <p className='content-text'>{author}</p>
+      {comments.map(answer => (
         <div>
           <Comment key={answer._id} {...answer} />
           <NewComment />
@@ -30,7 +25,7 @@ Thread.propTypes = {
   comments: PropTypes.arrayOf(
     PropTypes.shape({
       _id: PropTypes.string.isRequired,
-    }),
+    })
   ).isRequired,
 };
 

@@ -18,6 +18,14 @@ const ConstellationStyled = styled.div`
     overflow-y: auto;
     max-height: 500px;
   }
+
+  .constellation-link {
+    cursor: pointer;
+
+    &:hover {
+      color: ${props => props.theme.colors.primary};
+    }
+  }
 `;
 
 export default ConstellationStyled;

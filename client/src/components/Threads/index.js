@@ -7,7 +7,7 @@ const Threads = ({ list }) => (
   <ThreadsStyled>
     <div className='thread'>
       {list.map(thread => (
-        <Thread key={thread.author} {...thread} />
+        <Thread key={thread._id} {...thread} />
       ))}
     </div>
   </ThreadsStyled>
@@ -16,7 +16,7 @@ const Threads = ({ list }) => (
 Threads.propTypes = {
   list: PropTypes.arrayOf(
     PropTypes.shape({
-      author: PropTypes.string.isRequired,
+      _id: PropTypes.string.isRequired,
     })
   ).isRequired,
 };

@@ -6,6 +6,8 @@ import { newComment, changeValue } from 'src/actions/thread';
 
 const mapStateToProps = (state) => ({
   text: state.threads.text,
+  isLogged: state.login.isLogged,
+  active: state.threads.active,
 });
 
 const mapDispatchToProps = (dispatch) => ({

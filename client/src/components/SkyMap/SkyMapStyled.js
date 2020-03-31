@@ -13,6 +13,7 @@ const SkyMapStyled = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    margin-top: ${props => props.theme.sizings.largest};
   }
 
   .info-map {

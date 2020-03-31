@@ -8,6 +8,7 @@ const ConstellationStyled = styled.div`
     border: none;
     border-radius: ${props => props.theme.radius.medium};
     width: 100%;
+    margin-top: ${props => props.theme.sizings.largest};
   }
 
   h2 {

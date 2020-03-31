@@ -60,18 +60,16 @@ const LoginStyled = styled.div`
     width: 100%;
     text-align: left;
     margin-left: 5px;
-    color: #76c1dd;
-    font-weight: bold;
+    color: ${props => props.theme.colors.white};
+
+    &:hover {
+      color: ${props => props.theme.colors.linkDark};
+    }
   }
 
   .register {
-    font-size: 1rem;
-    margin-left: 5px;
-  }
-
-  .register:hover {
-    text-decoration: underline;
-    color: #60a3bc;
+    font-size: ${props => props.theme.fontSizes.default};
+    margin-left: ${props => props.theme.sizings.medium};
   }
 
   @media screen and (max-width: 650px) {

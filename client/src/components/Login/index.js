@@ -7,8 +7,6 @@ import LoginStyled from './LoginStyled';
 
 // import { useField } from './hooks';
 
-import './LoginStyled.js';
-
 const Login = ({
   email,
   password,

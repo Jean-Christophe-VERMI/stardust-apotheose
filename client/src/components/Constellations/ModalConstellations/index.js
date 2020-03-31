@@ -10,7 +10,7 @@ const Modal = ({ active, setShowModal, constellation }) => {
         <ModalStyled>
           <div className='modal-mask' />
           <div className='modal'>
-            <button onClick={() => setShowModal(false)}>Close</button>
+            <button onClick={() => setShowModal(false)}>Fermer</button>
             <div className='modal-text'>
               <p>Etoile principale : {constellation.mainStar}</p>
               <p>Nom Latin : {constellation.latinName}</p>

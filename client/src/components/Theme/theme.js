@@ -25,6 +25,10 @@ const theme = {
     warningDark: '#ff9f43',
     greyLighter: '#DFE6E9',
     greyDarker: '#8395a7',
+    peachLight: '#fab1a0',
+    peachDark: '#e17055',
+    lightBlue: '#82ccdd',
+    darkBlue: '#0a3d62',
   },
   fonts: {
     default: 'Raleway',
@@ -45,6 +49,7 @@ const theme = {
     medium: '1em',
     large: '2em',
     larger: '3em',
+    largest: '5em',
   },
   radius: {
     small: '4',

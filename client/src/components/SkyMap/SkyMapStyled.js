@@ -3,16 +3,16 @@ import styled from 'styled-components';
 const SkyMapStyled = styled.section`
   height: 100%;
   display: flex;
-  padding-top: 5rem;
+  padding-top: ${props => props.theme.sizings.largest};
   display: grid;
   grid-template-columns: 2fr 1fr;
-  background-color: #dfe6e9;
+  background-color: ${props => props.theme.colors.darkBlue};
 
   .map {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .info-map {
@@ -29,7 +29,7 @@ const SkyMapStyled = styled.section`
       font-size: ${props => props.theme.fontSizes.default};
       border: none;
       border-radius: ${props => props.theme.radius.medium};
-      margin: ${props => props.theme.sizings.medium};
+      margin-left: ${props => props.theme.sizings.medium};
     }
   }
 

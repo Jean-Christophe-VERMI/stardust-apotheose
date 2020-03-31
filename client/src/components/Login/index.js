@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import Field from './Field';
 
+import LoginStyled from './LoginStyled';
+
 // import { useField } from './hooks';
 
-import './styles.css';
+import './LoginStyled.js';
 
 const Login = ({
   email,
@@ -16,64 +18,67 @@ const Login = ({
   isLogged,
   loggedMessage,
 }) => {
-  const handleSubmit = (evt) => {
+  const handleSubmit = evt => {
     evt.preventDefault();
     handleLogin();
   };
+
   return (
-    <div className='login-form'>
-      {isLogged && (
-        <div className='login-form-logged'>
-          <div className="message-profil">
-            <p>{loggedMessage}</p>
-            <NavLink className="profil-link" exact to='/profil'>
-              Mon profil
-            </NavLink>
-          </div>
+    <LoginStyled>
+      <div className='login-form'>
+        {isLogged && (
+          <div className='login-form-logged'>
+            <div className='message-profil'>
+              <p>{loggedMessage}</p>
+              <NavLink className='profil-link' exact to='/profil'>
+                Mon profil
+              </NavLink>
+            </div>
             <button
               type='button'
               className='login-form-button'
               onClick={handleLogout}
             >
-            Déconnexion
+              Déconnexion
             </button>
+          </div>
+        )}
+        {!isLogged && (
+          <form className='login-form-element' onSubmit={handleSubmit}>
+            <div className='field-log'>
+              <Field
+                name='email'
+                placeholder='Adresse Email'
+                onChange={changeField}
+                value={email}
+              />
+              <div className='link-log'>
+                <NavLink exact to='/register'>
+                  S'inscrire
+                </NavLink>
+              </div>
+            </div>
+            <div className='field-log'>
+              <Field
+                name='password'
+                type='password'
+                placeholder='Mot de passe'
+                onChange={changeField}
+                value={password}
+              />
+              <div className='link-log'>
+                <NavLink exact to='/password'>
+                  Mot de passe oublié ?
+                </NavLink>
+              </div>
+            </div>
+            <button type='submit' className='login-form-button'>
+              OK
+            </button>
+          </form>
+        )}
       </div>
-      )}
-      {!isLogged && (
-        <form className='login-form-element' onSubmit={handleSubmit}>
-          <div className='field-log'>
-            <Field
-              name='email'
-              placeholder='Adresse Email'
-              onChange={changeField}
-              value={email}
-            />
-            <div className='link-log'>
-              <NavLink exact to='/register'>
-                S'inscrire
-              </NavLink>
-            </div>
-          </div>
-          <div className='field-log'>
-            <Field
-              name='password'
-              type='password'
-              placeholder='Mot de passe'
-              onChange={changeField}
-              value={password}
-            />
-            <div className='link-log'>
-              <NavLink exact to='/password'>
-                Mot de passe oublié ?
-              </NavLink>
-            </div>
-          </div>
-          <button type='submit' className='login-form-button'>
-            OK
-          </button>
-        </form>
-      )}
-    </div>
+    </LoginStyled>
   );
 };
 

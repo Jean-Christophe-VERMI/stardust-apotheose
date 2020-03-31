@@ -2,16 +2,21 @@ import styled from 'styled-components';
 
 const ConstellationStyled = styled.div`
   input {
+    display: block;
     padding: ${props => props.theme.sizings.small};
     font-size: ${props => props.theme.fontSizes.default};
     border: none;
     border-radius: ${props => props.theme.radius.medium};
-    margin-right: ${props => props.theme.sizings.medium};
+    width: 100%;
   }
 
   h2 {
     text-align: left;
     margin-bottom: ${props => props.theme.sizings.small};
+  }
+
+  .constellations {
+    width: 50%;
   }
 
   .constellations-list {

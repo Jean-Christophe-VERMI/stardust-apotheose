@@ -10,7 +10,7 @@ const NavStyled = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0rem 1rem;
-  color: white;
+  color: ${props => props.theme.colors.white};
   position: fixed;
   background-color: transparent;
 
@@ -28,30 +28,30 @@ const NavStyled = styled.nav`
 
   .button-planet {
     background-image: url(${planet});
-    padding: 2rem;
+    padding: ${props => props.theme.sizings.large};
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent;
     border: none;
-    margin-left: 1rem;
+    margin-left: ${props => props.theme.sizings.medium};
   }
 
   .button-login {
     background-image: url(${helmet});
-    padding: 1.5rem;
+    padding: ${props => props.theme.sizings.large};
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent;
     border: none;
-    margin-right: 1rem;
+    margin-right: ${props => props.theme.sizings.medium};
   }
 
   .link-menu {
-    margin: 1rem;
-    font-size: 1.7rem;
+    margin: ${props => props.theme.sizings.medium};
+    font-size: ${props => props.theme.fontSizes.large};
     &:hover {
-      text-decoration: underline;
-      color: #60a3bc;
+      text-decoration: none;
+      color: ${props => props.theme.colors.linkDark};
     }
   }
 

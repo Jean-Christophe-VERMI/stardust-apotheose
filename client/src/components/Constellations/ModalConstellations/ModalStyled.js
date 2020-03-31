@@ -10,6 +10,7 @@ const ModalStyled = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: ${props => props.theme.colors.darkBlue};
 
   .modal {
     border-radius: ${props => props.theme.sizings.medium};

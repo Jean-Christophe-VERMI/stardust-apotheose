@@ -42,11 +42,10 @@ const InfoConstellation = () => {
   return (
     <ConstellationStyled>
       <div className='constellations'>
-        <h2>Nom de la constellation</h2>
         <input
           className='input'
           name='name'
-          placeholder='Nom de la constellation'
+          placeholder='Rechercher une constellation...'
           onChange={e => setName(e.target.value)}
           autoComplete='off'
         />

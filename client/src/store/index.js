@@ -1,8 +1,10 @@
 // == Import : npm
 import { createStore, compose, applyMiddleware } from 'redux';
+import { persistStore } from 'redux-persist';
+
+import rootReducer from '../reducers';
 
 // == Import : local
-import combineReducers from 'src/reducers';
 import logMiddleware from '../middleware/logMiddleware';
 import registerMiddleware from '../middleware/registerMiddleware';
 import threadsMiddleware from '../middleware/threadsMiddleware';
@@ -18,16 +20,11 @@ const enhancers = composeEnhancers(
     registerMiddleware,
     authMiddleware,
     threadsMiddleware,
-    newThreadMiddleware,
-  ),
+    newThreadMiddleware
+  )
 );
 
 // == Store
-const store = createStore(
-  combineReducers,
-  // preloadedState,
-  enhancers
-);
+export const store = createStore(rootReducer, enhancers);
 
-// == Export
-export default store;
+export const persistor = persistStore(store);

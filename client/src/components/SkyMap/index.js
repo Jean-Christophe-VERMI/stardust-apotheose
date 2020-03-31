@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
 import axios from 'axios';
 import Constellations from 'src/components/Constellations';
 import SkyMapStyled from './SkyMapStyled';
 
-const SkyMap = () => {
+const SkyMap = ({ user }) => {
   const [coords, setCoords] = useState({});
   const [city, setCity] = useState('');
 
@@ -11,10 +12,11 @@ const SkyMap = () => {
     setCity(e.target.value);
   };
 
-  const handleSubmit = async e => {
-    e.preventDefault();
+  const fetchCoords = async city => {
     const { data } = await axios.get(
-      `https://api.opencagedata.com/geocode/v1/google-v3-json?q=${city}&key=${process.env.GEOLOC_API_KEY}`
+      `https://api.opencagedata.com/geocode/v1/google-v3-json?q=${
+        city ? city : user.city
+      }&key=${process.env.GEOLOC_API_KEY}`
     );
 
     const {
@@ -24,6 +26,15 @@ const SkyMap = () => {
     } = data.results[0];
 
     setCoords({ lat, lng });
+  };
+
+  useEffect(() => {
+    fetchCoords(city);
+  }, [user]);
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+    fetchCoords(city);
   };
 
   return (
@@ -41,6 +52,7 @@ const SkyMap = () => {
             />
           </form>
         </div>
+        <h2>{user.city ? (city ? city : user.city) : ''}</h2>
         <div className='sky-map'>
           <iframe
             width='450'
@@ -49,7 +61,7 @@ const SkyMap = () => {
             scrolling='no'
             marginHeight='0'
             marginWidth='0'
-            src={`https://virtualsky.lco.global/embed/index.html?longitude=${coords.lng}&latitude=${coords.lat}&projection=polar&constellations=true&constellationlabels=true&az=192.84525109280014`}
+            src={`https://virtualsky.lco.global/embed/index.html?longitude=${coords.lng}&latitude=${coords.lat}&projection=polar&constellations=true&constellationlabels=true&az=192.84525109280014&showdate=false&showposition=false`}
             allowtransparency='true'
           ></iframe>
         </div>
@@ -59,4 +71,8 @@ const SkyMap = () => {
   );
 };
 
-export default SkyMap;
+const mapStateToProps = state => ({
+  user: state.auth,
+});
+
+export default connect(mapStateToProps)(SkyMap);

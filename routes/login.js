@@ -46,6 +46,7 @@ router.post(
           id: user.id,
           email: user.email,
           name: user.name,
+          city: user.city,
         },
       };
 
@@ -53,7 +54,7 @@ router.post(
         payload,
         config.get('jwtSecret'),
         {
-          expiresIn: 360000,
+          // expiresIn: 360000,
         },
         (err, token) => {
           if (err) throw err;

@@ -17,7 +17,7 @@ Threads.propTypes = {
   list: PropTypes.arrayOf(
     PropTypes.shape({
       _id: PropTypes.string.isRequired,
-    })
+    }),
   ).isRequired,
 };
 

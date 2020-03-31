@@ -33,3 +33,4 @@ export const newComment = (text) => ({
   type: NEW_COMMENT,
   text,
 });
+

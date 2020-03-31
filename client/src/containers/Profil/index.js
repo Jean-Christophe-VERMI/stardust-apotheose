@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
 
-import Profil from 'src/components/UserProfil/Profil/Profil';
+import Profil from 'src/components/Profil';
 
 
 const mapStateToProps = (state) => ({
   name: state.auth.name,
   email: state.auth.email,
+  id: state.auth.id,
 });
 
 const mapDispatchToProps = null;

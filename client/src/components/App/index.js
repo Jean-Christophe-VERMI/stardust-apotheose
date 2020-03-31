@@ -7,7 +7,7 @@ import Theme from 'src/components/Theme/theme';
 import Main from 'src/components/Main';
 import HomePage from 'src/components/HomePage';
 import Register from 'src/containers/Register';
-import UserProfil from 'src/components/UserProfil';
+import UserProfil from 'src/containers/UserProfil';
 import SkyMap from 'src/components/SkyMap';
 import Forum from 'src/containers/Forum';
 

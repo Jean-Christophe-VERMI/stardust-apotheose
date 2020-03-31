@@ -12,15 +12,10 @@ const PostsStyled = styled.div`
   width: 400px;
   opacity: 0.6;
 
-  .posts-infos p{
-    padding: .3rem;
-    font-size: 1em;
-    background-color: #dfe6e9;
-    border: none;
-    border-radius: .3em;
-    height: 2rem;
+  .posts {
+    padding : 2rem;
+    width : 100%;
   }
-
 `;
 
 export default PostsStyled;

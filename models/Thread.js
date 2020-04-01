@@ -12,6 +12,10 @@ const ThreadSchema = mongoose.Schema({
     ref: 'User',
     required: true,
   },
+  name: {
+    type: String,
+    required: true,
+  },
   active: {
     type: Boolean,
     default: true,

@@ -20,6 +20,7 @@ router.post(
     try {
       const newThread = new Thread({
         author,
+        name,
         active,
         title,
       });
@@ -49,6 +50,7 @@ router.post(
     try {
       const newComment = new Comment({
         author,
+        name,
         text,
         updatedAt,
       });

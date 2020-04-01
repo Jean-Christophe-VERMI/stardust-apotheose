@@ -11,6 +11,7 @@ import UserProfil from 'src/containers/UserProfil';
 import SkyMap from 'src/components/SkyMap';
 import Forum from 'src/containers/Forum';
 import Termes from 'src/components/termes';
+import InfoPage from 'src/components/InfoPage';
 
 import AppStyled from './AppStyled';
 
@@ -27,6 +28,7 @@ const App = () => (
             <Route path='/users' component={UserProfil} />
             <Route path='/forum' component={Forum} />
             <Route exact path='/termes' component={Termes} />
+            <Route path='/infos' component={InfoPage} />
           </Switch>
         </Main>
       </Router>

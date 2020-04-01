@@ -15,7 +15,7 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { author, active, title, name } = req.body;
+    const { author, name, active, title } = req.body;
 
     try {
       const newThread = new Thread({

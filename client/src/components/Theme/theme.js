@@ -29,6 +29,7 @@ const theme = {
     peachDark: '#e17055',
     lightBlue: '#82ccdd',
     darkBlue: '#0a3d62',
+    mediumBlue: '#48dbfb',
   },
   fonts: {
     default: 'Raleway',

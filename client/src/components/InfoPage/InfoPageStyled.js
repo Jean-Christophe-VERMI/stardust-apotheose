@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const InfoPageStyled = styled.div`
   background-color: ${props => props.theme.colors.darkBlue};
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
 

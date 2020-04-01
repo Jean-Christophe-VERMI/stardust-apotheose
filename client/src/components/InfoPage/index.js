@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import InfoPageStyled from './InfoPageStyled';
-import ContactModal from './ContactModal';
 
 import Button from 'src/components/Button';
+import Anchor from 'src/components/Anchor';
 
 const InfoPage = () => {
-  const [showModal, setShowModal] = useState(false);
-
-  const handleModal = value => {
-    setShowModal(value);
-  };
   return (
     <InfoPageStyled>
       <div className='info-page'>
@@ -25,14 +21,11 @@ const InfoPage = () => {
           eligendi!
         </p>
 
-        <Button color='primary' handleClick={() => handleModal(true)}>
-          Contactez-nous
+        <Button color='primary'>
+          <Link to='/register'>Inscrivez-vous</Link>
         </Button>
+        <Anchor />
       </div>
-      <ContactModal
-        active={showModal}
-        closeModal={() => handleModal(false)}
-      ></ContactModal>
     </InfoPageStyled>
   );
 };

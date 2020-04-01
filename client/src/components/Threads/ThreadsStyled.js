@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const ThreadsStyled = styled.div`
 
   background-color: #bdc3c7;
-  border: 1px solid #dddddd;
+  
   display: flex;
   flex-direction: column;
   min-height: 80vh;

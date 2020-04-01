@@ -17,11 +17,13 @@ const NewThread = ({
     <NewThreadStyled>
       <div>
         <Form onSubmit={handleSubmit}>
-          <h1>Nouveau sujet</h1>
-          <div className="thread">
+        
+          <div className="new-thread">
+            <h3>Nouveau sujet</h3>
             <Field
+              className="field-new-thread"
               name='title'
-              placeholder='Ecrivez votre titre ici'
+              placeholder='sujet...'
               onChange={changeField}
               value={title}
             />

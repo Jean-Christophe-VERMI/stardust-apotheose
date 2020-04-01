@@ -2,10 +2,9 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-// import { getUrlByThreadTitle } from 'src/selectors';
 import NewThread from 'src/containers/NewThread';
 import Threads from 'src/containers/Threads';
-import ThreadWithComments from 'src/components/ThreadWithComments';
+import ThreadwithComments from 'src/containers/ThreadWithComments';
 
 import ForumStyled from './ForumStyled';
 
@@ -22,7 +21,7 @@ const Forum = ({
       )}
         <Route exact path='/forum' component={Threads} />
       <Switch>
-        <Route path='/forum/my-second-thread' component={ThreadWithComments} />
+        <Route path='/forum/:threadId' component={ThreadwithComments} />
       </Switch>
     </Router>
     </ForumStyled>

@@ -5,10 +5,13 @@ import { getUrlByThreadTitle } from 'src/selectors';
 
 import ThreadStyled from './ThreadStyled';
 
-const Thread = ({ title, name }) => (
+const Thread = ({ title, name, _id, dispatchCurrentThread }) => (
   <ThreadStyled>
     <div className='content'>
-      <Link className="show-thread" to={getUrlByThreadTitle(title)}>{title}</Link>
+      <Link 
+      className="show-thread" 
+      onClick={() => {dispatchCurrentThread(_id)}}
+      to={getUrlByThreadTitle(title)}>{title}</Link>
       <p className='content-text'>{name}</p>
     </div>
   </ThreadStyled>
@@ -17,6 +20,7 @@ const Thread = ({ title, name }) => (
 Thread.propTypes = {
   title: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  dispatchCurrentThread: PropTypes.func.isRequired,
 };
 
 Thread.defaultProps = {

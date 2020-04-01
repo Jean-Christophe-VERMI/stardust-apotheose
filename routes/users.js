@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
+const ObjectId = require('mongodb').ObjectId;
 const User = require('../models/User');
 
 router.get('/:id', async (req, res) => {
@@ -18,10 +18,10 @@ router.get('/:id', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
+  const userId = ObjectId(req.params.id);
   const { name, email } = req.body;
   try {
     const user = await User.findByIdAndUpdate(userId, { name, email });
-
     res.send(user);
   } catch (err) {
     console.error(err.message);

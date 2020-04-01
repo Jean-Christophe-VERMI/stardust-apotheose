@@ -10,6 +10,8 @@ export const ERROR_MESSAGE = 'ERROR_MESSAGE';
 export const ERROR_MESSAGE_TWO = 'ERROR_MESSAGE_TWO';
 export const VALIDATION_SIGNUP = 'VALIDATION_SIGNUP';
 export const VERIFY_CALLBACK = 'VERIFY_CALLBACK';
+export const CHANGE_USER_INFOS = 'CHANGE_USER_INFOS';
+export const TOGGLE_OPEN_MODIFY = 'TOOGLE_OPEN_MODIFY';
 
 export const changeValue = (value, name) => ({
   type: CHANGE_VALUE,
@@ -66,4 +68,14 @@ export const validationSignup = () => ({
 export const verifyCallback = (response) => ({
   type: VERIFY_CALLBACK,
   response,
+});
+
+export const changeUserInfos = (name, value) => ({
+  type: CHANGE_USER_INFOS,
+  name,
+  value,
+});
+
+export const toggleOpenModify = () => ({
+  type: TOGGLE_OPEN_MODIFY,
 });

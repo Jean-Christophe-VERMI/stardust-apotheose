@@ -10,16 +10,10 @@ const PostsStyled = styled.div`
   height: 300px;
   width: 400px;
   opacity: 0.6;
-
-  .posts-infos p {
-    padding: ${props => props.theme.sizings.small};
-    font-size: ${props => props.theme.sizings.default};
-    background-color: ${props => props.theme.colors.white};
-    border: none;
-    border-radius: ${props => props.theme.radius.medium};
-    margin: ${props => props.theme.sizings.medium};
-    color: ${props => props.theme.colors.darkBlue};
-  }
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  
 `;
 
 export default PostsStyled;

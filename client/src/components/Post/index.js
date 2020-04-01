@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { Link } from 'react-router-dom';
+import { getUrlByThreadTitle } from 'src/selectors';
 import PostStyled from './PostStyled';
 
 const Post = ({ title }) => (
   <PostStyled>
-    <div className='content'>
-      <p>{title}</p>
-    </div>
+    <Link className="show-thread" to={getUrlByThreadTitle(title)}>{title}</Link>
   </PostStyled>
 );
 

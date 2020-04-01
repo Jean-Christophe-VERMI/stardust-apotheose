@@ -23,7 +23,7 @@ const App = () => (
             <Route exact path='/' component={HomePage} />
             <Route path='/register' component={Register} />
             <Route path='/skymap' component={SkyMap} />
-            <Route path='/profil' component={UserProfil} />
+            <Route path='/users' component={UserProfil} />
             <Route path='/forum' component={Forum} />
           </Switch>
         </Main>

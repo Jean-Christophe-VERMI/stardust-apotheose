@@ -10,6 +10,7 @@ import registerMiddleware from '../middleware/registerMiddleware';
 import threadsMiddleware from '../middleware/threadsMiddleware';
 import authMiddleware from '../middleware/authMiddleware';
 import newThreadMiddleware from '../middleware/newThreadMiddleware';
+import userMiddleware from '../middleware/userMiddleware';
 
 
 // == Enhancers
@@ -22,7 +23,8 @@ const enhancers = composeEnhancers(
     authMiddleware,
     threadsMiddleware,
     newThreadMiddleware,
-  )
+    userMiddleware,
+  ),
 );
 
 // == Store

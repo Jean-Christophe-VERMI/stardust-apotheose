@@ -10,6 +10,7 @@ const mapStateToProps = (state) => ({
   password: state.login.password,
   isLogged: state.login.isLogged,
   loggedMessage: `Bienvenue ${state.auth.name}`,
+  userId: state.auth.id,
 });
 
 const mapDispatchToProps = (dispatch) => ({

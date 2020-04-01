@@ -3,7 +3,7 @@ import jwtDecode from 'jwt-decode';
 
 import { LOGIN, LOGOUT, addUserInfos, emptyUser } from 'src/actions/user';
 
-const auth = (store) => (next) => (action) => {
+const authMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case LOGIN: {
       axios({
@@ -38,4 +38,4 @@ const auth = (store) => (next) => (action) => {
   }
 };
 
-export default auth;
+export default authMiddleware;

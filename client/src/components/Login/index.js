@@ -15,12 +15,12 @@ const Login = ({
   handleLogout,
   isLogged,
   loggedMessage,
+  userId,
 }) => {
   const handleSubmit = evt => {
     evt.preventDefault();
     handleLogin();
   };
-
   return (
     <LoginStyled>
       <div className='login-form'>
@@ -28,7 +28,7 @@ const Login = ({
           <div className='login-form-logged'>
             <div className='message-profil'>
               <p>{loggedMessage}</p>
-              <NavLink className='profil-link' exact to='/profil'>
+              <NavLink className='profil-link' exact to={`/users/${userId}`}>
                 Mon profil
               </NavLink>
             </div>
@@ -88,6 +88,7 @@ Login.propTypes = {
   handleLogout: PropTypes.func.isRequired,
   isLogged: PropTypes.bool.isRequired,
   loggedMessage: PropTypes.string.isRequired,
+  userId: PropTypes.string.isRequired,
 };
 
 Login.defaultProps = {

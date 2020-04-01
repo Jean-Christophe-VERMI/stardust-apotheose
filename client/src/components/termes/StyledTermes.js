@@ -9,6 +9,7 @@ export const TermesStyled = styled.div`
   font-family: Georgia, serif;
   padding-left:1rem;
   width:auto;
+  font-size: 1.2rem;
   
 
 
@@ -17,20 +18,20 @@ h1 {
       text-align: center;
       padding-top:12rem;
       text-transform:uppercase;
-      font-size: 1.5rem;
+      font-size: 3rem;
       padding-bottom:3rem;
     }
 
 
     p{
       color: white;
-      
+
     }
 
 
 h2 {  
       color: white;
-      font-size:1rem;
+      font-size:2rem;
       padding:2rem;
       text-align:center;
 }
@@ -39,6 +40,7 @@ button{
   position: fixed; 
   text-transform:uppercase;
   font-weight:bold;
+  border-radius: 2px solid black;
 }
 
 `;

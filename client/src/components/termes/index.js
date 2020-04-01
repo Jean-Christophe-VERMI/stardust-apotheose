@@ -11,8 +11,8 @@ const Termes = () => (
         <h1 id='title'> Conditions générales d'utilisation du site.</h1>
 
           <div>
-            <form action="/">
-              <button type="submit">Page d'accueil</button>
+            <form action="/register">
+              <button type="submit">S'inscrire</button>
             </form>
           </div>
       

@@ -39,12 +39,14 @@ const Register = ({
             placeholder="Nom"
             onChange={changeValue}
             value={name}
+            required
           />
           <Field
             name="email"
             placeholder="Adresse Email"
             onChange={changeValue}
             value={email}
+            required
           />
           <Field
             name="password"
@@ -52,16 +54,18 @@ const Register = ({
             placeholder="Mot de passe"
             onChange={changeValue}
             value={password}
+            required
           />
           <Field
             name="city"
             placeholder="Ville"
             onChange={changeValue}
             value={city}
+            required
           />
           <div className="terms-button-submit">
-            <Form.Field>
-            <Checkbox  className="terms" label={<label> J'accepte les <a href = '/termes'> termes et conditions  </a> </label>}  />
+            <Form.Field required >
+            <Checkbox   className="terms" label={<label> J'accepte les <a href = '/termes'> termes et conditions  </a> </label>}  />
             </Form.Field>
          </div>
           <Recaptcha

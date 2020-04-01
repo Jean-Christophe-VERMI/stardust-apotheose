@@ -53,13 +53,16 @@ export const RegisterStyled = styled.div`
     margin-top: 2rem;
     background-color: #ffffff;
 
-    &:hover {
+    &:hover:enabled {
       background-color : #0a3d62;
       color : white;
       transition-duration: .3s;
+     
     }
   }
-
+  button:hover:disabled{
+    background-color : white;
+}   
 `;
 
 export default RegisterStyled;

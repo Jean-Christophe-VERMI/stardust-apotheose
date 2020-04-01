@@ -17,44 +17,48 @@ export const RegisterStyled = styled.div`
 
   .register-form-element {
     background-color: rgba(130, 204, 221, 0.7);
-    padding: 2rem;
-    border-radius: 5px;
+    padding: ${props => props.theme.sizings.large};
+    border-radius: ${props => props.theme.radius.medium};
     margin-top: auto;
     margin-bottom: auto;
 
     h1 {
-      color: white;
+      color: ${props => props.theme.colors.white};
       text-align: center;
-      margin-bottom: 2rem;
-      font-size: 1.5rem;
+      margin-bottom: ${props => props.theme.sizings.large};
+      font-size: ${props => props.theme.fontSizes.large};
     }
 
     p{
-      color: white;
+      color: ${props => props.theme.colors.white};
       text-align: center;
     }
 
+  }
+
+  field {
+    display: block;
+    padding: ${props => props.theme.sizings.small};
+    font-size: ${props => props.theme.fontSizes.default};
+    border: 1px solid ${props => props.theme.colors.darkBlue};
+    border-radius: ${props => props.theme.radius.medium};
+    width: 100%;
+    margin-top: ${props => props.theme.sizings.largest};
   }
 
   .terms-button-submit {
     text-align: center;
   }
 
+ 
+
   .terms {
-    color: #ffffff;
+    color: ${props => props.theme.colors.white};
   }
 
-  .button-submit {
-    color: #888888;
-    text-align: center;
-    border-radius: 3px;
-    border : none;
-    padding : .5rem .5rem;
-    margin-top: 2rem;
-    background-color: #ffffff;
 
     &:hover:enabled {
-      background-color : #0a3d62;
+      background-color : #0a3d62; // LE FICHIER DE THEME !
       color : white;
       transition-duration: .3s;
      

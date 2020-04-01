@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Button from 'src/components/Button';
+
 import ModalStyled from './ModalStyled';
 
 const Modal = ({ active, setShowModal, constellation }) => {
@@ -10,7 +12,7 @@ const Modal = ({ active, setShowModal, constellation }) => {
         <ModalStyled>
           <div className='modal-mask' />
           <div className='modal'>
-            <button onClick={() => setShowModal(false)}>Fermer</button>
+            <Button handleClick={() => setShowModal(false)}>Fermer</Button>
             <div className='modal-text'>
               <p>Etoile principale : {constellation.mainStar}</p>
               <p>Nom Latin : {constellation.latinName}</p>

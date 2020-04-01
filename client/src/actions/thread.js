@@ -4,9 +4,15 @@ export const NEW_THREAD = 'NEW_THREAD';
 export const CHANGE_VALUE = 'CHANGE_VALUE';
 export const DISPLAY = 'DISPLAY';
 export const NEW_COMMENT = 'NEW_COMMENT';
+export const DISPATCH_CURRENT_THREAD = 'DISPATCH_CURRENT_THREAD';
 
 export const fetchThreads = () => ({
   type: FETCH_THREADS,
+});
+
+export const dispatchCurrentThread = (id) => ({
+  type: DISPATCH_CURRENT_THREAD,
+  id,
 });
 
 export const saveThreads = (thread) => ({

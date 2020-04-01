@@ -6,14 +6,12 @@ import NewComment from 'src/containers/NewComment';
 import ThreadWithCommentStyled from './ThreadWithCommentsStyled';
 
 const ThreadWithComments = ({
-  title,
-  author,
-  comments,
+  list
 }) => (
   <ThreadWithCommentStyled>
   <div className="content">
-    <h2 className="content-title">{title}</h2>
-    <p className="content-text">{author}</p>
+    <h2 className="content-title">{list.title}</h2>
+    <p className="content-text">{list.author}</p>
   </div>
   <section className="comments">
     {comments.map((answer) => (

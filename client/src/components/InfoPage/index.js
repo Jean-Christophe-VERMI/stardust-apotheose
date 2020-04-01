@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import InfoPageStyled from './InfoPageStyled';
 
 import Button from 'src/components/Button';
-import Anchor from 'src/components/Anchor';
 
 const InfoPage = () => {
   return (
@@ -24,7 +23,6 @@ const InfoPage = () => {
         <Button color='primary'>
           <Link to='/register'>Inscrivez-vous</Link>
         </Button>
-        <Anchor />
       </div>
     </InfoPageStyled>
   );

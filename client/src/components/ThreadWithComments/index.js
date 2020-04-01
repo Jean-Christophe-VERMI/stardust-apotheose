@@ -21,21 +21,24 @@ const ThreadWithComments = ({ list, currentThread }) => {
 
   return (
     <ThreadWithCommentsStyled>
-      <div className="go-back-button">
-        <button onClick={goBackHandle}>Retour aux sujets</button>
-      </div>
-      <div className="content">
-        <h2>{theGoodThread.title}</h2>
-        <p>publié par {theGoodThread.name}</p>
-      </div>
-      <div className="comments">
-        <p> Les commentaires sont affichés ici</p>
-      </div>
-      <div className="form-comments">
-      <p>Le form post NewComment ici si connecté</p> 
-      <p>Sinon message connectez-vous</p> 
-      </div>
-      
+      <section className="content-section">
+        <div className="content">
+          <h2>{theGoodThread.title}</h2>
+          <p>publié par {theGoodThread.name}</p>
+        </div>
+        <div className="go-back-button">
+          <button onClick={goBackHandle}>Retour aux sujets</button>
+        </div>
+      </section>
+      <section className="comments-section">
+        <div className="comments">
+          <p> Les commentaires sont affichés ici</p>
+        </div>
+        <div className="form-comments">
+          <p>Le form post NewComment ici si connecté</p> 
+          <p>Sinon message connectez-vous</p> 
+        </div>
+      </section>
     </ThreadWithCommentsStyled>
   );
 };

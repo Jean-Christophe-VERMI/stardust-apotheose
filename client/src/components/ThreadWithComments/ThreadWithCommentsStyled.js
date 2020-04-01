@@ -13,11 +13,30 @@ const ThreadsWithCommentsStyled = styled.div`
   margin: auto auto;
   padding: 30px;
 
+  .content-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    
+  }
+
+  .comments-section {
+    background-color: #222f3e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 3px;
+  }
+
   .content {
     background-color: #222f3e;
     padding : 2rem;
     width : 100%;
     border-radius: 3px;
+    margin-right: 5rem;
 
     h2{
       color: #81b2c9;
@@ -44,13 +63,12 @@ const ThreadsWithCommentsStyled = styled.div`
   }
 
   .comments {
-    background-color : #222f3e;
     border-radius: 3px;
     text-align: center;
+    margin-bottom: 2rem;
   }
 
   .form-comments {
-    background-color : #222f3e;
     border-radius: 3px;
     text-align: center;
   }

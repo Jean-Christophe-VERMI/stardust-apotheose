@@ -50,27 +50,3 @@ ThreadWithComments.propTypes = {
 };
 
 export default ThreadWithComments;
-
-/*
-<section className="comments">
-    {comments.map((answer) => (
-      <div>
-        <Comment key={answer._id} {...answer} />
-      </div>
-    ))}
-  </section>
-  <div>
-    <NewComment />
-  </div>
-
-
-  ThreadWithComments.propTypes = {
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-};
-
-ThreadWithComments.defaultProps = {
-  isLogged: false,
-};
-
-  */

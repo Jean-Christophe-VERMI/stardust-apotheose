@@ -4,6 +4,7 @@ import {
   ERROR_MESSAGE,
   ERROR_MESSAGE_TWO,
   VALIDATION_SIGNUP,
+  VERIFY_CALLBACK,
 } from 'src/actions/user';
 
 export const initialState = {
@@ -17,6 +18,7 @@ export const initialState = {
   errorMessage2: '',
   validationSignup: false,
   signupMessage: 'Inscription confirmé, validez-votre adresse e-mail.',
+  isVerified: false,
 };
 
 const register = (state = initialState, action = {}) => {
@@ -46,8 +48,16 @@ const register = (state = initialState, action = {}) => {
         ...state,
         validationSignup: true,
       };
+    case VERIFY_CALLBACK: {
+      if (action.response) {
+        return {
+          ...state,
+          isVerified: true,
+        };
+      }
+    }
     default:
-      return state;
+    return state;
   }
 };
 

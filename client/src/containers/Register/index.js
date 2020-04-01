@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import Register from 'src/components/Register';
 
-import { sendUser, modifyField } from 'src/actions/user';
+import { sendUser, modifyField, verifyCallback } from 'src/actions/user';
 
 const mapStateToProps = (state) => ({
   name: state.register.name,
@@ -13,6 +13,7 @@ const mapStateToProps = (state) => ({
   errorMessage2: state.register.errorMessage2,
   validationSignup: state.register.validationSignup,
   signupMessage: state.register.signupMessage,
+  isVerified: state.register.isVerified,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -21,6 +22,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   changeValue: (value, name) => {
     dispatch(modifyField(value, name));
+  },
+  verifyCallback: (response) => {
+    dispatch(verifyCallback(response));
   },
 });
 

@@ -9,6 +9,7 @@ export const EMPTY_USER = 'EMPTY_USER';
 export const ERROR_MESSAGE = 'ERROR_MESSAGE';
 export const ERROR_MESSAGE_TWO = 'ERROR_MESSAGE_TWO';
 export const VALIDATION_SIGNUP = 'VALIDATION_SIGNUP';
+export const VERIFY_CALLBACK = 'VERIFY_CALLBACK';
 
 export const changeValue = (value, name) => ({
   type: CHANGE_VALUE,
@@ -60,4 +61,9 @@ export const errorMsg2 = (value) => ({
 
 export const validationSignup = () => ({
   type: VALIDATION_SIGNUP,
+});
+
+export const verifyCallback = (response) => ({
+  type: VERIFY_CALLBACK,
+  response,
 });

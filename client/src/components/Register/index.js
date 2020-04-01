@@ -17,6 +17,8 @@ const Register = ({
   errorMessage2,
   validationSignup,
   signupMessage,
+  verifyCallback,
+  isVerified,
 }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -61,15 +63,21 @@ const Register = ({
             <Form.Field>
               <Checkbox className="terms" label="J'accepte les termes et conditions" />
             </Form.Field>
-            <Button className="button-submit" type="submit">ENREGISTRER</Button>
             <Form.Field>
               <Checkbox className="terms" label="Mentions RGPD bla bla bla ...!!!" />
             </Form.Field>
           </div>
           <Recaptcha
-          sitekey="6LdwN-QUAAAAAH5d15dEMnS-CL6UYmtzvl1C2krw"
-          
+            sitekey="6LdwN-QUAAAAAH5d15dEMnS-CL6UYmtzvl1C2krw"
+            verifyCallback={verifyCallback}
           />
+          <Button
+            className="button-submit"
+            type="submit"
+            disabled={!isVerified}
+          >
+            ENREGISTRER
+          </Button>
         </Form>
       </div>
     </RegisterStyled>
@@ -88,6 +96,8 @@ Register.propTypes = {
   errorMessage2: PropTypes.string.isRequired,
   validationSignup: PropTypes.bool.isRequired,
   signupMessage: PropTypes.string.isRequired,
+  verifyCallback: PropTypes.func.isRequired,
+  isVerified: PropTypes.string.isRequired,
 };
 
 export default Register;

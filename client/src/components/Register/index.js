@@ -61,12 +61,9 @@ const Register = ({
           />
           <div className="terms-button-submit">
             <Form.Field>
-              <Checkbox className="terms" label="J'accepte les termes et conditions" />
+            <Checkbox  className="terms" label={<label> J'accepte les <a href = '/termes'> termes et conditions  </a> </label>}  />
             </Form.Field>
-            <Form.Field>
-              <Checkbox className="terms" label="Mentions RGPD bla bla bla ...!!!" />
-            </Form.Field>
-          </div>
+         </div>
           <Recaptcha
             sitekey="6LdwN-QUAAAAAH5d15dEMnS-CL6UYmtzvl1C2krw"
             verifyCallback={verifyCallback}
@@ -97,7 +94,7 @@ Register.propTypes = {
   validationSignup: PropTypes.bool.isRequired,
   signupMessage: PropTypes.string.isRequired,
   verifyCallback: PropTypes.func.isRequired,
-  isVerified: PropTypes.string.isRequired,
+  isVerified: PropTypes.bool.isRequired,
 };
 
 export default Register;

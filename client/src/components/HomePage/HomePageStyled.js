@@ -21,6 +21,13 @@ const HomePageStyled = styled.header`
     font-size: 10rem;
     font-family: ${props => props.theme.fonts.headings};
   }
+  p{
+    font-size:2rem;
+    color:red;
+    font-family: ${props => props.theme.fonts.headings};
+    text-transform:uppercase;
+
+  }
 `;
 
 export default HomePageStyled;

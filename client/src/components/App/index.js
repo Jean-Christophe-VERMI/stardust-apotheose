@@ -10,6 +10,7 @@ import Register from 'src/containers/Register';
 import UserProfil from 'src/containers/UserProfil';
 import SkyMap from 'src/components/SkyMap';
 import Forum from 'src/containers/Forum';
+import Termes from 'src/components/termes';
 
 import AppStyled from './AppStyled';
 
@@ -25,6 +26,7 @@ const App = () => (
             <Route path='/skymap' component={SkyMap} />
             <Route path='/profil' component={UserProfil} />
             <Route path='/forum' component={Forum} />
+            <Route exact path='/termes' component={Termes} />
           </Switch>
         </Main>
       </Router>

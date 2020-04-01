@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const ThreadStyled = styled.div`
   font-size: 1em;
-  background-color: #dfe6e9;
+  background-color: #222f3e;
   border: none;
   border-radius: .3em;
   margin : 1rem;
@@ -10,6 +10,10 @@ const ThreadStyled = styled.div`
 
   .show-thread {
     color: #60a3bc;
+  }
+
+  a {
+    font-weight: bold;
   }
 
 `;

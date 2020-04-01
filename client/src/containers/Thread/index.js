@@ -4,6 +4,7 @@ import Thread from 'src/components/Thread';
 
 const mapStateToProps = (state) => ({
   display: state.threads.display,
+  // name: state.register.name,
 });
 
 const mapDispatchToProps = (dispatch) => ({

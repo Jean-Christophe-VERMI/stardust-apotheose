@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 // import { getUrlByThreadTitle } from 'src/selectors';
 import NewThread from 'src/containers/NewThread';
 import Threads from 'src/containers/Threads';
-import ThreadWithComments from 'src/components/ThreadWithComments';
+import Thread from 'src/components/Thread';
 
 import ForumStyled from './ForumStyled';
 
@@ -22,7 +22,7 @@ const Forum = ({
       )}
         <Route exact path='/forum' component={Threads} />
       <Switch>
-        <Route path='/forum/my-second-thread' component={ThreadWithComments} />
+        <Route path='/forum/:threadId' component={Thread} />
       </Switch>
     </Router>
     </ForumStyled>

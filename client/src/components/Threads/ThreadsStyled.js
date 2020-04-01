@@ -5,6 +5,7 @@ const ThreadsStyled = styled.div`
   background-color: #bdc3c7;
   border: 1px solid #dddddd;
   display: flex;
+  flex-direction: column;
   min-height: 80vh;
   justify-content: space-between;
   width: 70%;
@@ -14,6 +15,11 @@ const ThreadsStyled = styled.div`
   .thread {
     padding : 2rem;
     width : 100%;
+  }
+
+  h1 {
+    color: #60a3bc;
+    font-weight: bold;
   }
 
 `;

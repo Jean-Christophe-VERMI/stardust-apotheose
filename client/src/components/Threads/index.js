@@ -7,6 +7,7 @@ const Threads = ({ list }) => {
   console.log(list)
   return (
     <ThreadsStyled>
+    <h1>FORUM STARDUST : Liste des sujets</h1>
       <div className='thread'>
         {list.map(thread => (
           <Thread key={thread._id} {...thread} />

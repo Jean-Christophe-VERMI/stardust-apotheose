@@ -23,6 +23,8 @@ const InfoPageStyled = styled.div`
 
   .text-infos {
     color: ${props => props.theme.colors.white};
+    font-family: ${props => props.theme.fonts.default};
+
     text-align: justify;
     margin: ${props => props.theme.sizings.medium};
   }

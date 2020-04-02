@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
@@ -10,6 +11,7 @@ import Anchor from 'src/components/Anchor';
 import HomePageStyled from './HomePageStyled';
 
 const HomePage = () => {
+
   const [nextElement, setNextElement] = useState(1);
   const maxElements = 2;
 
@@ -21,7 +23,6 @@ const HomePage = () => {
       setNextElement(nextElement + 1);
     }
   };
-
   return (
     <HomePageStyled>
       <Element name='0'>
@@ -37,6 +38,7 @@ const HomePage = () => {
         nextElement={nextElement}
         maxElements={maxElements}
       />
+
     </HomePageStyled>
   );
 };

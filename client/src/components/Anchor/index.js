@@ -6,6 +6,7 @@ import AnchorStyled from './AnchorStyled';
 
 import { Link } from 'react-scroll';
 
+
 const Anchor = ({ nextElement, maxElements, handleScroll }) => (
   <AnchorStyled>
     <Link

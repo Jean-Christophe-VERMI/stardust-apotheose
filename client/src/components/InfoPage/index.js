@@ -21,7 +21,7 @@ const InfoPage = () => {
         </p>
 
         <Button color='primary'>
-          <Link to='/register'>Inscrivez-vous</Link>
+          <Link to='/register'>S'inscrire</Link>
         </Button>
       </div>
     </InfoPageStyled>

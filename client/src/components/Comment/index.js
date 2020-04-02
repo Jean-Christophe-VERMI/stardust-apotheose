@@ -6,8 +6,9 @@ const Comment = ({
   author,
 }) => (
   <div className="content">
+    <p className="content-text">Posté par: {author}</p>
     <h2 className="content-title">{text}</h2>
-    <p className="content-text">{author}</p>
+    
   </div>
 );
 

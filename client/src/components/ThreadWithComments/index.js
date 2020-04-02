@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory } from "react-router";
 import PropTypes from 'prop-types';
 
-
+import Comment from 'src/components/Comment';
 import NewComment from 'src/containers/NewComment';
 import ThreadWithCommentsStyled from './ThreadWithCommentsStyled';
 
@@ -13,8 +13,14 @@ const ThreadWithComments = ({ list, currentThread }) => {
   console.log(currentThread);
   const theGoodThread = list.find(thread => thread._id === currentThread);
   console.log(theGoodThread);
-  console.log(theGoodThread.title);
-  console.log(theGoodThread.name);
+  // console.log(theGoodThread.title);
+  // console.log(theGoodThread.name);
+
+  const comments = theGoodThread.comments;
+  console.log(comments);
+
+  // const allTextComments = comments.map(comment => comment.text);
+  // console.log(allTextComments);
 
   const history = useHistory();
   function goBackHandle(){
@@ -34,7 +40,11 @@ const ThreadWithComments = ({ list, currentThread }) => {
       </section>
       <section className="comments-section">
         <div className="comments">
-          <p> Les commentaires sont affichés ici</p>
+          <h3>Commentaires</h3>
+          {comments.map(comment => (
+          <Comment key={comment._id} {...comment} />
+        ))}
+        
         </div>
         <div className="form-comments">
           <NewComment />

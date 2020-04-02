@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const SkyMapStyled = styled.section`
-  height: 100%;
+  height: auto;
   display: flex;
   padding-top: ${props => props.theme.sizings.largest};
   display: grid;
@@ -36,8 +36,9 @@ const SkyMapStyled = styled.section`
 
   .sky-map {
     padding: ${props => props.theme.sizings.large};
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 70%;
+    max-height: 70%;
+    z-index: 2;
   }
 `;
 

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const ConstellationStyled = styled.div`
+  height: 80vh;
   input {
     display: block;
     padding: ${props => props.theme.sizings.small};

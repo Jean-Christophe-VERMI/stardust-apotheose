@@ -16,9 +16,9 @@ const Forum = ({
     <ForumStyled>
     <Router>
       
-        <Route exact path='/forum' component={Threads} />
+        <Route exact path='/forum' exact component={Threads} />
       <Switch>
-        <Route path='/forum/:threadId' component={ThreadwithComments} />
+        <Route exact path='/forum/:threadId' exact component={ThreadwithComments} />
       </Switch>
     </Router>
     </ForumStyled>

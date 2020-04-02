@@ -46,7 +46,7 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { author, text, updatedAt } = req.body;
+    const { author, name, text, updatedAt } = req.body;
     try {
       const newComment = new Comment({
         author,

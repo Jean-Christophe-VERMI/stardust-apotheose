@@ -4,11 +4,11 @@ import {
   FETCH_THREADS,
   saveThreads,
   NEW_COMMENT,
-  saveComment,
-
+  fetchThreads,
 } from 'src/actions/thread';
 
 const threadMiddleware = (store) => (next) => (action) => {
+
   switch (action.type) {
     case FETCH_THREADS: {
       axios.get('http://localhost:5000/forum/')
@@ -22,15 +22,16 @@ const threadMiddleware = (store) => (next) => (action) => {
       break;
     }
     case NEW_COMMENT: {
-      const threadId = store.getState().thread.currentThread;
-      console.log(threadId);
+      let threadId = store.getState().threads.currentThread;
+      
       axios({
         method: 'post',
         url: `http://localhost:5000/forum/${threadId}/comments`,
         data: {
           author: store.getState().auth.id,
-          text: store.getState().thread.text,
-          updatedAt: date.now(),
+          name: store.getState().register.name,
+          text: store.getState().threads.text,
+          updatedAt: Date.now(),
         },
       })
         .then((response) => {

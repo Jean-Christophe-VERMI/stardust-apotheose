@@ -5,6 +5,7 @@ export const CHANGE_VALUE = 'CHANGE_VALUE';
 export const DISPLAY = 'DISPLAY';
 export const NEW_COMMENT = 'NEW_COMMENT';
 export const DISPATCH_CURRENT_THREAD = 'DISPATCH_CURRENT_THREAD';
+export const SAVE_COMMENTS = 'SAVE_COMMENTS';
 
 export const fetchThreads = () => ({
   type: FETCH_THREADS,
@@ -38,5 +39,10 @@ export const display = () => ({
 export const newComment = (text) => ({
   type: NEW_COMMENT,
   text,
+});
+
+export const saveComments = (comment) => ({
+  type: SAVE_COMMENTS,
+  comment,
 });
 

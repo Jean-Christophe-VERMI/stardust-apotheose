@@ -2,6 +2,8 @@ import React from 'react';
 import { useHistory } from "react-router";
 import PropTypes from 'prop-types';
 
+
+import NewComment from 'src/containers/NewComment';
 import ThreadWithCommentsStyled from './ThreadWithCommentsStyled';
 
 
@@ -35,8 +37,7 @@ const ThreadWithComments = ({ list, currentThread }) => {
           <p> Les commentaires sont affichés ici</p>
         </div>
         <div className="form-comments">
-          <p>Le form post NewComment ici si connecté</p> 
-          <p>Sinon message connectez-vous</p> 
+          <NewComment />
         </div>
       </section>
     </ThreadWithCommentsStyled>

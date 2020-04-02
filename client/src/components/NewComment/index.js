@@ -19,7 +19,7 @@ const NewComment = ({
       {isLogged && (
         <div>
           <Form onSubmit={handleSubmit}>
-            <h1>Nouveau sujet</h1>
+            <p>Ajouter un nouveau commentaire</p>
             <div className="comment">
               <Field
                 name='text'
@@ -33,8 +33,9 @@ const NewComment = ({
         </div>
       )}
       {!isLogged && (
-        <div>
-          <p> Si vous souhaitez commenter ce sujet, merci de vous inscrire ou vous connecter !</p>
+        <div className="not-logged-comment">
+          <p> Si vous souhaitez commenter ce sujet, merci de vous <a className="link-register" href="http://localhost:8080/register">inscrire.</a></p>
+          <p>Sinon connectez-vous !</p>
         </div>
       )}
     </NewCommentStyled>

@@ -81,11 +81,7 @@ const Register = ({
             sitekey='6LdwN-QUAAAAAH5d15dEMnS-CL6UYmtzvl1C2krw'
             verifyCallback={verifyCallback}
           />
-          <Button
-            className='button-submit'
-            type='submit'
-            disabled={!isVerified}
-          >
+          <Button type='submit' color='primary'>
             ENREGISTRER
           </Button>
         </Form>

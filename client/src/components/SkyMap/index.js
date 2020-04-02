@@ -55,14 +55,14 @@ const SkyMap = ({ user }) => {
         <h2>{user.city ? (city ? city : user.city) : ''}</h2>
         <div className='sky-map'>
           <iframe
-            width='450'
-            height='450'
+            width='400'
+            height='400'
             frameBorder='0'
-            scrolling='no'
+            scrolling='yes'
             marginHeight='0'
             marginWidth='0'
             src={`https://virtualsky.lco.global/embed/index.html?longitude=${coords.lng}&latitude=${coords.lat}&projection=polar&constellations=true&constellationlabels=true&az=192.84525109280014&showdate=false&showposition=false`}
-            allowtransparency='true'
+            allowtransparency='false'
           ></iframe>
         </div>
       </div>

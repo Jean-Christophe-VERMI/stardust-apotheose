@@ -21,8 +21,11 @@ router.put('/:id', async (req, res) => {
   const userId = ObjectId(req.params.id);
   const { name, email } = req.body;
   try {
-    const user = await User.findByIdAndUpdate(userId, { name, email });
-    res.send(user);
+    const user = await User.findByIdAndUpdate(userId, {
+      name,
+      email,
+    });
+    await res.send(user);
   } catch (err) {
     console.error(err.message);
     res.status(500).send('User not updated');

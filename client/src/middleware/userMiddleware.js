@@ -2,12 +2,12 @@ import axios from 'axios';
 
 import { CHANGE_USER_INFOS, addUserInfos } from 'src/actions/user';
 
-const userMiddleware = (store) => (next) => (action) => {
+const userMiddleware = store => next => async action => {
   switch (action.type) {
     case CHANGE_USER_INFOS: {
-      axios({
+      await axios({
         method: 'put',
-        url: 'http://localhost:5000/users/:id',
+        url: 'http://localhost:5000/users/:_id',
         data: {
           name: store.getState().auth.newName,
         },

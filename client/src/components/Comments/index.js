@@ -4,15 +4,17 @@ import PropTypes from 'prop-types';
 
 import CommentStyled from './CommentStyled';
 
-const Comments = ({ text, author, _id, deleteComment }) => {
+const Comments = ({ text, author, _id, dispatchCommentInfos, deleteComment }) => {
 
   const date = Date.now();
-  
+
   return (
       <CommentStyled>
             <div className="action-post">
               <p className="info-author">Posté par: {author}, le {date}</p>
-              <button onClick={() => {deleteComment(_id)}} className="delete-post">X</button>
+              <button onClick={() => {
+                      dispatchCommentInfos(_id, author);
+                      deleteComment()}} className="delete-post">X</button>
             </div>
           <h2 className="content-post">{text}</h2>
       </CommentStyled>
@@ -24,6 +26,7 @@ Comment.propTypes = {
   _id : PropTypes.string.isRequired,
   text : PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  dispatchCommentInfos: PropTypes.func.isRequired,
   deleteComment: PropTypes.func.isRequired,
 };
 

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { deleteComment } from 'src/actions/thread';
+import { dispatchCommentInfos, deleteComment } from 'src/actions/thread';
 import Comments from 'src/components/Comments';
 
 const mapStateToProps = (state) => ({
@@ -7,8 +7,13 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  deleteComment: (id) => {
-    dispatch(deleteComment(id));
+
+  dispatchCommentInfos: (id, author) => {
+    dispatch(dispatchCommentInfos(id, author));
+  },
+
+  deleteComment: () => {
+    dispatch(deleteComment());
   },
 });
 

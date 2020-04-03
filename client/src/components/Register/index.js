@@ -78,6 +78,7 @@ const Register = ({
             className="button-submit"
             type="submit"
             disabled={!isVerified}
+            fr
             onClick={routeChange}
           >
             ENREGISTRER

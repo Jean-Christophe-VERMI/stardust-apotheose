@@ -1,5 +1,6 @@
 .field {
   margin: .3em;
+  width: 100%;
   position: relative;
 }
 .field-input {

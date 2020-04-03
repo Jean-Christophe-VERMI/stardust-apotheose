@@ -23,8 +23,11 @@ const ThreadWithComments = ({ list, currentThread }) => {
   // console.log(allTextComments);
 
   const history = useHistory();
-  function goBackHandle(){
-    history.goBack();
+
+
+  function routeChange(){
+    let path = "/forum";
+    history.push(path);
   }
 
   return (
@@ -35,7 +38,7 @@ const ThreadWithComments = ({ list, currentThread }) => {
           <p>publié par {theGoodThread.name}</p>
         </div>
         <div className="go-back-button">
-          <button onClick={goBackHandle}>Retour aux sujets</button>
+          <button onClick={routeChange}>Retour aux sujets</button>
         </div>
       </section>
       <section className="comments-section">

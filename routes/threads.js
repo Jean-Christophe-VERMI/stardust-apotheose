@@ -1,4 +1,5 @@
 const express = require('express');
+var mongoose = require('mongoose');
 const router = express.Router();
 const { validationResult } = require('express-validator');
 
@@ -83,15 +84,19 @@ router.get('/', async (req, res) => {
 router.delete('/:threadId/comments/:commentId/:userId', async (req, res) => {
   const { threadId, commentId, userId } = req.params;
 
-  try {
-    const comment = await Comment.findById(commentId);
-    const thread = await Thread.findById(threadId);
+  mongoose.Types.ObjectId.isValid(commentId);
+  mongoose.Types.ObjectId.isValid(threadId);
+  mongoose.Types.ObjectId.isValid(userId);
 
-    if (comment.author == userId) {
+  try {
+    const comment = await Comment.findById(mongoose.Types.ObjectId.isValid(commentId));
+    const thread = await Thread.findById(mongoose.Types.ObjectId.isValid(threadId));
+
+    if (comment.author == mongoose.Types.ObjectId.isValid(userId)) {
       await thread.update({
         comments: [
           thread.comments.filter(
-            threadComment => threadComment._id !== commentId
+            threadComment => threadComment._id !== mongoose.Types.ObjectId.isValid(commentId)
           ),
         ],
       });

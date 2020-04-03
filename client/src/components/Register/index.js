@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from "react-router";
 import PropTypes from 'prop-types';
 import { Button, Checkbox, Form } from 'semantic-ui-react';
 import Field from './Field';
@@ -13,8 +14,6 @@ const Register = ({
   sendUser,
   errorMessage,
   errorMessage2,
-  validationSignup,
-  signupMessage,
   verifyCallback,
   isVerified,
 }) => {
@@ -22,6 +21,14 @@ const Register = ({
     event.preventDefault();
     sendUser();
   };
+
+  const history = useHistory();
+
+  function routeChange(){
+    let path = "/";
+    history.push(path);
+  };
+
   return (
     <RegisterStyled>
       <div id="register-form">
@@ -29,9 +36,6 @@ const Register = ({
           <h1>INSCRIPTION</h1>
           <p>{errorMessage}</p>
           <p>{errorMessage2}</p>
-          {validationSignup && (
-          <p>{signupMessage}</p>
-          )}
           <Field
             name="name"
             placeholder="Nom"
@@ -74,6 +78,7 @@ const Register = ({
             className="button-submit"
             type="submit"
             disabled={!isVerified}
+            onClick={routeChange}
           >
             ENREGISTRER
           </Button>
@@ -82,6 +87,7 @@ const Register = ({
     </RegisterStyled>
   );
 };
+
 Register.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,

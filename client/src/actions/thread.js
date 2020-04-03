@@ -6,10 +6,23 @@ export const DISPLAY = 'DISPLAY';
 export const NEW_COMMENT = 'NEW_COMMENT';
 export const DISPATCH_CURRENT_THREAD = 'DISPATCH_CURRENT_THREAD';
 export const SAVE_COMMENTS = 'SAVE_COMMENTS';
+export const DELETE_COMMENT = 'DELETE_COMMENT';
+export const DISPATCH_COMMENT_INFOS = 'DISPATCH_COMMENT_INFOS';
 
 export const fetchThreads = () => ({
   type: FETCH_THREADS,
 });
+
+export const dispatchCommentInfos = (id, author) => ({
+  type: DISPATCH_COMMENT_INFOS,
+  id,
+  author,
+});
+
+export const deleteComment = () => ({
+  type: DELETE_COMMENT,
+});
+
 
 export const dispatchCurrentThread = (id) => ({
   type: DISPATCH_CURRENT_THREAD,

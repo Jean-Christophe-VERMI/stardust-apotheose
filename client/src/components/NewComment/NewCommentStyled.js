@@ -12,7 +12,9 @@ const NewThreadStyled = styled.div`
   }
 
   .not-logged-comment{
-    padding : 2rem;
+    padding : .8rem;
+    background-color: #222f3e;
+    border-radius: 3px;
   }
 `;
 

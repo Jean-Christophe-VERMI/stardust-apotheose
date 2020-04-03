@@ -57,7 +57,7 @@ const threadMiddleware = (store) => (next) => (action) => {
       console.log(userId);
 
       axios({
-        method: 'post',
+        method: 'delete',
         url: `http://localhost:5000/${threadId}/comments/${commentId}/${userId}`,
       })
         .then((response) => {

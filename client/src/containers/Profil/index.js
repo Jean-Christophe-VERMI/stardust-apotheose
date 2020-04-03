@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { toggleOpenModify, changeValue, changeUserInfos } from 'src/actions/user';
+import { toggleOpenModify, modifyField, changeUserInfos } from 'src/actions/user';
 import Profil from 'src/components/Profil';
 
 
@@ -15,11 +15,11 @@ const mapDispatchToProps = (dispatch) => ({
   toggle: () => {
     dispatch(toggleOpenModify());
   },
-  changeField: (name, value) => {
-    dispatch(changeValue(name, value));
+  changeValue: (value, name) => {
+    dispatch(modifyField(value, name));
   },
-  changeUserInfos: (user) => {
-    dispatch(changeUserInfos(user));
+  changeUserInfos: (newName) => {
+    dispatch(changeUserInfos(newName));
   },
 });
 export default connect(mapStateToProps, mapDispatchToProps)(Profil);

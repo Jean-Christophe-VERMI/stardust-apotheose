@@ -11,12 +11,12 @@ const Profil = ({
   city,
   toggle,
   toggleOpen,
-  changeField,
+  changeValue,
   changeUserInfos,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    changeUserInfos();
+    changeUserInfos(newName);
   };
   return (
     <ProfilStyled>
@@ -30,7 +30,7 @@ const Profil = ({
                 <Field
                   name='newName'
                   placeholder='Nouveau nom'
-                  onChange={changeField}
+                  onChange={changeValue}
                   value={newName}
                 />
                 <button type='submit' className='login-form-button'>
@@ -66,8 +66,8 @@ Profil.propTypes = {
   city: PropTypes.string.isRequired,
   toggle: PropTypes.func.isRequired,
   toggleOpen: PropTypes.bool.isRequired,
-  changeField: PropTypes.string.isRequired,
-  changeUserInfos: PropTypes.string.isRequired,
+  changeValue: PropTypes.func.isRequired,
+  changeUserInfos: PropTypes.func.isRequired,
 };
 
 export default Profil;

@@ -12,6 +12,7 @@ export const VALIDATION_SIGNUP = 'VALIDATION_SIGNUP';
 export const VERIFY_CALLBACK = 'VERIFY_CALLBACK';
 export const CHANGE_USER_INFOS = 'CHANGE_USER_INFOS';
 export const TOGGLE_OPEN_MODIFY = 'TOOGLE_OPEN_MODIFY';
+export const UPDATE_USER_INFOS ='UPDATE_USER_INFOS';
 
 export const changeValue = (value, name) => ({
   type: CHANGE_VALUE,
@@ -47,6 +48,7 @@ export const addUserInfos = (user) => ({
   type: ADD_USER_INFOS,
   payload: user,
 });
+
 export const emptyUser = () => ({
   type: EMPTY_USER,
 });
@@ -70,10 +72,14 @@ export const verifyCallback = (response) => ({
   response,
 });
 
-export const changeUserInfos = (name, value) => ({
+export const changeUserInfos = (newName) => ({
   type: CHANGE_USER_INFOS,
-  name,
-  value,
+  newName,
+});
+
+export const updateUserInfos = (user) => ({
+  type: UPDATE_USER_INFOS,
+  user: user,
 });
 
 export const toggleOpenModify = () => ({

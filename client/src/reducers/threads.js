@@ -4,6 +4,7 @@ import {
   CHANGE_VALUE, 
   NEW_COMMENT,
   DISPATCH_CURRENT_THREAD,
+  DELETE_COMMENT,
  } from 'src/actions/thread';
 
 export const initialState = {
@@ -14,6 +15,7 @@ export const initialState = {
   text: '',
   display: false,
   currentThread: '',
+  CommentToDelete: '',
 };
 
 const threads = (state = initialState, action = {}) => {
@@ -22,6 +24,11 @@ const threads = (state = initialState, action = {}) => {
       return {
         ...state,
         [action.name]: action.value,
+      };
+    case DELETE_COMMENT:
+      return {
+        ...state,
+        commentToDelete: action.id,
       };
     case DISPATCH_CURRENT_THREAD:
       return {

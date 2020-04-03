@@ -2,10 +2,12 @@ import styled from 'styled-components';
 
 const FooterStyled = styled.div`
   position: fixed;
-  height: auto;
+  z-index: 20;
   width: 100%;
-  flex-direction: row;
-  background-color: ${props => props.theme.colors.darkBlue};
+  background-color: red;
+  display: inline-flex;
+  margin-top: 85vh;
+  padding-bottom: ${props => props.theme.sizings.small};
 
   .footer {
     color: ${props => props.theme.colors.white};
@@ -13,11 +15,10 @@ const FooterStyled = styled.div`
 
   .mentions,
   .termes {
-    display: block;
-    text-align: right;
-    align-items: right;
-    justify-content: space-between;
     padding: ${props => props.theme.sizings.medium};
+    text-align: right;
+    align-items: center;
+    justify-content: space-between;
 
     &:hover {
       color: ${props => props.theme.colors.linkDark};

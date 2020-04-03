@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import Constellations from 'src/components/Constellations';
 import SkyMapStyled from './SkyMapStyled';
+import Footer from 'src/components/Footer';
 
 const SkyMap = ({ user }) => {
   const [coords, setCoords] = useState({});
@@ -67,6 +68,7 @@ const SkyMap = ({ user }) => {
         </div>
       </div>
       <Constellations />
+      <Footer />
     </SkyMapStyled>
   );
 };

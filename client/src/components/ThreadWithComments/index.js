@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory } from "react-router";
 import PropTypes from 'prop-types';
 
-import Comment from 'src/components/Comment';
+import Comments from 'src/containers/Comments';
 import NewComment from 'src/containers/NewComment';
 import ThreadWithCommentsStyled from './ThreadWithCommentsStyled';
 
@@ -39,10 +39,10 @@ const ThreadWithComments = ({ list, currentThread }) => {
         </div>
       </section>
       <section className="comments-section">
-        <div className="comments">
+        <div className="posts">
           <h3>Commentaires</h3>
           {comments.map(comment => (
-          <Comment key={comment._id} {...comment} />
+          <Comments key={comment._id} {...comment} />
         ))}
         
         </div>

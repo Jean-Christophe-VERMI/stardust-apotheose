@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import Constellations from 'src/components/Constellations';
 import SkyMapStyled from './SkyMapStyled';
-import Footer from 'src/components/Footer';
 
 const SkyMap = ({ user }) => {
   const [coords, setCoords] = useState({});
@@ -56,8 +55,8 @@ const SkyMap = ({ user }) => {
         <h2>{user.city ? (city ? city : user.city) : ''}</h2>
         <div className='sky-map'>
           <iframe
-            width='400'
-            height='400'
+            width='580'
+            height='580'
             frameBorder='0'
             scrolling='yes'
             marginHeight='0'
@@ -68,7 +67,6 @@ const SkyMap = ({ user }) => {
         </div>
       </div>
       <Constellations />
-      <Footer />
     </SkyMapStyled>
   );
 };

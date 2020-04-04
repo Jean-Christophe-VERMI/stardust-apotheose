@@ -17,7 +17,7 @@ export const initialState = {
   errorMessage: '',
   errorMessage2: '',
   validationSignup: false,
-  signupMessage: 'Inscription confirmé, validez-votre adresse e-mail.',
+  signupMessage: 'Inscription confirmé, vous pouvez maintenant utiliser vos identifiants de connexion.',
   isVerified: false,
 };
 

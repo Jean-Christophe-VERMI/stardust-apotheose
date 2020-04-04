@@ -12,7 +12,8 @@ export const VALIDATION_SIGNUP = 'VALIDATION_SIGNUP';
 export const VERIFY_CALLBACK = 'VERIFY_CALLBACK';
 export const CHANGE_USER_INFOS = 'CHANGE_USER_INFOS';
 export const TOGGLE_OPEN_MODIFY = 'TOOGLE_OPEN_MODIFY';
-export const UPDATE_USER_INFOS ='UPDATE_USER_INFOS';
+export const UPDATE_USER_INFOS = 'UPDATE_USER_INFOS';
+export const DELETE_USER = 'DELETE_USER';
 
 export const changeValue = (value, name) => ({
   type: CHANGE_VALUE,
@@ -79,9 +80,13 @@ export const changeUserInfos = (newName) => ({
 
 export const updateUserInfos = (user) => ({
   type: UPDATE_USER_INFOS,
-  user: user,
+  user,
 });
 
 export const toggleOpenModify = () => ({
   type: TOGGLE_OPEN_MODIFY,
+});
+
+export const deleteUser = (id) => ({
+  type: DELETE_USER,
 });

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { toggleOpenModify, modifyField, changeUserInfos } from 'src/actions/user';
+import { toggleOpenModify, modifyField, changeUserInfos, deleteUser } from 'src/actions/user';
 import Profil from 'src/components/Profil';
 
 
@@ -21,5 +21,8 @@ const mapDispatchToProps = (dispatch) => ({
   changeUserInfos: (newName) => {
     dispatch(changeUserInfos(newName));
   },
+  deleteUser: () => {
+    dispatch(deleteUser());
+  }
 });
 export default connect(mapStateToProps, mapDispatchToProps)(Profil);

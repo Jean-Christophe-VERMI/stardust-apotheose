@@ -6,6 +6,7 @@ import
   CHANGE_USER_INFOS,
   MODIFY_FIELD,
   UPDATE_USER_INFOS,
+  DELETE_USER,
 } from 'src/actions/user';
 
 export const initialState = {
@@ -42,7 +43,9 @@ const auth = (state = initialState, action = {}) => {
       return {
         ...state,
         name: action.user.name,
-      }
+      };
+    case DELETE_USER:
+      return {};
     case EMPTY_USER:
       return {};
     default:

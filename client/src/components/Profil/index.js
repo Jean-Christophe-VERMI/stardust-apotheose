@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
+import DeleteIcon from '@material-ui/icons/Delete';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Field from './Field';
@@ -13,6 +15,7 @@ const Profil = ({
   toggleOpen,
   changeValue,
   changeUserInfos,
+  deleteUser,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -54,6 +57,14 @@ const Profil = ({
             <Field />
           )}
         </div>
+        <Button
+          variant="contained"
+          color="secondary"
+          startIcon={<DeleteIcon />}
+          onClick={deleteUser}
+        >
+          Delete
+        </Button>
       </div>
     </ProfilStyled>
   );
@@ -68,6 +79,7 @@ Profil.propTypes = {
   toggleOpen: PropTypes.bool.isRequired,
   changeValue: PropTypes.func.isRequired,
   changeUserInfos: PropTypes.func.isRequired,
+  deleteUser: PropTypes.func.isRequired,
 };
 
 export default Profil;

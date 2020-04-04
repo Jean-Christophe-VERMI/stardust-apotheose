@@ -34,10 +34,11 @@ router.put('/:id', async (req, res) => {
 });
 
 router.delete('/:id', async (req, res) => {
-  const userId = req.params.id;
+  const userId = ObjectId(req.params.id);
   try {
     const deleteUser = await User.findByIdAndDelete(userId);
-    res.send(deleteUser);
+    console.log("Did it");
+    res.json(deleteUser);
   } catch (err) {
     console.error(err.message);
     res.status(500).send('User not deleted');

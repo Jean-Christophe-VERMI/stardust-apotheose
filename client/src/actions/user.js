@@ -78,15 +78,15 @@ export const changeUserInfos = (newName) => ({
   newName,
 });
 
-export const updateUserInfos = (user) => ({
+export const updateUserInfos = (name) => ({
   type: UPDATE_USER_INFOS,
-  user,
+  name,
 });
 
 export const toggleOpenModify = () => ({
   type: TOGGLE_OPEN_MODIFY,
 });
 
-export const deleteUser = (id) => ({
+export const deleteUser = () => ({
   type: DELETE_USER,
 });

@@ -21,7 +21,7 @@ const registerMiddleware = store => next => action => {
         },
       })
         .then(response => {
-          console.log(response.data);
+          console.log(response.data.token);
           store.dispatch(validationSignup());
         })
         .catch(error => {

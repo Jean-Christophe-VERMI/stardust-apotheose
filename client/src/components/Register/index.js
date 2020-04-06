@@ -5,6 +5,7 @@ import { Button, Checkbox, Form } from 'semantic-ui-react';
 import Field from './Field';
 const Recaptcha = require('react-recaptcha');
 import RegisterStyled from './RegisterStyled';
+
 const Register = ({
   name,
   email,
@@ -17,16 +18,17 @@ const Register = ({
   verifyCallback,
   isVerified,
 }) => {
+  const history = useHistory();
+
+  function routeChange() {
+    let path = "/";
+    history.push(path);
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     sendUser();
-  };
-
-  const history = useHistory();
-
-  function routeChange(){
-    let path = "/";
-    history.push(path);
+    routeChange();
   };
 
   return (
@@ -66,10 +68,10 @@ const Register = ({
             required
           />
           <div className="terms-button-submit">
-            <Form.Field required >
-            <Checkbox   className="terms" label={<label> J'accepte les <a href = '/termes'> termes et conditions  </a> </label>}  />
+            <Form.Field required>
+              <Checkbox className="terms" label={<label> J'accepte les <a href='/termes'> termes et conditions  </a> </label>} />
             </Form.Field>
-         </div>
+          </div>
           <Recaptcha
             sitekey="6LdwN-QUAAAAAH5d15dEMnS-CL6UYmtzvl1C2krw"
             verifyCallback={verifyCallback}
@@ -79,7 +81,6 @@ const Register = ({
             type="submit"
             disabled={!isVerified}
             fr
-            onClick={routeChange}
           >
             ENREGISTRER
           </Button>
@@ -103,4 +104,5 @@ Register.propTypes = {
   verifyCallback: PropTypes.func.isRequired,
   isVerified: PropTypes.bool.isRequired,
 };
+
 export default Register;

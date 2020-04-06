@@ -4,7 +4,9 @@ import
   EMPTY_USER,
   TOGGLE_OPEN_MODIFY,
   CHANGE_USER_INFOS,
-  CHANGE_VALUE,
+  MODIFY_FIELD,
+  UPDATE_USER_INFOS,
+  DELETE_USER,
 } from 'src/actions/user';
 
 export const initialState = {
@@ -25,18 +27,25 @@ const auth = (state = initialState, action = {}) => {
     case CHANGE_USER_INFOS:
       return {
         ...state,
-        newName: action.user,
+        newName: action.newName,
       };
     case TOGGLE_OPEN_MODIFY:
       return {
         ...state,
         toggleOpen: !state.toggleOpen,
       };
-    case CHANGE_VALUE:
+    case MODIFY_FIELD:
       return {
         ...state,
-        [action.name]: action.value,
+        [action.key]: action.value,
       };
+    case UPDATE_USER_INFOS:
+      return {
+        ...state,
+        name: action.user.name,
+      };
+    case DELETE_USER:
+      return {};
     case EMPTY_USER:
       return {};
     default:

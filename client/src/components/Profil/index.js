@@ -45,17 +45,9 @@ const Profil = ({
         </div>
         <div>
           <p>{email}</p>
-          <Link onClick={toggle}>Modifier</Link>
-          {toggleOpen && (
-            <Field />
-          )}
         </div>
         <div>
           <p>{city}</p>
-          <Link onClick={toggle}>Modifier</Link>
-          {toggleOpen && (
-            <Field />
-          )}
         </div>
         <Button
           variant="contained"

@@ -42,7 +42,7 @@ const auth = (state = initialState, action = {}) => {
     case UPDATE_USER_INFOS:
       return {
         ...state,
-        name: action.user.name,
+        name: action.name,
       };
     case DELETE_USER:
       return {};

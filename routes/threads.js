@@ -82,19 +82,21 @@ router.get('/', async (req, res) => {
 
 router.delete('/:threadId/comments/:commentId/:userId', async (req, res) => {
   const { threadId, commentId, userId } = req.params;
+  console.log(req.params);
 
   try {
     const comment = await Comment.findById(commentId);
     const thread = await Thread.findById(threadId);
-
+    console.log(commentId);
     if (comment.author == (userId)) {
       await thread.update({
         comments: [
           thread.comments.filter(
-            threadComment => threadComment._id !== (commentId)
+            threadComment => threadComment._id == (commentId)
           ),
         ],
       });
+      ;
       await comment.delete();
 
       res.status(200);

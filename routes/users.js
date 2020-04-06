@@ -1,5 +1,5 @@
 const express = require('express');
-const ObjectId = require('mongodb').ObjectId;
+const ObjectID = require('mongodb').ObjectID;
 
 const User = require('../models/User');
 const router = express.Router();
@@ -8,7 +8,7 @@ router.get('/:id', async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
     if (user) {
-      res.send(user);
+      res.json(user);
     } else {
       res.status(404);
     }
@@ -19,22 +19,23 @@ router.get('/:id', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
-  const userId = ObjectId(req.params.id);
-  await console.log(userId);
-  const name = req.body;
+  console.log(req.params);
+  const userId = ObjectID(req.params.id);
+  console.log(userId, "back");
+  const name = req.body.name;
+  console.log(req.body.name);
   try {
-    const user = await User.findByIdAndUpdate(userId,{ $set:
-      {"name": name}}, {new: true}).exec();
-    await console.log(user);
+    const user = await User.findByIdAndUpdate(userId, {$set: { "name":name} } );
     await res.json(user);
   } catch (err) {
-    console.error(err.message);
+    console.error("on est dans le catch", err.message);
     res.status(500).send('User not updated');
   }
 });
 
 router.delete('/:id', async (req, res) => {
-  const userId = ObjectId(req.params.id);
+  console.log(req.params);
+  const userId = ObjectID(req.params.id);
   try {
     const deleteUser = await User.findByIdAndDelete(userId);
     console.log("Did it");
@@ -44,5 +45,7 @@ router.delete('/:id', async (req, res) => {
     res.status(500).send('User not deleted');
   }
 });
+
+
 
 module.exports = router;

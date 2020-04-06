@@ -55,8 +55,8 @@ const SkyMap = ({ user }) => {
         <h2>{user.city ? (city ? city : user.city) : ''}</h2>
         <div className='sky-map'>
           <iframe
-            width='400'
-            height='400'
+            width='570'
+            height='570'
             frameBorder='0'
             scrolling='yes'
             marginHeight='0'

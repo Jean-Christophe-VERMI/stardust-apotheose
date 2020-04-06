@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 const TeamPageStyled = styled.div`
-  position: fixed;
+
   width: 100%;
-  height: auto;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,6 +15,10 @@ const TeamPageStyled = styled.div`
     margin: ${props => props.theme.sizings.medium};
   }
 
+  .contact {
+    align-items: center;
+    display: block;
+  }
   input,
   text-area {
     width: 100%;
@@ -27,11 +31,21 @@ const TeamPageStyled = styled.div`
   input,
   .message-text {
     display: block;
+    width: 100%;
     padding: ${props => props.theme.sizings.small};
     font-size: ${props => props.theme.fontSizes.default};
     border: 1px solid ${props => props.theme.colors.darkBlue};
     border-radius: ${props => props.theme.radius.medium};
     margin: ${props => props.theme.sizings.medium} 0;
+
+    &:hover {
+      border: 1px solid ${props => props.theme.colors.linkDark};
+    }
+  }
+
+  h1 {
+    font-size: ${props => props.theme.fontSizes.largest};
+    margin-bottom: ${props => props.theme.sizings.medium};
   }
 
   p {

@@ -6,7 +6,6 @@ import TeamPageStyled from './TeamPageStyled';
 const TeamPage = () => {
   return (
     <TeamPageStyled>
-      <div className='team-photos'></div>
       <div className='contact'>
         <h1>Nous contacter</h1>
         <form className='contact-form'>

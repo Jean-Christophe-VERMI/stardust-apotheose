@@ -12,7 +12,8 @@ import InfoPage from 'src/components/InfoPage';
 import Anchor from 'src/components/Anchor';
 import HomePageStyled from './HomePageStyled';
 
-const HomePage = ({ isVerified, signupMessage, isLogged }) => {
+
+const HomePage = () => {
   const [nextElement, setNextElement] = useState(1);
   const maxElements = 3;
 

@@ -8,24 +8,26 @@ const FooterStyled = styled.div`
   background-color: transparent;
   display: block;
   margin-top: 80vh;
-  padding: ${props => props.theme.sizings.medium};
+  padding: ${(props) => props.theme.sizings.medium};
+  margin-right: ${(props) => props.theme.sizings.medium};
 
   .footer {
-    color: ${props => props.theme.colors.white};
+    color: ${(props) => props.theme.colors.white};
     display: flex;
     justify-content: flex-end;
     align-items: center;
   }
 
   .mentions,
-  .termes {
-    padding: ${props => props.theme.sizings.medium};
+  .termes,
+  .contact {
+    padding: ${(props) => props.theme.sizings.medium};
     text-align: right;
     align-items: center;
     justify-content: space-between;
 
     &:hover {
-      color: ${props => props.theme.colors.linkDark};
+      color: ${(props) => props.theme.colors.linkDark};
     }
   }
 `;

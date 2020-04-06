@@ -15,6 +15,11 @@ const Footer = () => {
             <p>Termes et conditions</p>
           </Link>
         </div>
+        <div className='contact'>
+          <Link to='/contact'>
+            <p>Contact</p>
+          </Link>
+        </div>
       </div>
     </FooterStyled>
   );

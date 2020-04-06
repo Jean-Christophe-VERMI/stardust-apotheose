@@ -30,7 +30,7 @@ const App = () => (
             <Route path='/forum' component={Forum} />
             <Route exact path='/termes' component={Termes} />
             <Route path='/infos' component={InfoPage} />
-            <Route path='/team' component={TeamPage} />
+            <Route path='/contact' component={TeamPage} />
           </Switch>
         </Main>
       </Router>

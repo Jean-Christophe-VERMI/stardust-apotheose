@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from "react-router";
 import PropTypes from 'prop-types';
-import { Button, Checkbox, Form } from 'semantic-ui-react';
+import { Checkbox, Form } from 'semantic-ui-react';
 import Field from './Field';
 const Recaptcha = require('react-recaptcha');
 import RegisterStyled from './RegisterStyled';
@@ -76,14 +76,14 @@ const Register = ({
             sitekey="6LdwN-QUAAAAAH5d15dEMnS-CL6UYmtzvl1C2krw"
             verifyCallback={verifyCallback}
           />
-          <Button
+          <button
             className="button-submit"
             type="submit"
             disabled={!isVerified}
             fr
           >
             ENREGISTRER
-          </Button>
+          </button>
         </Form>
       </div>
     </RegisterStyled>

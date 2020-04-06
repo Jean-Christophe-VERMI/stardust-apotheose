@@ -89,10 +89,13 @@ router.delete('/:threadId/comments/:commentId/:userId', async (req, res) => {
     const thread = await Thread.findById(threadId);
     console.log(commentId);
     if (comment.author == (userId)) {
-      await thread.update({
+      await thread.updateOne(
+        console.log(thread),
+        {
         comments: [
-          thread.comments.filter(
-            threadComment => threadComment._id == (commentId)
+          console.log(thread.comments),
+          thread.comments.find(
+            threadComment => threadComment === commentId
           ),
         ],
       });
@@ -100,10 +103,10 @@ router.delete('/:threadId/comments/:commentId/:userId', async (req, res) => {
       await comment.delete();
 
       res.status(200);
-      res.send('Comment deleted');
+      res.json('Comment deleted');
     } else {
       res.status(403);
-      res.send('User not authorized');
+      res.json('User not authorized');
     }
   } catch (err) {
     console.error(err.message);

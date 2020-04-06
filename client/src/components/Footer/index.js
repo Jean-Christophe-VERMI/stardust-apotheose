@@ -8,6 +8,7 @@ const Footer = () => {
     <FooterStyled>
       <div className='footer'>
         <div className='mentions'>
+
           <Link to='/termes'>Mentions Légales</Link>
         </div>
         <div className='termes'>

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const TeamPageStyled = styled.div`
+
   width: 100%;
   height: 100vh;
   display: flex;
@@ -18,7 +19,6 @@ const TeamPageStyled = styled.div`
     align-items: center;
     display: block;
   }
-
   input,
   text-area {
     width: 100%;

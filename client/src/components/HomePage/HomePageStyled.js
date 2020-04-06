@@ -19,6 +19,18 @@ const HomePageStyled = styled.header`
     font-size: 12rem;
     font-family: ${props => props.theme.fonts.headings};
   }
+
+  .signup-confirmation {
+    position: absolute;
+    border: 1px solid #81b2c9;
+    border-radius: 3px;
+    background-color: rgba(129, 178, 201, 0.8);
+    color: white;
+    text-align: center;
+    margin-top: 7rem;
+    margin-left: 1rem;
+    padding: .5rem;
+  }
 `;
 
 export default HomePageStyled;

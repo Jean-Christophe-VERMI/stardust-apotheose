@@ -46,7 +46,7 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { author, text, updatedAt } = req.body;
+    const { author, name, text, updatedAt } = req.body;
     try {
       const newComment = new Comment({
         author,
@@ -87,11 +87,11 @@ router.delete('/:threadId/comments/:commentId/:userId', async (req, res) => {
     const comment = await Comment.findById(commentId);
     const thread = await Thread.findById(threadId);
 
-    if (comment.author == userId) {
+    if (comment.author == (userId)) {
       await thread.update({
         comments: [
           thread.comments.filter(
-            threadComment => threadComment._id !== commentId
+            threadComment => threadComment._id !== (commentId)
           ),
         ],
       });

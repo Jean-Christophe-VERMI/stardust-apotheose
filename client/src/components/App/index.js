@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // == Import
 import Theme from 'src/components/Theme/theme';
 import Main from 'src/components/Main';
-import HomePage from 'src/components/HomePage';
+import HomePage from 'src/containers/HomePage';
 import Register from 'src/containers/Register';
 import UserProfil from 'src/containers/UserProfil';
 import SkyMap from 'src/components/SkyMap';
@@ -31,7 +31,9 @@ const App = () => (
             <Route exact path='/termes' component={Termes} />
             <Route path='/infos' component={InfoPage} />
             <Route path='/contact' component={TeamPage} />
+
           </Switch>
+          <Footer />
         </Main>
       </Router>
     </AppStyled>

@@ -8,6 +8,7 @@ const mapStateToProps = (state) => ({
   text: state.threads.text,
   isLogged: state.login.isLogged,
   active: state.threads.active,
+  currentThread: state.threads.currentThread,
 });
 
 const mapDispatchToProps = (dispatch) => ({

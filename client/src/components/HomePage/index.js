@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,6 +11,7 @@ import InfoPage from 'src/components/InfoPage';
 
 import Anchor from 'src/components/Anchor';
 import HomePageStyled from './HomePageStyled';
+
 
 const HomePage = () => {
   const [nextElement, setNextElement] = useState(1);
@@ -23,8 +26,14 @@ const HomePage = () => {
     }
   };
   return (
+    
     <HomePageStyled>
       <Element name='0'>
+        {isVerified && !isLogged && (
+          <div className="signup-confirmation">
+            <p>{signupMessage}</p>
+          </div>
+        )}
         <div className='header'>
           <h1 className='title'>STARDUST</h1>
         </div>
@@ -40,6 +49,12 @@ const HomePage = () => {
       />
     </HomePageStyled>
   );
+};
+
+HomePage.propTypes = {
+  isLogged: PropTypes.bool.isRequired,
+  isVerified: PropTypes.bool.isRequired,
+  signupMessage: PropTypes.string.isRequired,
 };
 
 export default HomePage;

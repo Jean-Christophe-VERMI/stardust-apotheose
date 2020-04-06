@@ -16,8 +16,8 @@ const HomePageStyled = styled.header`
   .title {
     color: white;
     font-weight: bold;
-    font-size: 12rem;
-    font-family: ${props => props.theme.fonts.headings};
+    font-size: 10rem;
+    font-family: ${(props) => props.theme.fonts.headings};
   }
 
   .signup-confirmation {

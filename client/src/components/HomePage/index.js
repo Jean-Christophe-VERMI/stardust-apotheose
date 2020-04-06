@@ -19,7 +19,7 @@ const HomePage = ({
   signupMessage
 }) => {
   const [nextElement, setNextElement] = useState(1);
-  const maxElements = 3;
+  const maxElements = 2;
 
   const handleScroll = () => {
     if (nextElement === maxElements) {

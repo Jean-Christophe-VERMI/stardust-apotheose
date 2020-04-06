@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const ThreadsWithCommentsStyled = styled.div`
-
   background-color: #bdc3c7;
   border-radius: 3px;
   display: flex;
@@ -12,7 +11,7 @@ const ThreadsWithCommentsStyled = styled.div`
   margin: auto auto;
   padding: 30px;
 
-  .content-section{
+  .content-section {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -20,7 +19,6 @@ const ThreadsWithCommentsStyled = styled.div`
     margin-bottom: 2rem;
   }
 
-  
   .comments-section {
     background-color: #a4b0be;
     display: flex;
@@ -31,15 +29,14 @@ const ThreadsWithCommentsStyled = styled.div`
     border-radius: 3px;
   }
 
-
   .content {
     background-color: #222f3e;
-    width : 100%;
+    width: 100%;
     border-radius: 3px;
     margin-right: 5rem;
     padding: 2rem;
 
-    h2{
+    h2 {
       color: #81b2c9;
       size: 2rem;
       font-weight: bold;
@@ -53,26 +50,24 @@ const ThreadsWithCommentsStyled = styled.div`
       background-color: #81b2c9;
       border-radius: 3px;
       border: 1px solid #ccc;
-      padding: .5rem;
+      padding: 0.5rem;
       color: white;
 
       &:hover {
         color: #222f3e;
         border: 1px solid #222f3e;
       }
-
     }
-    
   }
 
-  .content-post{
+  .content-post {
     background-color: white;
     color: black;
     border-radius: 3px;
     border: 1px solid #bdc3c7;
     text-align: left;
-    margin-bottom: .5rem;
-    padding: .3rem .5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem 0.5rem;
   }
 
   .action-post {
@@ -82,30 +77,28 @@ const ThreadsWithCommentsStyled = styled.div`
     justify-content: space-between;
     text-align: right;
   }
-  
+
   .info-author {
     color: black;
     font-style: italic;
     margin-right: 1rem;
   }
 
-  .delete-post{
+  .delete-post {
     background-color: #81b2c9;
     border-radius: 3px;
     border: 1px solid #ccc;
     color: white;
 
     &:hover {
-        color: #222f3e;
-      }
+      color: #222f3e;
+    }
   }
 
   .form-comments {
-    
     border-radius: 3px;
     text-align: center;
   }
-
 `;
 
 export default ThreadsWithCommentsStyled;

@@ -2,10 +2,12 @@ import React from 'react';
 
 import Button from 'src/components/Button';
 import TeamPageStyled from './TeamPageStyled';
+import TeamPhotos from './TeamPhotos';
 
 const TeamPage = () => {
   return (
     <TeamPageStyled>
+      <TeamPhotos />
       <div className='contact'>
         <h1>Nous contacter</h1>
         <form className='contact-form'>

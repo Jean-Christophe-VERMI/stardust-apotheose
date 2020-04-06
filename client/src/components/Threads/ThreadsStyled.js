@@ -2,17 +2,20 @@ import styled from 'styled-components';
 
 const ThreadsStyled = styled.div`
   background-color: ${(props) => props.theme.colors.darkBlue};
+  position: fixed;
   display: flex;
   flex-direction: column;
   min-height: 80vh;
-  justify-content: space-between;
-  width: 50%;
-  margin: auto auto;
-  padding: 30px;
+  justify-content: flex-start;
+  width: 80%;
 
   .thread {
-    padding: 2rem;
+    padding: ${(props) => props.theme.sizings.large};
+    margin-bottom: ${(props) => props.theme.sizings.larger};
     width: 100%;
+    overflow-y: auto;
+    max-height: 600px;
+    border-radius: ${(props) => props.theme.radius.medium};
   }
 
   h1 {
@@ -20,7 +23,7 @@ const ThreadsStyled = styled.div`
     font-size: ${(props) => props.theme.fontSizes.larger};
     font-weight: bold;
     text-align: center;
-    margin: ${(props) => props.theme.sizings.large};
+    margin: ${(props) => props.theme.sizings.medium};
   }
 `;
 

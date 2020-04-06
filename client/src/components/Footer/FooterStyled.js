@@ -16,6 +16,7 @@ const FooterStyled = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding-top: ${(props) => props.theme.sizings.medium};
   }
 
   .mentions,

@@ -64,11 +64,6 @@ const Login = ({
                 onChange={changeField}
                 value={password}
               />
-              <div className='link-log'>
-                <NavLink exact to='/password'>
-                  Mot de passe oublié ?
-                </NavLink>
-              </div>
             </div>
             <button type='submit' className='login-form-button'>
               OK

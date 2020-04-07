@@ -66,6 +66,7 @@
     "jwt-decode": "^2.2.0",
     "prop-types": "*",
     "react": "*",
+    "react-burger-menu": "^2.6.13",
     "react-dom": "*",
     "react-redux": "*",
     "react-router-dom": "^5.1.2",

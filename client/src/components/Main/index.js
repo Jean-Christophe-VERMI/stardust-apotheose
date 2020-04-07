@@ -1,6 +1,7 @@
 import React from 'react';
+import Nav from 'src/containers/Nav';
 import MainStyled from './MainStyled';
-import Nav from 'src/components/Nav';
+
 
 const Main = ({ children }) => (
   <MainStyled>

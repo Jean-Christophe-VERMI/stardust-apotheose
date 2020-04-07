@@ -58,6 +58,11 @@ const theme = {
     large: '20px',
     round: '50%',
   },
+  imageSize: {
+    small: '16px',
+    medium: '30px',
+    large: '50px',
+  },
 };
 
 const Theme = ({ children }) => (

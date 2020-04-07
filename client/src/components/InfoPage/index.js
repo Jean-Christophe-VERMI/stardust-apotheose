@@ -10,14 +10,14 @@ const InfoPage = () => {
       <div className='info-page'>
         <h1>Bienvenue sur Stardust</h1>
         <p className='text-infos'>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas,
-          exercitationem omnis? Consectetur ad doloribus quidem incidunt quos
-          voluptate voluptatum officiis autem eaque, veritatis consequatur
-          officia nam, sapiente velit? Facere architecto doloremque officia rem.
-          Recusandae commodi illo vitae corporis, delectus odio accusantium
-          architecto quos laboriosam nostrum sapiente fugiat esse dolorum
-          consectetur unde aut, fuga ratione nemo eaque repellendus ipsam optio
-          eligendi!
+          Stardust est un site dédié aux amateurs d'astronomie. La Skymap vous
+          permettra d'accéder à des informations sur les différentes
+          constellations, et à découvrir celles qui se trouvent au dessus de
+          vous, où d'une ville que vous aurez préalablement indiquée dans
+          l'encart au dessus de la carte. De plus, si vous souhaitez échanger
+          avec d'autres passionnés, un forum de discussion est également
+          disponible. Pour y accéder, pensez à cliquer sur le bouton
+          "s'inscrire" juste en dessous.
         </p>
 
         <Button color='primary'>

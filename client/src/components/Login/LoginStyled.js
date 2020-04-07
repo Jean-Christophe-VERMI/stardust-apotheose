@@ -50,7 +50,7 @@ const LoginStyled = styled.div`
   }
 
   .field-log {
-    max-width: 250px;
+    max-width: auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -72,14 +72,6 @@ const LoginStyled = styled.div`
     margin-left: ${props => props.theme.sizings.medium};
   }
 
-  @media screen and (max-width: 650px) {
-    .login-form-element {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
 `;
 
 export default LoginStyled;

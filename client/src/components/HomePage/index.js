@@ -30,7 +30,6 @@ const HomePage = ({
     }
   };
   return (
-    
     <HomePageStyled>
       <Element name='0'>
         {isVerified && !isLogged && (

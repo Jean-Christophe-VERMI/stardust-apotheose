@@ -31,6 +31,12 @@ const HomePageStyled = styled.header`
     margin-left: 1rem;
     padding: .5rem;
   }
+
+  @media screen and (max-width: 650px) {
+    .title {
+      font-size: ${props => props.theme.fontSizes.largest};
+    }
+  }
 `;
 
 export default HomePageStyled;

@@ -16,6 +16,10 @@ const ThreadStyled = styled.div`
     }
   }
 
+  .nbr-comments {
+    text-align: right;
+  }
+
   a {
     font-weight: bold;
     color: red;

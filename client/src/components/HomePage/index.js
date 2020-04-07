@@ -8,16 +8,12 @@ import { Element, animateScroll as scroll, Events } from 'react-scroll';
 
 import Button from 'src/components/Button';
 import InfoPage from 'src/components/InfoPage';
+import SignupMessage from 'src/components/SignupMessage';
 
 import Anchor from 'src/components/Anchor';
 import HomePageStyled from './HomePageStyled';
 
-
-const HomePage = ({
-  isLogged,
-  isVerified,
-  signupMessage
-}) => {
+const HomePage = ({ isLogged, isVerified, signupMessage }) => {
   const [nextElement, setNextElement] = useState(1);
   const maxElements = 2;
 
@@ -29,13 +25,12 @@ const HomePage = ({
       setNextElement(nextElement + 1);
     }
   };
+
   return (
     <HomePageStyled>
       <Element name='0'>
         {isVerified && !isLogged && (
-          <div className="signup-confirmation">
-            <p>{signupMessage}</p>
-          </div>
+          <SignupMessage signupMessage={signupMessage} />
         )}
         <div className='header'>
           <h1 className='title'>STARDUST</h1>

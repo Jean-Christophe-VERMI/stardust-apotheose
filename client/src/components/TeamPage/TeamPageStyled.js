@@ -3,27 +3,36 @@ import styled from 'styled-components';
 const TeamPageStyled = styled.div`
   width: 100%;
   height: 100vh;
-
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   background-color: ${(props) => props.theme.colors.darkBlue};
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  .team-photos {
+  .team-page--header {
     display: flex;
-    margin: ${(props) => props.theme.sizings.large};
+    justify-content: space-evenly;
+    text-align: center;
+  }
+
+  .team-page--header h1 {
+    width: 50vh;
+  }
+
+  .team-page--content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
 
   .contact {
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    display: block;
-    margin: ${(props) => props.theme.sizings.large};
   }
   input,
   text-area {
+    display: block;
     width: 100%;
 
     &:hover {
@@ -34,7 +43,6 @@ const TeamPageStyled = styled.div`
   input,
   .message-text {
     display: block;
-    width: 50%;
     padding: ${(props) => props.theme.sizings.small};
     font-size: ${(props) => props.theme.fontSizes.default};
     border: 1px solid ${(props) => props.theme.colors.darkBlue};
@@ -54,6 +62,10 @@ const TeamPageStyled = styled.div`
   p {
     padding: ${(props) => props.theme.sizings.small};
     font-size: ${(props) => props.theme.fontSizes.small};
+  }
+
+  button {
+    margin: ${(props) => props.theme.sizings.medium} 0;
   }
 `;
 

@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 
 export const TermesStyled = styled.div`
-  background-color: ${props => props.theme.colors.darkBlue};
-  margin-bottom: ${props => props.theme.sizings.large};
-  height: 100vh;
+  background-color: ${(props) => props.theme.colors.darkBlue};
+  margin-bottom: ${(props) => props.theme.sizings.medium};
+
+  height: 80vh;
   overflow-y: auto;
 
   .termes {
     max-width: 50%;
     margin: 0 auto;
-    padding: ${props => props.theme.sizings.small};
+    padding: ${(props) => props.theme.sizings.small};
     text-align: center;
-    border: 1px solid ${props => props.theme.colors.white};
   }
 
   h1 {
@@ -19,27 +19,30 @@ export const TermesStyled = styled.div`
     color: white;
     text-align: center;
     padding-top: 12rem;
+    margin-top: ${(props) => props.theme.sizings.large};
     text-transform: uppercase;
-    font-size: ${props => props.theme.fontSizes.larger};
-    padding-bottom: ${props => props.theme.sizings.larger};
+    font-size: ${(props) => props.theme.fontSizes.larger};
+    padding-bottom: ${(props) => props.theme.sizings.larger};
     line-height: 2rem;
+    font-weight: bold;
   }
 
   h2 {
-    color: ${props => props.theme.colors.white};
-    font-size: ${props => props.theme.sizings.medium};
-    padding: ${props => props.theme.sizings.large};
+    color: ${(props) => props.theme.colors.white};
+    font-size: ${(props) => props.theme.sizings.medium};
+    padding: ${(props) => props.theme.sizings.large};
     text-align: center;
+    font-weight: bold;
   }
 
   p,
   li {
-    font-size: ${props => props.theme.fontSizes.medium};
-    color: ${props => props.theme.colors.white};
-    margin-left: ${props => props.theme.sizings.large};
-    padding: ${props => props.theme.sizings.small};
-    max-width: 60%;
-    text-align: center;
+    font-size: ${(props) => props.theme.fontSizes.medium};
+    color: ${(props) => props.theme.colors.white};
+    margin-left: ${(props) => props.theme.sizings.large};
+    padding: ${(props) => props.theme.sizings.small};
+    max-width: 80%;
+    text-align: justify;
   }
 `;
 

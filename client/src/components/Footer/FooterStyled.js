@@ -7,7 +7,7 @@ const FooterStyled = styled.div`
   z-index: 20;
   background-color: transparent;
   display: block;
-  margin-top: 80vh;
+  max-height: 20vh;
   padding: ${(props) => props.theme.sizings.medium};
   margin-right: ${(props) => props.theme.sizings.medium};
 

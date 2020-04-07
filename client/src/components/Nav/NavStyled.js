@@ -34,6 +34,11 @@ const NavStyled = styled.nav`
     background-color: transparent;
     border: none;
     margin-left: ${props => props.theme.sizings.medium};
+
+    @media screen and (max-width: 650px) {
+      
+      height: ${props => props.theme.sizings.small};
+    }
   }
 
   .button-login {

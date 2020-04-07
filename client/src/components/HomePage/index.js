@@ -25,7 +25,6 @@ const HomePage = ({ isVerified, signupMessage, isLogged }) => {
     }
   };
   return (
-    
     <HomePageStyled>
       <Element name='0'>
         {isVerified && !isLogged && (

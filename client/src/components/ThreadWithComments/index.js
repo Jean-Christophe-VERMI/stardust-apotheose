@@ -16,7 +16,7 @@ const ThreadWithComments = ({ list, currentThread }) => {
   // console.log(theGoodThread.title);
   // console.log(theGoodThread.name);
 
-  const comments = theGoodThread.comments;
+  const { comments } = theGoodThread;
   console.log(comments);
 
   // const allTextComments = comments.map(comment => comment.text);
@@ -47,7 +47,6 @@ const ThreadWithComments = ({ list, currentThread }) => {
           {comments.map(comment => (
           <Comments key={comment._id} {...comment} />
         ))}
-        
         </div>
         <div className="form-comments">
           <NewComment />

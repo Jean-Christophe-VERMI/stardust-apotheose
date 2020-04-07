@@ -2,9 +2,7 @@ import { connect } from 'react-redux';
 import { dispatchCommentInfos, deleteComment } from 'src/actions/thread';
 import Comments from 'src/components/Comments';
 
-const mapStateToProps = (state) => ({
-  
-});
+const mapStateToProps = () => ({});
 
 const mapDispatchToProps = (dispatch) => ({
 

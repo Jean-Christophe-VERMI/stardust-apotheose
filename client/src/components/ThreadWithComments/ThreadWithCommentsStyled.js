@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const ThreadsWithCommentsStyled = styled.div`
-  background-color: #bdc3c7;
+  background-color: ${(props) => props.theme.colors.darkBlue};
   border-radius: 3px;
   display: flex;
   min-height: 80vh;
@@ -11,12 +11,26 @@ const ThreadsWithCommentsStyled = styled.div`
   margin: auto auto;
   padding: 30px;
 
+  @media screen and (max-width : 650px) {
+    width: 100%;
+  }
+
   .content-section {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
     margin-bottom: 2rem;
+
+    @media screen and (max-width : 650px) {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: .3rem;
+      margin-top: 1rem;
+    }
+
   }
 
   .comments-section {
@@ -30,17 +44,25 @@ const ThreadsWithCommentsStyled = styled.div`
   }
 
   .content {
-    background-color: #222f3e;
+    background-color: #a4b0be;
     width: 100%;
     border-radius: 3px;
     margin-right: 5rem;
     padding: 2rem;
 
     h2 {
-      color: #81b2c9;
+      color: white;
       size: 2rem;
       font-weight: bold;
     }
+
+    @media screen and (max-width : 650px) {
+      margin-right: 0rem;
+      padding: 1rem;
+      margin: 1rem;
+
+    }
+
   }
 
   .go-back-button {

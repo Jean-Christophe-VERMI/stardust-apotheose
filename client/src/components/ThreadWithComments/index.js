@@ -16,7 +16,7 @@ const ThreadWithComments = ({ list, currentThread }) => {
   // console.log(theGoodThread.title);
   // console.log(theGoodThread.name);
 
-  const { comments } = theGoodThread;
+  const comments = theGoodThread.comments;
   console.log(comments);
 
   // const allTextComments = comments.map(comment => comment.text);

@@ -58,15 +58,7 @@ router.post(
 );
 router.get('/', async (req, res) => {
   try {
-    const threads = await Thread.find()
-      .populate('author')
-      .populate({
-        path: 'comments',
-        populate: {
-          path: 'author',
-          model: 'User',
-        },
-      });
+    const threads = await Thread.find().populate('comments');
     res.json(threads);
   } catch (err) {
     console.error(err.message);
@@ -80,14 +72,18 @@ router.delete('/:threadId/comments/:commentId/:userId', async (req, res) => {
     const comment = await Comment.findById(commentId);
     const thread = await Thread.findById(threadId);
     console.log(commentId);
-    if (comment.author == userId) {
-      await thread.update({
+    if (comment.author == (userId)) {
+      await thread.updateOne(
+        console.log(thread),
+        {
         comments: [
-          thread.comments.filter(
-            (threadComment) => threadComment._id == commentId
+          console.log(thread.comments),
+          thread.comments.find(
+            threadComment => threadComment === commentId
           ),
         ],
       });
+      ;
       await comment.delete();
       res.status(200);
       res.json('Comment deleted');

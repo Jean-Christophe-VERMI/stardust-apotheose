@@ -18,7 +18,7 @@ const Threads = ({ list, isLogged }) => {
       <div className="not-logged-comment">
         <p> Pour poster un nouveau sujet vous devez être <a className="link-register" href="http://localhost:8080/register">inscrit</a> et connecté.</p>
       </div>
-    )}
+      )}
       </Router>
       <div className='thread'>
         {list.map(thread => (

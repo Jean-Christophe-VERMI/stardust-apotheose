@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 import CommentStyled from './CommentStyled';
 
-const Comments = ({ text, name, _id, dispatchCommentInfos, deleteComment, author }) => {
+const Comments = ({ text, name, _id, dispatchCommentInfos, deleteComment, author, isLogged }) => {
 
   const date = Date.now();
   const dateToFormat = date;
@@ -17,9 +17,14 @@ const Comments = ({ text, name, _id, dispatchCommentInfos, deleteComment, author
               <p className="info-author">{name}, 
               le <Moment format="DD/MM/YYYY">{dateToFormat}</Moment>
               </p>
-              <button onClick={() => {
-                      dispatchCommentInfos(_id, author);
-                      deleteComment()}} className="delete-post">X</button>
+              {isLogged && (
+              <button
+                onClick={() => {
+                dispatchCommentInfos(_id, author);
+                deleteComment()}} className="delete-post">
+                X
+              </button>
+              )}
             </div>
           <h2 className="content-post">{text}</h2>
       </CommentStyled>
@@ -28,6 +33,7 @@ const Comments = ({ text, name, _id, dispatchCommentInfos, deleteComment, author
   
 
 Comment.propTypes = {
+  isLogged: PropTypes.bool.isRequired,
   _id : PropTypes.string.isRequired,
   text : PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,

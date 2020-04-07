@@ -2,7 +2,9 @@ import { connect } from 'react-redux';
 import { dispatchCommentInfos, deleteComment } from 'src/actions/thread';
 import Comments from 'src/components/Comments';
 
-const mapStateToProps = () => ({});
+const mapStateToProps = (state) => ({
+  isLogged: state.login.isLogged,
+});
 
 const mapDispatchToProps = (dispatch) => ({
 

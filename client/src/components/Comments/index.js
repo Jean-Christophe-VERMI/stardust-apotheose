@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import CommentStyled from './CommentStyled';
 
-const Comments = ({ text, name, _id, dispatchCommentInfos, deleteComment }) => {
+const Comments = ({ text, name, _id, dispatchCommentInfos, deleteComment, author }) => {
 
   const date = Date.now();
 
@@ -26,6 +26,7 @@ Comment.propTypes = {
   _id : PropTypes.string.isRequired,
   text : PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
   dispatchCommentInfos: PropTypes.func.isRequired,
   deleteComment: PropTypes.func.isRequired,
 };

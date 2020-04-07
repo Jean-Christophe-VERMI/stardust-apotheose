@@ -18,6 +18,14 @@ const ThreadsStyled = styled.div`
     border-radius: ${(props) => props.theme.radius.medium};
   }
 
+  .not-logged-comment {
+    text-align : center;
+
+    a {
+      color: ${(props) => props.theme.colors.linkDark};
+    }
+  }
+
   h1 {
     color: ${(props) => props.theme.colors.white};
     font-size: ${(props) => props.theme.fontSizes.larger};

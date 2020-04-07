@@ -4,6 +4,7 @@ import Comments from 'src/components/Comments';
 
 const mapStateToProps = (state) => ({
   isLogged: state.login.isLogged,
+  idOnlineUser: state.auth.id,
 });
 
 const mapDispatchToProps = (dispatch) => ({

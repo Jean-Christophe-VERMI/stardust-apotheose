@@ -11,7 +11,7 @@ const ThreadsWithCommentsStyled = styled.div`
   margin: auto auto;
   padding: 30px;
 
-  @media screen and (max-width : 650px) {
+  @media screen and (max-width: 650px) {
     width: 100%;
   }
 
@@ -22,71 +22,57 @@ const ThreadsWithCommentsStyled = styled.div`
     align-items: flex-start;
     margin-bottom: 2rem;
 
-    @media screen and (max-width : 650px) {
+    @media screen and (max-width: 650px) {
       display: flex;
       flex-direction: column-reverse;
       justify-content: space-around;
       align-items: center;
-      margin-bottom: .3rem;
+      margin-bottom: 0.3rem;
       margin-top: 1rem;
     }
-
   }
 
   .comments-section {
-    background-color: #a4b0be;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-    border-radius: 3px;
+    padding: ${(props) => props.theme.sizings.large};
+    margin-bottom: ${(props) => props.theme.sizings.larger};
+    width: 100%;
+    overflow-y: auto;
+    max-height: 600px;
+    border-radius: ${(props) => props.theme.radius.medium};
+    background-color: white;
   }
 
   .content {
-    background-color: #a4b0be;
+    background-color: ${(props) => props.theme.colors.white};
+    color: ${(props) => props.theme.colors.darkBlue};
     width: 100%;
-    border-radius: 3px;
-    margin-right: 5rem;
+    height: 100%;
+    border-radius: ${(props) => props.theme.radius.medium};
+    border: 1px solid ${(props) => props.theme.colors.darkBlue};
     padding: 2rem;
+    text-align: center;
 
     h2 {
-      color: white;
-      size: 2rem;
+      color: ${(props) => props.theme.colors.darkBlue};
+      size: ${(props) => props.theme.sizings.largest};
       font-weight: bold;
+      text-transform: uppercase;
     }
 
-    @media screen and (max-width : 650px) {
+    @media screen and (max-width: 650px) {
       margin-right: 0rem;
       padding: 1rem;
       margin: 1rem;
-
-    }
-
-  }
-
-  .go-back-button {
-    text-align: right;
-
-    button {
-      background-color: #81b2c9;
-      border-radius: 3px;
-      border: 1px solid #ccc;
-      padding: 0.5rem;
-      color: white;
-
-      &:hover {
-        color: #222f3e;
-        border: 1px solid #222f3e;
-      }
     }
   }
 
   .content-post {
-    background-color: white;
-    color: black;
-    border-radius: 3px;
-    border: 1px solid #bdc3c7;
+    width: 60vw;
+    height: 5rem;
+    background-color: ${(props) => props.theme.colors.white};
+    color: ${(props) => props.theme.colors.darkBlue};
+    border-radius: ${(props) => props.theme.radius.medium};
+    border: 1px solid ${(props) => props.theme.colors.darkBlue};
     text-align: left;
     margin-bottom: 0.5rem;
     padding: 0.3rem 0.5rem;

@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
 const NewThreadStyled = styled.div`
-  background-color: ${(props) => props.theme.colors.darkBlue};
-  border: 1px solid #dddddd;
+  border: 1px solid ${(props) => props.theme.colors.darkBlue};
   border-radius: ${(props) => props.theme.radius.medium};
-  z-index: 6;
 
   .new-thread {
+    color: ${(props) => props.theme.colors.darkBlue};
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,10 +15,24 @@ const NewThreadStyled = styled.div`
     border-radius: ${(props) => props.theme.radius.medium};
   }
 
-  .field-new-thread {
+  .field-newthread {
     width: 80%;
-    border: 1px solid #dddddd;
+    color: red;
+    border: 1px solid ${(props) => props.theme.colors.darkBlue};
     border-radius: ${(props) => props.theme.radius.medium};
+  }
+
+  input {
+    display: block;
+    padding: ${(props) => props.theme.sizings.small};
+    font-size: ${(props) => props.theme.fontSizes.default};
+    border: 1px solid ${(props) => props.theme.colors.darkBlue};
+    border-radius: ${(props) => props.theme.radius.medium};
+    margin: ${(props) => props.theme.sizings.large} 0;
+
+    &:hover {
+      border: 1px solid ${(props) => props.theme.colors.linkDark};
+    }
   }
 `;
 

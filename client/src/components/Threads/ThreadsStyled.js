@@ -9,10 +9,9 @@ const ThreadsStyled = styled.div`
   justify-content: flex-start;
   width: 80%;
 
-  @media screen and (max-width : 650px) {
+  @media screen and (max-width: 650px) {
     width: 100%;
   }
-  
 
   .thread {
     padding: ${(props) => props.theme.sizings.large};
@@ -22,8 +21,8 @@ const ThreadsStyled = styled.div`
     max-height: 600px;
     border-radius: ${(props) => props.theme.radius.medium};
 
-    @media screen and (max-width : 650px) {
-      padding: .1rem;
+    @media screen and (max-width: 650px) {
+      padding: 0.1rem;
       margin-bottom: ${(props) => props.theme.sizings.larger};
       width: 100%;
       overflow-y: auto;
@@ -33,7 +32,8 @@ const ThreadsStyled = styled.div`
   }
 
   .not-logged-comment {
-    text-align : center;
+    text-align: center;
+    color: ${(props) => props.theme.colors.darkBlue};
 
     a {
       color: ${(props) => props.theme.colors.linkDark};
@@ -47,7 +47,6 @@ const ThreadsStyled = styled.div`
     text-align: center;
     margin: ${(props) => props.theme.sizings.medium};
   }
-
 `;
 
 export default ThreadsStyled;

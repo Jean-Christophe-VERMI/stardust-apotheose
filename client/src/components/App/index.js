@@ -31,7 +31,6 @@ const App = () => (
             <Route exact path='/termes' component={Termes} />
             <Route path='/infos' component={InfoPage} />
             <Route path='/contact' component={TeamPage} />
-
           </Switch>
           <Footer />
         </Main>

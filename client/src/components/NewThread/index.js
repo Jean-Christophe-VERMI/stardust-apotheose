@@ -18,9 +18,9 @@ const NewThread = ({ changeField, title, newThread }) => {
           <div className='new-thread'>
             <h3>Nouveau sujet</h3>
             <Field
-              className='field-new-thread'
+              className='field-newthread'
               name='title'
-              placeholder='sujet...'
+              placeholder='Sujet...'
               onChange={changeField}
               value={title}
             />

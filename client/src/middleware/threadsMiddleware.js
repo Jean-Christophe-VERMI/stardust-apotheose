@@ -30,7 +30,7 @@ const threadMiddleware = (store) => (next) => (action) => {
         url: `http://localhost:5000/forum/${threadId}/comments`,
         data: {
           author: store.getState().auth.id,
-          name: store.getState().register.name,
+          name: store.getState().auth.name,
           text: store.getState().threads.text,
           updatedAt: Date.now(),
         },

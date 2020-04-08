@@ -51,5 +51,23 @@ export const RegisterStyled = styled.div`
   button:hover:disabled{
     background-color : white;
 }   
-`;
+@media only screen and (max-width : 480px){
+  .recaptcha{
+    transform:scale(0.50);
+    -webkit-transform:scale(0.75);
+    transform-origin:0 0;
+    -webkit-transform-origin:0 0;
+  }
+}
+@media screen and (max-width: 700px){
+  .button-submit {
+  margin-top: 2rem;
+}
+.register-form-element{
+  width: 80%;
+  height:70%;
+  margin-bottom:8rem;
+  margin-top:5rem;
+}
+}`;
 export default RegisterStyled;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Button from 'src/components/Button';
 import Field from './Field';
@@ -20,12 +19,13 @@ const Profil = ({
     evt.preventDefault();
     changeUserInfos(newName);
   };
+
   return (
     <ProfilStyled>
       <div className='user-infos'>
         <div>
           <p>{name}</p>
-          <div onClick={toggle}>Modifier</div>
+          <button onClick={toggle}>Modifier</button>
           {toggleOpen && (
             <form onSubmit={handleSubmit}>
               <div>
@@ -35,9 +35,9 @@ const Profil = ({
                   onChange={changeValue}
                   value={newName}
                 />
-                <button type='submit' className='login-form-button'>
+                <Button type='submit' className='login-form-button'>
                   OK
-                </button>
+                </Button>
               </div>
             </form>
           )}
@@ -48,7 +48,7 @@ const Profil = ({
         <div>
           <p>{city}</p>
         </div>
-        <Button onClick={deleteUser}>Delete</Button>
+        <button onClick={deleteUser}>Delete</button>
       </div>
     </ProfilStyled>
   );

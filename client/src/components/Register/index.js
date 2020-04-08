@@ -73,14 +73,15 @@ const Register = ({
             </Form.Field>
           </div>
           <Recaptcha
+            hl="fr"
             sitekey="6LdwN-QUAAAAAH5d15dEMnS-CL6UYmtzvl1C2krw"
             verifyCallback={verifyCallback}
+            className="recaptcha"
           />
           <button
             className="button-submit"
             type="submit"
             disabled={!isVerified}
-            fr
           >
             ENREGISTRER
           </button>

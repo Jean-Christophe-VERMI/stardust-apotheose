@@ -5,6 +5,7 @@ import helmet from './icons/helmet.svg';
 const NavStyled = styled.nav`
   width: 100%;
   top: 10px;
+  z-index: 5;
   height: 5rem;
   display: flex;
   justify-content: space-between;

@@ -34,6 +34,29 @@ const InfoPageStyled = styled.div`
     border-radius: ${props => props.theme.sizings.small};
     border: 1px solid ${props => props.theme.colors.white};
   }
+
+  @media screen and (max-width: 650px) {
+    height: 100vh;
+
+    .info-page {
+      width: auto;
+      padding: ${props => props.theme.sizings.small};
+    }
+
+    h1 {
+      font-size: ${props => props.theme.fontSizes.larger};
+    }
+
+    .text-infos {
+      font-size: ${props => props.theme.fontSizes.default};
+      margin: ${props => props.theme.sizings.medium};
+    }
+
+    button {
+      display: block;
+      margin: auto;
+    }
+  }
 `;
 
 export default InfoPageStyled;

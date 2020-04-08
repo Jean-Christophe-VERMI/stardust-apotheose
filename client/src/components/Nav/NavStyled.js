@@ -1,31 +1,26 @@
 import styled from 'styled-components';
 import planet from './icons/planet.svg';
 import helmet from './icons/helmet.svg';
+import moon from './icons/moon.svg';
+import star from './icons/star.svg';
 
 const NavStyled = styled.nav`
-  width: 100%;
-  top: 10px;
-  z-index: 6;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0rem 1rem;
-  color: ${props => props.theme.colors.white};
-  position: fixed;
-  background-color: transparent;
 
-  nav {
+  .navbar {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    position: fixed;
 
     @media screen and (max-width: 650px) {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
+      justify-content: space-between;
     }
   }
-
   .button-planet {
     background-image: url(${planet});
     padding: ${props => props.theme.sizings.large};
@@ -34,10 +29,11 @@ const NavStyled = styled.nav`
     background-color: transparent;
     border: none;
     margin-left: ${props => props.theme.sizings.medium};
-
+    
     @media screen and (max-width: 650px) {
-      
-      height: ${props => props.theme.sizings.small};
+      background-image: url(${moon});
+      padding: ${props => props.theme.sizings.medium};
+      margin-left: ${props => props.theme.sizings.medium};
     }
   }
 
@@ -49,6 +45,12 @@ const NavStyled = styled.nav`
     background-color: transparent;
     border: none;
     margin-right: ${props => props.theme.sizings.medium};
+
+    @media screen and (max-width: 650px) {
+      background-image: url(${star});
+      padding: ${props => props.theme.sizings.medium};
+      margin-right: ${props => props.theme.sizings.medium};
+    }
   }
 
   .link-menu {
@@ -74,6 +76,10 @@ const NavStyled = styled.nav`
     max-width: 390px;
     animation: fadein 2s;
     transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    font-size: ${props => props.theme.fontSizes.small};
   }
 
   .nav-menu--closed {

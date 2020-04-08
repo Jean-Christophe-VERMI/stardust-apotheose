@@ -33,8 +33,11 @@ const HomePageStyled = styled.header`
   }
 
   @media screen and (max-width: 650px) {
+    .header {
+      height: 100vh;
+    }
     .title {
-      font-size: ${props => props.theme.fontSizes.largest};
+      font-size: 4rem;
     }
   }
 `;

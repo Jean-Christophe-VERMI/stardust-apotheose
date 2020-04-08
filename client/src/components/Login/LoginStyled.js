@@ -4,8 +4,18 @@ const LoginStyled = styled.div`
   .login-form-element {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .field-log {
+    display: flex;
     flex-direction: row;
-    align-items: baseline;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    
   }
 
   .message-profil {
@@ -49,14 +59,7 @@ const LoginStyled = styled.div`
     margin-left: 0.3rem;
   }
 
-  .field-log {
-    max-width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-
-  .link-log {
+  .link-register {
     width: 100%;
     text-align: left;
     margin-left: 12px;

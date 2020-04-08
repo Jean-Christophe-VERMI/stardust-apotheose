@@ -50,13 +50,6 @@ const Login = ({
                 onChange={changeField}
                 value={email}
               />
-              <div className='link-log'>
-                <NavLink exact to='/register'>
-                  S'inscrire
-                </NavLink>
-              </div>
-            </div>
-            <div className='field-log'>
               <Field
                 name='password'
                 type='password'
@@ -64,10 +57,15 @@ const Login = ({
                 onChange={changeField}
                 value={password}
               />
-            </div>
             <button type='submit' className='login-form-button'>
               OK
             </button>
+            </div>
+            <div className="link-register">
+            <NavLink exact to='/register'>
+            S'inscrire
+            </NavLink>
+            </div>
           </form>
         )}
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from 'src/containers/Nav';
+import Nav from 'src/components/Nav';
 import MainStyled from './MainStyled';
 import Footer from 'src/components/Footer';
 

@@ -59,7 +59,7 @@ const LoginStyled = styled.div`
   .link-log {
     width: 100%;
     text-align: left;
-    margin-left: 5px;
+    margin-left: 12px;
     color: ${props => props.theme.colors.white};
 
     &:hover {

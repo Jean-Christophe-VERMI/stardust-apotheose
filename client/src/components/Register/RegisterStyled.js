@@ -12,6 +12,9 @@ export const RegisterStyled = styled.div`
     min-height: 100vh;
   }
   .register-form-element {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background-color: rgba(130, 204, 221, 0.7);
     padding: 2rem;
     border-radius: 5px;

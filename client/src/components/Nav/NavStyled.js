@@ -5,7 +5,7 @@ import helmet from './icons/helmet.svg';
 const NavStyled = styled.nav`
   width: 100%;
   top: 10px;
-  z-index: 6;
+  height: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,6 +15,7 @@ const NavStyled = styled.nav`
   background-color: transparent;
 
   nav {
+    padding: .5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -48,7 +49,7 @@ const NavStyled = styled.nav`
     background-repeat: no-repeat;
     background-color: transparent;
     border: none;
-    margin-right: ${props => props.theme.sizings.medium};
+    
   }
 
   .link-menu {

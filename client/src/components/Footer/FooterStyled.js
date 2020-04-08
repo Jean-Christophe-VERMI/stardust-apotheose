@@ -2,25 +2,33 @@ import styled from 'styled-components';
 
 const FooterStyled = styled.div`
   position: fixed;
-  height: auto;
-  width: 100%;
-  flex-direction: row;
-  background-color: ${props => props.theme.colors.darkBlue};
+  bottom: 0;
+  right: 0;
+  z-index: 20;
+  background-color: transparent;
+  display: block;
+  max-height: 20vh;
+  padding: ${(props) => props.theme.sizings.medium};
+  margin-right: ${(props) => props.theme.sizings.medium};
 
   .footer {
-    color: ${props => props.theme.colors.white};
+    color: ${(props) => props.theme.colors.white};
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: ${(props) => props.theme.sizings.medium};
   }
 
   .mentions,
-  .termes {
-    display: block;
+  .termes,
+  .contact {
+    padding: ${(props) => props.theme.sizings.medium};
     text-align: right;
-    align-items: right;
+    align-items: center;
     justify-content: space-between;
-    padding: ${props => props.theme.sizings.medium};
 
     &:hover {
-      color: ${props => props.theme.colors.linkDark};
+      color: ${(props) => props.theme.colors.linkDark};
     }
   }
 `;

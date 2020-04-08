@@ -1,8 +1,7 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import DeleteIcon from '@material-ui/icons/Delete';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import Button from 'src/components/Button';
 import Field from './Field';
 import ProfilStyled from './ProfilStyled';
 
@@ -23,10 +22,10 @@ const Profil = ({
   };
   return (
     <ProfilStyled>
-      <div className="user-infos">
+      <div className='user-infos'>
         <div>
           <p>{name}</p>
-          <Link onClick={toggle}>Modifier</Link>
+          <div onClick={toggle}>Modifier</div>
           {toggleOpen && (
             <form onSubmit={handleSubmit}>
               <div>
@@ -49,14 +48,7 @@ const Profil = ({
         <div>
           <p>{city}</p>
         </div>
-        <Button
-          variant="contained"
-          color="secondary"
-          startIcon={<DeleteIcon />}
-          onClick={deleteUser}
-        >
-          Delete
-        </Button>
+        <Button onClick={deleteUser}>Delete</Button>
       </div>
     </ProfilStyled>
   );

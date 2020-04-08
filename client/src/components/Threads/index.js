@@ -6,17 +6,31 @@ import NewThread from 'src/containers/NewThread';
 import ThreadsStyled from './ThreadsStyled';
 
 const Threads = ({ list, isLogged }) => {
-  console.log(list)
+  console.log(list);
   return (
     <ThreadsStyled>
       <h1>FORUM STARDUST : Liste des sujets</h1>
-      <Router>
-      {isLogged && (
-          <Route exact path='/forum' component={NewThread} />
-        )}
-      </Router>
+
       <div className='thread'>
-        {list.map(thread => (
+        <Router>
+          {isLogged && <Route exact path='/forum' component={NewThread} />}
+          {!isLogged && (
+            <div className='not-logged-comment'>
+              <p>
+                {' '}
+                Pour poster un nouveau sujet vous devez être{' '}
+                <a
+                  className='link-register'
+                  href='http://localhost:8080/register'
+                >
+                  inscrit
+                </a>{' '}
+                et connecté.
+              </p>
+            </div>
+          )}
+        </Router>
+        {list.map((thread) => (
           <Thread key={thread._id} {...thread} />
         ))}
       </div>
@@ -29,7 +43,7 @@ Threads.propTypes = {
   list: PropTypes.arrayOf(
     PropTypes.shape({
       _id: PropTypes.string.isRequired,
-    }),
+    })
   ).isRequired,
 };
 

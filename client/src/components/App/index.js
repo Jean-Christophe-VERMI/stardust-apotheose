@@ -14,7 +14,6 @@ import Termes from 'src/components/termes';
 import InfoPage from 'src/components/InfoPage';
 import TeamPage from 'src/components/TeamPage';
 import Footer from 'src/components/Footer';
-
 import AppStyled from './AppStyled';
 
 // == Composant
@@ -31,7 +30,7 @@ const App = () => (
             <Route path='/forum' component={Forum} />
             <Route exact path='/termes' component={Termes} />
             <Route path='/infos' component={InfoPage} />
-            <Route path='/team' component={TeamPage} />
+            <Route path='/contact' component={TeamPage} />
           </Switch>
           <Footer />
         </Main>

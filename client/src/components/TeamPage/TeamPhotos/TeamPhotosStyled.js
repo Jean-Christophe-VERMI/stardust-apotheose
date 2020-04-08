@@ -16,17 +16,20 @@ const TeamPhotosStyled = styled.div`
     margin: ${(props) => props.theme.sizings.medium};
   }
 
-  .team-photos--photo {
+  .team-photos--member {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-shadow: 1px 1px 3px ${(props) => props.theme.colors.dark};
   }
 
-  img {
+  .team-photos--photo {
+    background-size: cover;
     width: 150px;
     height: 150px;
     border: 1px solid ${(props) => props.theme.colors.white};
     margin: ${(props) => props.theme.sizings.medium};
+    color: ${(props) => props.theme.colors.primary};
   }
 
   p {

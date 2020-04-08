@@ -16,8 +16,9 @@ const Field = ({ value, type, name, placeholder, onChange }) => {
   return (
     <FieldStyled>
       <div className={value.length > 0 ? 'field field--has-content' : 'field'}>
-        <input
+        <textarea
           // React - state
+          rows='5'
           value={value}
           onChange={handleChange}
           // infos de base

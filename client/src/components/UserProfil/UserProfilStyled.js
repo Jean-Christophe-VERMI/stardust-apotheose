@@ -16,18 +16,19 @@ const UserProfil = styled.section`
 
   .container {
     display: flex;
-    min-height: 80vh;
+    height: 100vh;
     justify-content: space-between;
-    width: 70%;
+    width: 80%;
     margin: auto auto;
     padding: 30px;
 
     @media screen and (max-width:650px) {
-      width: 90%;
-      min-height: 90vh;
+      width: 95%;
+      padding-top: 5rem;
+      height: 80vh;
       flex-wrap: wrap;
       text-align: center;
-      justify-content: center;
+      justify-content: space-around;
     }
   }
 

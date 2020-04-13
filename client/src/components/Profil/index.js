@@ -23,6 +23,7 @@ const Profil = ({
   return (
     <ProfilStyled>
       <div className='user-infos'>
+        <h1>MON COMPTE</h1>
         <div>
           <p>{name}</p>
           <button onClick={toggle}>Modifier</button>

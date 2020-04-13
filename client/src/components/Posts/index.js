@@ -19,6 +19,7 @@ const Posts = ({
   }, []);
   return (
     <PostsStyled ref={postsElement}>
+    <h1>MES SUJETS</h1>
         {threadUser.map(thread => (
           <Post key={thread._id} {...thread} />
         ))}
